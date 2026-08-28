@@ -1,0 +1,177 @@
+---
+import type { I18nContent } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
+
+interface Props {
+  content: I18nContent['venue'];
+}
+
+const { content } = Astro.props;
+---
+
+<section id="venue" class="py-24 px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="max-w-6xl mx-auto">
+    {/* Section Header */}
+    <div class="text-center max-w-2xl mx-auto mb-16 gsap-reveal">
+      <span class="text-xs font-sans font-bold uppercase tracking-widest text-gold-700 mb-2 block">
+        {content.eyebrow}
+      </span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-emerald-950">
+        {content.title}
+      </h2>
+      <p class="text-stone-600 mt-2 font-serif text-sm sm:text-base">
+        {content.subtitle}
+      </p>
+      <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4" />
+    </div>
+
+    {/* Venue Feature Hero Card */}
+    <div class="rounded-3xl overflow-hidden bg-white border border-gold-200 shadow-2xl mb-16 gsap-reveal">
+      <div class="grid grid-cols-1 lg:grid-cols-12">
+        {/* Left: Venue Image */}
+        <div class="lg:col-span-7 relative min-h-[350px] lg:min-h-[450px]">
+          <img
+            src="/images/venue.jpg"
+            alt={content.resortName}
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
+          <div class="absolute bottom-4 left-4 right-4 text-white lg:hidden">
+            <span class="text-xs font-sans text-gold-300 uppercase tracking-widest block">{content.resortSubtitle}</span>
+            <h3 class="text-xl font-serif font-bold">{content.resortName}</h3>
+          </div>
+        </div>
+
+        {/* Right: Venue Info */}
+        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between bg-gold-50/30">
+          <div>
+            <div class="hidden lg:block mb-4">
+              <span class="text-xs font-sans font-bold uppercase tracking-widest text-gold-700 block">
+                {content.resortSubtitle}
+              </span>
+              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-emerald-950 mt-1">
+                {content.resortName}
+              </h3>
+            </div>
+
+            <p class="text-xs sm:text-sm text-stone-600 font-sans mb-4 flex items-start gap-2">
+              <span class="text-gold-600 text-sm">📍</span>
+              <span>{content.address}</span>
+            </p>
+
+            <p class="text-stone-700 font-serif text-sm sm:text-base leading-relaxed mb-6">
+              {content.aboutDesc}
+            </p>
+
+            <h4 class="text-xs font-sans font-bold uppercase tracking-wider text-emerald-950 mb-3">
+              {content.villaHighlightsTitle}
+            </h4>
+            <ul class="space-y-2 mb-6">
+              {content.highlights.map((item) => (
+                <li class="flex items-center gap-2 text-xs sm:text-sm text-stone-700 font-serif">
+                  <span class="text-gold-600 font-bold">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <a
+            href={WEDDING_CONFIG.location.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full bg-emerald-900 hover:bg-emerald-950 text-gold-100 text-sm font-semibold transition-all shadow-md hover:shadow-lg"
+          >
+            <span>🗺️</span>
+            <span>{content.viewMap}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* 4 Travel Advice Cards */}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      {/* Flight Card */}
+      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+        <span class="text-3xl mb-3 block">✈️</span>
+        <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
+          {content.travelCards.flightTitle}
+        </h4>
+        <p class="font-serif text-xs sm:text-sm text-stone-600 leading-relaxed">
+          {content.travelCards.flightDesc}
+        </p>
+      </div>
+
+      {/* Transfer Card */}
+      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+        <span class="text-3xl mb-3 block">🚐</span>
+        <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
+          {content.travelCards.transferTitle}
+        </h4>
+        <p class="font-serif text-xs sm:text-sm text-stone-600 leading-relaxed">
+          {content.travelCards.transferDesc}
+        </p>
+      </div>
+
+      {/* Visa Card */}
+      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+        <span class="text-3xl mb-3 block">🛂</span>
+        <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
+          {content.travelCards.visaTitle}
+        </h4>
+        <p class="font-serif text-xs sm:text-sm text-stone-600 leading-relaxed">
+          {content.travelCards.visaDesc}
+        </p>
+      </div>
+
+      {/* Weather Card */}
+      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+        <span class="text-3xl mb-3 block">☀️</span>
+        <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
+          {content.travelCards.weatherTitle}
+        </h4>
+        <p class="font-serif text-xs sm:text-sm text-stone-600 leading-relaxed">
+          {content.travelCards.weatherDesc}
+        </p>
+      </div>
+    </div>
+
+    {/* Partner Resort Accommodation Card */}
+    <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-gold-100 border border-gold-400/40 shadow-2xl gsap-reveal">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="max-w-2xl text-center lg:text-left">
+          <span class="inline-block px-3 py-1 rounded-full bg-gold-400/20 text-gold-300 text-xs font-bold uppercase tracking-widest mb-3">
+            {content.hotelBooking.discountText}
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-serif font-bold text-white mb-2">
+            {content.hotelBooking.title}
+          </h3>
+          <p class="text-gold-200/90 text-sm sm:text-base font-serif leading-relaxed">
+            {content.hotelBooking.desc}
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+          <div class="px-5 py-3 rounded-2xl bg-black/40 border border-gold-400/60 text-center">
+            <span class="text-[10px] font-sans uppercase tracking-widest text-gold-300 block">
+              {content.hotelBooking.codeLabel}
+            </span>
+            <span class="font-mono font-bold text-base sm:text-lg text-gold-100 tracking-wider">
+              {content.hotelBooking.code}
+            </span>
+          </div>
+
+          <a
+            href={WEDDING_CONFIG.resortBooking.bookingLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3.5 rounded-full bg-gold-500 hover:bg-gold-400 text-emerald-950 font-serif font-bold text-sm tracking-wide shadow-lg transition-all hover:scale-105"
+          >
+            {content.hotelBooking.bookButton}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

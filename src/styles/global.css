@@ -1,1 +1,84 @@
 @import "tailwindcss";
+
+@theme {
+  /* Opencode palette */
+  --color-ivory: #faf6ef;
+  --color-sand: #f0e8da;
+  --color-gold: #b08d57;
+  --color-gold-light: #d4bc94;
+  --color-charcoal: #2b2723;
+  --color-ink: #555048;
+
+  /* Gemini palette (used by sections) */
+  --color-gold-50: #fcf9f2;
+  --color-gold-100: #f7f1df;
+  --color-gold-200: #eee0bc;
+  --color-gold-300: #e3cc92;
+  --color-gold-400: #d6b363;
+  --color-gold-500: #c5a059;
+  --color-gold-600: #aa813e;
+  --color-gold-700: #886230;
+  --color-gold-800: #6f4e2b;
+  --color-gold-900: #5d4127;
+
+  --color-emerald-700: #2e6254;
+  --color-emerald-800: #234e42;
+  --color-emerald-900: #16362d;
+  --color-emerald-950: #0d221c;
+
+  --color-terracotta-50: #fdf5f2;
+  --color-terracotta-100: #fbeae3;
+  --color-terracotta-500: #d48166;
+  --color-terracotta-600: #bf6a4e;
+
+  --color-sage-50: #f7f9f7;
+  --color-sage-100: #eff3ee;
+  --color-sage-200: #dce5db;
+  --color-sage-500: #8f9e8b;
+  --color-sage-700: #576554;
+
+  /* Opencode fonts — kept; gemini font tokens alias them */
+  --font-display: "Cormorant Garamond", "Noto Serif KR", ui-serif, Georgia, serif;
+  --font-script: "Great Vibes", "Noto Serif KR", cursive;
+  --font-body: "Jost", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+
+  --font-serif: var(--font-display);
+  --font-sans: var(--font-body);
+  --font-kr: "Noto Serif KR", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ivory font-body text-ink antialiased;
+}
+
+::selection {
+  @apply bg-gold/30 text-charcoal;
+}
+
+.site-header {
+  @apply text-ivory transition-all duration-500;
+}
+
+.site-header.scrolled {
+  @apply bg-ivory/90 text-charcoal shadow-[0_1px_0_0_rgba(176,141,87,0.25)] backdrop-blur-md;
+}
+
+.mobile-menu {
+  @apply pointer-events-none opacity-0 transition-opacity duration-300;
+}
+
+.mobile-menu.open {
+  @apply pointer-events-auto opacity-100;
+}
+
+.field {
+  @apply w-full border border-gold/30 bg-ivory/80 px-4 py-3 font-body text-sm text-charcoal outline-none transition-colors placeholder:text-ink/40 focus:border-gold;
+}
+
+.btn-gold {
+  @apply inline-flex items-center justify-center border border-gold bg-gold px-8 py-3 text-xs font-medium tracking-[0.25em] text-ivory uppercase transition-colors duration-300 hover:bg-transparent hover:text-gold disabled:cursor-wait disabled:opacity-60;
+}

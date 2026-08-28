@@ -1,0 +1,114 @@
+---
+import type { I18nContent, SupportedLocale } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
+import { supportedLocales } from '../data/i18n';
+
+interface Props {
+  locale: SupportedLocale;
+  nav: I18nContent['nav'];
+}
+
+const { locale, nav } = Astro.props;
+const links = [
+  { href: '#story', label: nav.story },
+  { href: '#schedule', label: nav.schedule },
+  { href: '#venue', label: nav.venue },
+  { href: '#dress-code', label: nav.dressCode },
+  { href: '#gallery', label: nav.gallery },
+  { href: '#faq', label: nav.faq },
+  { href: '#wishes', label: nav.wishes },
+  { href: '#rsvp', label: nav.rsvp }
+];
+---
+
+<header id="site-header" class="site-header fixed inset-x-0 top-0 z-50">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
+    <a href="#home" class="font-script text-2xl leading-none" aria-label="Home">
+      {WEDDING_CONFIG.couple.monogram}
+    </a>
+
+    <nav class="hidden items-center gap-6 md:flex" aria-label="Main">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class="text-xs font-medium tracking-[0.2em] uppercase opacity-80 transition-opacity hover:opacity-100"
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1 text-xs tracking-widest uppercase" aria-label="Language">
+        {
+          supportedLocales.map(({ code }, i) => (
+            <>
+              {i > 0 && <span class="opacity-40">/</span>}
+              <a
+                href={`/${code}/`}
+                aria-current={code === locale ? 'page' : undefined}
+                class={`px-1 transition-opacity ${
+                  code === locale ? 'opacity-100 underline underline-offset-4' : 'opacity-50 hover:opacity-100'
+                }`}
+              >
+                {code}
+              </a>
+            </>
+          ))
+        }
+      </div>
+
+      <button
+        id="menu-btn"
+        type="button"
+        class="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span class="menu-line h-px w-6 bg-current transition-transform duration-300"></span>
+        <span class="menu-line h-px w-6 bg-current transition-transform duration-300"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" class="mobile-menu absolute inset-x-0 top-full bg-ivory/95 text-charcoal backdrop-blur-md md:hidden" aria-label="Mobile">
+    <div class="flex flex-col px-6 py-4">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class="border-b border-gold/15 py-4 text-sm tracking-[0.25em] uppercase last:border-b-0"
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById('site-header')!;
+  const btn = document.getElementById('menu-btn')!;
+  const menu = document.getElementById('mobile-menu')!;
+
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    btn.querySelectorAll('.menu-line')[0]?.classList.toggle('translate-y-[3.5px] rotate-45', open);
+    btn.querySelectorAll('.menu-line')[1]?.classList.toggle('-translate-y-[3.5px] -rotate-45', open);
+  });
+
+  menu.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    })
+  );
+</script>

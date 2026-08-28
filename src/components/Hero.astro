@@ -1,0 +1,63 @@
+---
+import type { I18nContent } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
+import Ornament from './Ornament.astro';
+
+interface Props {
+  hero: I18nContent['hero'];
+}
+
+const { hero } = Astro.props;
+const { couple } = WEDDING_CONFIG;
+---
+
+<section id="home" data-hero class="relative h-svh min-h-[580px] overflow-hidden">
+  <div class="absolute inset-0 overflow-hidden">
+    <img
+      data-hero-bg
+      src="/images/hero.jpg"
+      alt=""
+      class="absolute inset-x-0 -top-[15%] h-[130%] w-full object-cover"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/70"></div>
+  </div>
+
+  <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-ivory">
+    <p data-hero-item class="text-[11px] font-light tracking-[0.45em] text-gold-light uppercase sm:text-sm">
+      {hero.eyebrow}
+    </p>
+
+    <h1 class="mt-6 font-display leading-none">
+      <span data-hero-item class="block text-5xl font-medium sm:text-7xl lg:text-8xl">
+        {couple.partner1.split(' ')[0]}
+      </span>
+      <span data-hero-item class="my-2 block font-script text-4xl text-gold-light sm:my-3 sm:text-6xl">
+        &amp;
+      </span>
+      <span data-hero-item class="block text-5xl font-medium sm:text-7xl lg:text-8xl">
+        {couple.partner2.split(' ')[0]}
+      </span>
+    </h1>
+
+    <Ornament data-hero-item class="mt-8" />
+
+    <p data-hero-item class="mt-8 text-base font-light tracking-[0.2em] uppercase sm:text-lg">
+      {hero.date}
+    </p>
+    <p data-hero-item class="mt-2 text-sm font-light tracking-[0.2em] text-ivory/80 uppercase">
+      {hero.location}
+    </p>
+
+    <a data-hero-item href="#rsvp" class="btn-gold mt-10">
+      {hero.ctaRsvp}
+    </a>
+  </div>
+
+  <div data-hero-item class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-ivory/70">
+    <div class="flex flex-col items-center gap-2">
+      <span class="text-[10px] tracking-[0.35em] uppercase">{hero.scrollPrompt}</span>
+      <span class="block h-8 w-px animate-pulse bg-current"></span>
+    </div>
+  </div>
+</section>

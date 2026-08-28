@@ -1,0 +1,52 @@
+---
+import type { I18nContent } from '../data/types';
+
+interface Props {
+  content: I18nContent['footer'];
+}
+
+const { content } = Astro.props;
+---
+
+<footer class="relative z-10 bg-emerald-950 text-gold-100 py-16 px-4 sm:px-6 lg:px-8 border-t border-gold-400/30 overflow-hidden">
+  {/* Background glow circle */}
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none" />
+
+  <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+    {/* Monogram Seal */}
+    <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-400/50 flex items-center justify-center mb-6 shadow-inner">
+      <span class="font-script text-2xl text-gold-300">C & J</span>
+    </div>
+
+    {/* Couple Names */}
+    <h3 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">
+      {content.names}
+    </h3>
+
+    <p class="font-sans text-xs sm:text-sm uppercase tracking-widest text-gold-300 mb-6">
+      {content.date} • {content.location}
+    </p>
+
+    {/* Romantic Quote */}
+    <blockquote class="font-serif italic text-sm sm:text-base text-gold-100/80 max-w-xl mx-auto mb-8 border-y border-gold-400/20 py-4 leading-relaxed">
+      {content.quote}
+    </blockquote>
+
+    <p class="font-serif text-xs text-gold-300/70 mb-8">
+      {content.loveNote}
+    </p>
+
+    {/* Back to Top */}
+    <a
+      href="#"
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-gold-400/30 text-gold-200 text-xs font-medium transition-all mb-8 hover:-translate-y-0.5"
+    >
+      <span>↑</span>
+      <span>{content.backToTop}</span>
+    </a>
+
+    <p class="text-[11px] font-sans text-stone-400/60">
+      {content.copyright}
+    </p>
+  </div>
+</footer>

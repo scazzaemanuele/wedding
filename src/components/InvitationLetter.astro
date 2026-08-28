@@ -1,0 +1,62 @@
+---
+import type { I18nContent } from '../data/types';
+
+interface Props {
+  content: I18nContent['invitation'];
+}
+
+const { content } = Astro.props;
+---
+
+<section id="invitation" class="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="max-w-3xl mx-auto">
+    {/* Parchment Invitation Card */}
+    <div class="relative p-8 sm:p-12 md:p-16 rounded-3xl bg-[#fdfcf9] border border-gold-300 shadow-2xl shadow-emerald-950/10 text-center gsap-reveal">
+      {/* Decorative Ornate Borders */}
+      <div class="absolute inset-3 sm:inset-4 border border-gold-200 pointer-events-none rounded-2xl" />
+      <div class="absolute inset-5 sm:inset-6 border border-gold-100 pointer-events-none rounded-xl" />
+
+      {/* Wax Seal / Monogram Emblem */}
+      <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto -mt-16 sm:-mt-24 mb-6 rounded-full bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 p-1 shadow-xl flex items-center justify-center">
+        <div class="w-full h-full rounded-full bg-emerald-950 flex items-center justify-center border border-gold-300">
+          <span class="font-script text-2xl sm:text-3xl text-gold-200">C & J</span>
+        </div>
+      </div>
+
+      {/* Eyebrow */}
+      <span class="inline-block text-xs font-sans font-bold uppercase tracking-widest text-gold-700 mb-2">
+        {content.eyebrow}
+      </span>
+
+      {/* Title */}
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-emerald-950 mb-6">
+        {content.title}
+      </h2>
+
+      {/* Salutation */}
+      <p class="font-serif italic text-lg sm:text-xl text-emerald-900 mb-6 font-semibold">
+        {content.greeting}
+      </p>
+
+      {/* Letter Body Paragraphs */}
+      <div class="space-y-4 font-serif text-stone-700 text-sm sm:text-base md:text-lg leading-relaxed text-justify sm:text-center max-w-2xl mx-auto">
+        <p>{content.letterParagraph1}</p>
+        <p>{content.letterParagraph2}</p>
+        <p>{content.letterParagraph3}</p>
+      </div>
+
+      {/* Couple Signature */}
+      <div class="mt-8 pt-6 border-t border-gold-200/80">
+        <p class="font-script text-3xl sm:text-4xl text-emerald-900">
+          {content.signature}
+        </p>
+      </div>
+
+      {/* Response Notice */}
+      <div class="mt-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-50 border border-gold-300 text-xs font-medium text-emerald-900">
+        <span>🕊️</span>
+        <span>{content.ceremonyNotice}</span>
+      </div>
+    </div>
+  </div>
+</section>

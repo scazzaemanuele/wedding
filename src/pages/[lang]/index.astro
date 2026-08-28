@@ -1,0 +1,50 @@
+---
+import { getI18n, supportedLocales } from '../../data/i18n';
+import type { SupportedLocale } from '../../data/types';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import InvitationLetter from '../../components/InvitationLetter.astro';
+import StorySection from '../../components/StorySection.astro';
+import ScheduleSection from '../../components/ScheduleSection.astro';
+import VenueSection from '../../components/VenueSection.astro';
+import DressCodeSection from '../../components/DressCodeSection.astro';
+import GallerySection from '../../components/GallerySection.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import WishesSection from '../../components/WishesSection.astro';
+import RsvpSection from '../../components/RsvpSection.astro';
+import Footer from '../../components/Footer.astro';
+import ScrollAnimations from '../../components/ScrollAnimations.astro';
+
+export function getStaticPaths() {
+  return supportedLocales.map((loc) => ({
+    params: { lang: loc.code },
+    props: { currentLocale: loc.code as SupportedLocale }
+  }));
+}
+
+const { lang } = Astro.params;
+const currentLocale = (lang || 'en') as SupportedLocale;
+const content = getI18n(currentLocale);
+---
+
+<Base lang={currentLocale} title={content.meta.title} description={content.meta.description}>
+  <Header locale={currentLocale} nav={content.nav} />
+
+  <main>
+    <Hero hero={content.hero} />
+    <InvitationLetter content={content.invitation} />
+    <StorySection content={content.story} />
+    <ScheduleSection content={content.schedule} />
+    <VenueSection content={content.venue} />
+    <DressCodeSection content={content.dressCode} />
+    <GallerySection content={content.gallery} />
+    <FaqSection content={content.faq} />
+    <WishesSection content={content.wishes} />
+    <RsvpSection content={content.rsvp} />
+  </main>
+
+  <Footer content={content.footer} />
+
+  <ScrollAnimations />
+</Base>

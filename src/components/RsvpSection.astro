@@ -1,0 +1,16 @@
+---
+import type { I18nContent } from '../data/types';
+import { RsvpForm } from './react/RsvpForm';
+
+interface Props {
+  content: I18nContent['rsvp'];
+}
+
+const { content } = Astro.props;
+---
+
+<section id="rsvp" class="py-24 px-4 sm:px-6 lg:px-8 relative z-10 bg-gold-50/50">
+  <div class="max-w-5xl mx-auto gsap-reveal">
+    <RsvpForm content={content} client:visible />
+  </div>
+</section>
