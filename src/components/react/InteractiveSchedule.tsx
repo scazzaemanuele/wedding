@@ -31,14 +31,15 @@ export const InteractiveSchedule: React.FC<InteractiveScheduleProps> = ({ conten
   };
 
   const handleDownloadIcs = () => {
+    const toIcsDate = (iso: string) => iso.replace(/[-:]/g, '').split('+')[0];
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Chiara JiHoon Wedding//EN',
+      'PRODID:-//Yeji Emanuele Wedding//EN',
       'CALSCALE:GREGORIAN',
       'BEGIN:VEVENT',
-      'DTSTART:20261127T180000',
-      'DTEND:20261129T160000',
+      `DTSTART:${toIcsDate(WEDDING_CONFIG.date.welcomeDateISO)}`,
+      `DTEND:${toIcsDate(WEDDING_CONFIG.date.brunchDateISO).slice(0, 8)}T160000`,
       `SUMMARY:${content.calendarSummary}`,
       `DESCRIPTION:${content.calendarDesc}`,
       `LOCATION:${WEDDING_CONFIG.location.fullAddress}`,

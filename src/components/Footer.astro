@@ -1,11 +1,13 @@
 ---
 import type { I18nContent } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
 
 interface Props {
   content: I18nContent['footer'];
 }
 
 const { content } = Astro.props;
+const { monogram } = WEDDING_CONFIG.couple;
 ---
 
 <footer class="relative z-10 bg-emerald-950 text-gold-100 py-16 px-4 sm:px-6 lg:px-8 border-t border-gold-400/30 overflow-hidden">
@@ -15,7 +17,7 @@ const { content } = Astro.props;
   <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
     {/* Monogram Seal */}
     <div class="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-400/50 flex items-center justify-center mb-6 shadow-inner">
-      <span class="font-script text-2xl text-gold-300">C & J</span>
+      <span class="font-script text-2xl text-gold-300">{monogram}</span>
     </div>
 
     {/* Couple Names */}

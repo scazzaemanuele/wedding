@@ -2,9 +2,9 @@ import type { I18nContent } from '../types';
 
 export const itContent: I18nContent = {
   meta: {
-    title: 'Chiara & Ji-Hoon — Invito di Nozze | 28 Novembre 2026 | Phuket, Thailandia',
-    description: 'Vi invitiamo con immensa gioia a celebrare il matrimonio di Chiara e Ji-Hoon a Phuket, Thailandia. Programma, alloggi, RSVP e dettagli di viaggio.',
-    ogImageAlt: 'Celebrazione di Matrimonio di Chiara & Ji-Hoon a Phuket'
+    title: 'Yeji & Emanuele — Invito di Nozze | 3 Gennaio 2027 | Phuket, Thailandia',
+    description: 'Vi invitiamo con immensa gioia a celebrare il matrimonio di Yeji e Emanuele a Phuket, Thailandia. Programma, alloggi, RSVP e dettagli di viaggio.',
+    ogImageAlt: 'Celebrazione di Matrimonio di Yeji & Emanuele a Phuket'
   },
   nav: {
     story: 'La Nostra Storia',
@@ -19,11 +19,11 @@ export const itContent: I18nContent = {
   },
   hero: {
     eyebrow: 'Save the Date & Invito Ufficiale',
-    names: 'Chiara & Ji-Hoon',
+    names: 'Yeji & Emanuele',
     and: '&',
     tagline: 'Due Anime, Tre Culture, Un Eterno Viaggio Insieme',
-    date: 'Sabato, 28 Novembre 2026',
-    location: 'The Secret Cliff Villa • Phuket, Thailandia',
+        date: 'Domenica, 3 Gennaio 2027',
+    location: 'Thavorn Beach Village Resort • Phuket, Thailandia',
     ctaRsvp: 'Conferma Presenza',
     ctaDetails: 'Scopri i Dettagli',
     scrollPrompt: 'Scorri per Scoprire'
@@ -35,15 +35,15 @@ export const itContent: I18nContent = {
     letterParagraph1:
       'Da un incontro fortuito sotto le luci calde del tramonto a Roma fino alle avventure gastronomiche notturne a Seoul, il nostro cammino ha attraversato continenti e mari. Lungo la strada, il vostro affetto e la vostra amicizia sono stati la nostra bussola costante.',
     letterParagraph2:
-      'Per celebrare questo grande capitolo, non potevamo immaginare un luogo più magico delle scogliere incantate di Phuket, in Thailandia: un rifugio mozzafiato che unisce i nostri mondi, dove acque turchesi abbracciano la quiete tropicale.',
+      'Per celebrare questo grande capitolo, non potevamo immaginare un luogo più magico delle spiagge incantate di Phuket, in Thailandia: un rifugio mozzafiato che unisce i nostri mondi, dove acque turchesi abbracciano la quiete tropicale.',
     letterParagraph3:
       'Sarebbe per noi un onore immenso avervi al nostro fianco mentre scambiamo le nostre promesse, celebriamo i riti tradizionali e balliamo sotto il cielo stellato del Mare delle Andamane.',
-    signature: 'Con tutto il nostro amore, Chiara & Ji-Hoon',
+    signature: 'Con tutto il nostro amore, Yeji & Emanuele',
     ceremonyNotice: 'Si prega cortesemente di dare conferma entro il 30 Settembre 2026'
   },
   countdown: {
     title: 'Il Conto alla Rovescia per il Nostro Sì',
-    subtitle: 'Mancano pochi giorni al 28 Novembre 2026 a The Secret Cliff Estate',
+    subtitle: 'Mancano pochi giorni al 3 Gennaio 2027 al Thavorn Beach Village',
     days: 'Giorni',
     hours: 'Ore',
     minutes: 'Minuti',
@@ -76,13 +76,13 @@ export const itContent: I18nContent = {
         title: 'La Proposta sulla Scogliera',
         location: 'Phuket, Thailandia',
         description:
-          'Su una scogliera a picco sul mare, circondati da lanterne accese e gelsomini in fiore, Ji-Hoon ha fatto la domanda più importante. Chiara ha risposto sì tra lacrime di commozione e felicità.',
+          'Su una scogliera a picco sul mare, circondati da lanterne accese e gelsomini in fiore, Emanuele ha fatto la domanda più importante. Yeji ha risposto sì tra lacrime di commozione e felicità.',
         image: '/images/proposal.jpg'
       },
       {
-        year: '2026',
+        year: '2027',
         title: 'Il Nostro Prossimo Grande Capitolo',
-        location: 'Spiaggia di Kata Noi, Phuket',
+        location: 'Spiaggia di Nakalay, Phuket',
         description:
           'Ora riuniamo le nostre famiglie dall’Italia, dalla Corea e da tutto il mondo per unire le nostre radici e scrivere insieme una pagina indimenticabile.',
         image: '/images/hero.jpg'
@@ -94,12 +94,12 @@ export const itContent: I18nContent = {
     title: 'Programma delle Celebrazioni',
     subtitle: 'Tre giorni di festa, riti tradizionali e momenti speciali in riva al mare',
     addToCalendar: 'Aggiungi al Calendario',
-    calendarSummary: 'Matrimonio di Chiara & Ji-Hoon a Phuket',
-    calendarDesc: 'Celebrazione di matrimonio di Chiara e Ji-Hoon a Phuket, Thailandia.',
+    calendarSummary: 'Matrimonio di Yeji & Emanuele a Phuket',
+    calendarDesc: 'Celebrazione di matrimonio di Yeji e Emanuele a Phuket, Thailandia.',
     days: [
       {
         dayNumber: 'Giorno 01',
-        date: 'Venerdì, 27 Novembre 2026',
+        date: 'Sabato, 2 Gennaio 2027',
         dayTitle: 'Cocktail di Benvenuto al Tramonto & Banchetto',
         events: [
           {
@@ -107,7 +107,7 @@ export const itContent: I18nContent = {
             title: 'Aperitivo sul Mare & Grigliata Thai',
             location: 'Terrazza Panoramica Tramonto',
             description:
-              'Iniziamo il weekend di festa con cocktail tropicali d’autore, spritz italiani, specialità di pesce fresco alla griglia e musica acustica dal vivo al calar del sole su Kata Noi.',
+              'Iniziamo il weekend di festa con cocktail tropicali d’autore, spritz italiani, specialità di pesce fresco alla griglia e musica acustica dal vivo al calar del sole sulla Baia di Nakalay.',
             dressCode: 'Resort Chic / Eleganza Tropicale (Lino leggero ed abiti estivi raffinati)',
             icon: 'cocktail'
           }
@@ -115,7 +115,7 @@ export const itContent: I18nContent = {
       },
       {
         dayNumber: 'Giorno 02',
-        date: 'Sabato, 28 Novembre 2026',
+    date: 'Domenica, 3 Gennaio 2027',
         dayTitle: 'Il Giorno delle Nozze: Benedizioni & Festa',
         events: [
           {
@@ -130,9 +130,9 @@ export const itContent: I18nContent = {
           {
             time: '15:30 – 16:30',
             title: 'Scambio dei Voti & Cerimonia delle Fedi',
-            location: 'Prato a Picco sul Mare',
+            location: 'Il Pontile Amor, Spiaggia Privata del Thavorn',
             description:
-              'La cerimonia all’aperto con vista spettacolare sull’oceano, accompagnata dalle note di un quartetto d’archi, durante la quale Chiara e Ji-Hoon si scambieranno le promesse e le fedi.',
+              'La cerimonia all’aperto con vista spettacolare sull’oceano, accompagnata dalle note di un quartetto d’archi, durante la quale Yeji e Emanuele si scambieranno le promesse e le fedi.',
             dressCode: 'Tropical Black Tie / Abito Formale Scuro',
             icon: 'ring'
           },
@@ -164,7 +164,7 @@ export const itContent: I18nContent = {
       },
       {
         dayNumber: 'Giorno 03',
-        date: 'Domenica, 29 Novembre 2026',
+        date: 'Lunedì, 4 Gennaio 2027',
         dayTitle: 'Brunch di Saluto & Relax a Bordo Piscina',
         events: [
           {
@@ -183,21 +183,21 @@ export const itContent: I18nContent = {
   venue: {
     eyebrow: 'La Destinazione',
     title: 'La Location & Come Arrivare',
-    subtitle: 'Dove la rigogliosa scogliera incontra le acque turchesi del Mare delle Andamane',
-    resortName: 'The Secret Cliff Villa & Sanctuary Estate',
-    resortSubtitle: 'Spiaggia di Kata Noi • Phuket, Thailandia',
-    address: '88/12 Kata-Sai Yuan Road, Karon, Mueang Phuket District, Phuket 83100',
+    subtitle: 'Dove la spiaggia privata della Baia di Nakalay incontra le acque turchesi del Mare delle Andamane',
+    resortName: 'Thavorn Beach Village Resort',
+    resortSubtitle: 'Spiaggia di Nakalay • Phuket, Thailandia',
+    address: '6/2 Moo 6 Kamala, Kathu, Phuket 83150',
     viewMap: 'Apri su Google Maps',
     aboutTitle: 'La Struttura',
     aboutDesc:
-      'Situata maestosamente su una scogliera privata tra le baie di Karon e Kata Noi, la villa offre panorami mozzafiato a 180 gradi, piscine a sfioro su più livelli, giardini tropicali lussureggianti e un’atmosfera di totale riservatezza.',
-    villaHighlightsTitle: 'I Servizi della Tenuta',
+      'Situata sulle rive private della Baia di Nakalay tra Kamala e Patong, la struttura offre una spiaggia appartata riservata agli ospiti, una delle più grandi piscine laguna tropicali della Thailandia, giardini botanici lussureggianti e un’atmosfera di totale riservatezza.',
+    villaHighlightsTitle: 'I Servizi del Resort',
     highlights: [
-      'Accesso esclusivo alla scogliera oceanica',
+      'Spiaggia privata sulla Baia di Nakalay',
       'Vista panoramica sul tramonto del Mare delle Andamane',
-      'Piscine a sfioro infinity multilivello',
+      'Piscina laguna tropicale tra le più grandi della Thailandia',
       'Padiglione benessere e SPA di lusso per gli ospiti',
-      'Navetta interna in golf cart per tutti gli spostamenti'
+      'Navetta gratuita per le spiagge di Kamala e Patong'
     ],
     travelCards: {
       flightTitle: 'Voli per Phuket (HKT)',
@@ -205,19 +205,19 @@ export const itContent: I18nContent = {
         'L’aeroporto di riferimento è Phuket International (HKT). Ottimi collegamenti con scalo unico da Roma Fiumicino (FCO), Milano Malpensa (MXP), Seoul Incheon (ICN) via Bangkok o Doha/Dubai.',
       transferTitle: 'Trasferimenti Aeroportuali',
       transferDesc:
-        'La tenuta dista circa 45–55 minuti dall’aeroporto. Abbiamo organizzato navette private di gruppo dedicate ai nostri invitati nelle giornate del 27 e 28 novembre.',
+        'La struttura dista circa 40–50 minuti dall’aeroporto. Abbiamo organizzato navette private di gruppo dedicate ai nostri invitati nelle giornate del 2 e 3 gennaio.',
       visaTitle: 'Passaporto & Informazioni Visto',
       visaDesc:
         'Il passaporto deve avere validità residua di almeno 6 mesi dalla data d’ingresso. I cittadini italiani e dell’UE beneficiano dell’ingresso turistico senza visto fino a 60 giorni.',
-      weatherTitle: 'Clima a Novembre',
+      weatherTitle: 'Clima a Gennaio',
       weatherDesc:
-        'La fine di novembre inaugura la stagione secca e soleggiata a Phuket. Le temperature medie oscillano tra i 28°C e i 31°C con piacevoli brezze marine serali.'
+        'I primi giorni di gennaio cadono nel pieno della stagione secca e soleggiata di Phuket. Le temperature medie oscillano tra i 28°C e i 31°C con piacevoli brezze marine serali.'
     },
     hotelBooking: {
       title: 'Convenzione Alloggio Ospiti',
       desc: 'Abbiamo riservato un blocco di suite fronte oceano e ville con piscina a tariffa agevolata per i nostri invitati.',
       codeLabel: 'Codice Promozionale:',
-      code: 'CHIARAJIHOON2026',
+      code: 'YEJIEMANUELE2026',
       discountText: 'Sconto del 25% su soggiorni di 3 o più notti con colazione allo champagne e crediti spa inclusi.',
       bookButton: 'Prenota con Codice Sconto'
     }
@@ -241,7 +241,7 @@ export const itContent: I18nContent = {
     ],
     tipsTitle: 'Consigli Pratici',
     tips: [
-      'La cerimonia si svolgerà su terrazze con prato all’inglese e pontili in legno. Consigliamo tacchi larghi, zeppe eleganti o scarpe eleganti a pianta piatta anziché tacchi a spillo sottili.',
+      'La cerimonia si svolgerà sul pontile Amor accanto alla spiaggia privata del resort. Consigliamo tacchi larghi, zeppe eleganti o scarpe eleganti a pianta piatta anziché tacchi a spillo sottili.',
       'Le serate sono calde e piacevolmente ventilate; tessuti naturali come seta, chiffon, cotone di qualità e lino garantiranno il massimo comfort.',
       'Si prega cortesemente di evitare il bianco totale, colori fluorescenti ed abbigliamento informale da spiaggia per la cerimonia di sabato.'
     ]
@@ -252,7 +252,7 @@ export const itContent: I18nContent = {
     subtitle: 'Uno sguardo alla nostra storia, alla proposta e al santuario che ci ospiterà',
     filterAll: 'Tutte le Foto',
     filterStory: 'La Nostra Storia',
-    filterVenue: 'La Tenuta',
+    filterVenue: 'Il Resort',
     filterCeremony: 'I Riti',
     filterReception: 'La Festa',
     filterDetails: 'Dettagli',
@@ -262,14 +262,14 @@ export const itContent: I18nContent = {
         title: 'Promesse nella Luce Dorata',
         category: 'ceremony',
         src: '/images/hero.jpg',
-        alt: 'Chiara e Ji-Hoon sotto l’arco fiorito vista mare'
+        alt: 'Yeji e Emanuele sotto l’arco fiorito vista mare'
       },
       {
         id: 'venue',
-        title: 'La Scogliera Panoramica',
+        title: 'Il Resort sulla Baia',
         category: 'venue',
         src: '/images/venue.jpg',
-        alt: 'Villa con piscina infinity sul mare al tramonto'
+        alt: 'Resort sulla spiaggia con piscina laguna al tramonto'
       },
       {
         id: 'water-blessing',
@@ -297,7 +297,7 @@ export const itContent: I18nContent = {
         title: 'La Proposta sulla Scogliera',
         category: 'story',
         src: '/images/proposal.jpg',
-        alt: 'La proposta di matrimonio di Ji-Hoon al tramonto'
+        alt: 'La proposta di matrimonio di Emanuele al tramonto'
       },
       {
         id: 'rings',
@@ -328,7 +328,7 @@ export const itContent: I18nContent = {
       {
         question: 'È possibile portare un accompagnatore o bambini?',
         answer:
-          'Data la capienza esclusiva della tenuta sulla scogliera, possiamo accogliere solo gli ospiti espressamente indicati sul vostro invito personale. Per situazioni particolari o neonati, contattateci direttamente!'
+          'Data la capienza esclusiva del resort sulla spiaggia, possiamo accogliere solo gli ospiti espressamente indicati sul vostro invito personale. Per situazioni particolari o neonati, contattateci direttamente!'
       },
       {
         question: 'Come funzioneranno i trasporti e le navette?',
@@ -369,9 +369,9 @@ export const itContent: I18nContent = {
       attendingNo: 'Purtroppo non posso (Presente con il cuore)',
       guestCount: 'Numero Totale di Partecipanti',
       eventsAttending: 'A quali eventi parteciperai?',
-      eventWelcome: 'Cocktail di Benvenuto (Ven 27 Nov)',
-      eventMain: 'Cerimonia Principale & Banchetto (Sab 28 Nov)',
-      eventBrunch: 'Brunch di Saluto in Piscina (Dom 29 Nov)',
+      eventWelcome: 'Cocktail di Benvenuto (Sab 2 Gen)',
+      eventMain: 'Cerimonia Principale & Banchetto (Dom 3 Gen)',
+      eventBrunch: 'Brunch di Saluto in Piscina (Lun 4 Gen)',
       dietary: 'Restrizioni Alimentari & Allergie',
       dietaryPlaceholder: 'es. Vegetariano, Senza Glutine, Allergia ai Crostacei, Nessuna',
       dietaryOptions: ['Nessuna restrizione', 'Vegetariano', 'Vegano', 'Senza Glutine (Celiaco)', 'Halal', 'Allergia Frutta a Guscio', 'Allergia Frutti di Mare'],
@@ -381,7 +381,7 @@ export const itContent: I18nContent = {
       songRequest: 'Una canzone che ti farà ballare tutta la notte',
       songRequestPlaceholder: 'Artista e Titolo della canzone',
       warmMessage: 'Un Messaggio o Augurio per gli Sposi',
-      warmMessagePlaceholder: 'Scrivi un pensiero per Chiara & Ji-Hoon...',
+      warmMessagePlaceholder: 'Scrivi un pensiero per Yeji & Emanuele...',
       submitBtn: 'Invia Conferma RSVP',
       submittingBtn: 'Registrazione in corso...',
       successTitle: 'Grazie di Cuore per la Tua Conferma!',
@@ -396,7 +396,7 @@ export const itContent: I18nContent = {
   wishes: {
     eyebrow: 'Libro degli Ospiti',
     title: 'Messaggi & Auguri dal Mondo',
-    subtitle: 'Lascia una dedica affettuosa che Chiara e Ji-Hoon custodiranno per sempre',
+    subtitle: 'Lascia una dedica affettuosa che Yeji e Emanuele custodiranno per sempre',
     leaveWishTitle: 'Firma il Guestbook Digitale',
     namePlaceholder: 'Il tuo nome / I vostri nomi',
     locationPlaceholder: 'La tua città / nazione (es. Roma, Italia)',
@@ -411,7 +411,7 @@ export const itContent: I18nContent = {
         author: 'Sofia & Marco',
         location: 'Firenze, Italia',
         message:
-          'Carissimi Chiara e Ji-Hoon, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
+          'Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
         stamp: '🥂',
         date: 'Agosto 2026'
       },
@@ -420,7 +420,7 @@ export const itContent: I18nContent = {
         author: 'Min-Jun & Yu-Jin',
         location: 'Seoul, Corea del Sud',
         message:
-          '지훈아, 키아라! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
+          '예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
         stamp: '💐',
         date: 'Agosto 2026'
       },
@@ -429,7 +429,7 @@ export const itContent: I18nContent = {
         author: 'Elena & Lucas',
         location: 'Bangkok, Thailandia',
         message:
-          'Sawaddee krub! We are counting down the days until November. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
+          'Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
         stamp: '✨',
         date: 'Agosto 2026'
       }
@@ -440,15 +440,15 @@ export const itContent: I18nContent = {
     pause: 'Metti in Pausa',
     label: 'Musica d’Atmosfera',
     nowPlaying: 'In Riproduzione',
-    trackTitle: 'Serenata al Tramonto a Kata Noi'
+    trackTitle: 'Serenata al Tramonto a Nakalay'
   },
   footer: {
-    names: 'Chiara & Ji-Hoon',
-    date: '28 Novembre 2026',
-    location: 'The Secret Cliff Villa • Phuket, Thailandia',
+    names: 'Yeji & Emanuele',
+    date: '3 Gennaio 2027',
+    location: 'Thavorn Beach Village Resort • Phuket, Thailandia',
     quote: '“Amare non significa guardarsi l’un l’altro, ma guardare insieme nella stessa direzione.”',
     loveNote: 'Creato con amore ed entusiasmo infinito per i nostri cari invitati.',
     backToTop: 'Torna all’Inizio',
-    copyright: '© 2026 Matrimonio di Chiara & Ji-Hoon. Tutti i diritti riservati.'
+    copyright: '© 2026 Matrimonio di Yeji & Emanuele. Tutti i diritti riservati.'
   }
 };

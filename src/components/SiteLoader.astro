@@ -1,0 +1,56 @@
+---
+import { WEDDING_CONFIG } from '../data/wedding-data';
+
+const { couple } = WEDDING_CONFIG;
+---
+
+<div
+  id="site-loader"
+  class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-charcoal transition-opacity duration-700"
+  aria-hidden="true"
+>
+  <p class="font-script text-4xl text-gold-light opacity-0 transition-opacity duration-700 sm:text-5xl">
+    {couple.partner1.split(' ')[0]} &amp; {couple.partner2.split(' ')[0]}
+  </p>
+  <span class="h-9 w-9 animate-spin rounded-full border border-gold/25 border-t-gold"></span>
+</div>
+
+<script>
+  const loader = document.getElementById('site-loader');
+  if (loader) {
+    const docEl = document.documentElement;
+    docEl.style.overflow = 'hidden';
+
+    // Always show the loader for at least 1s, even if content is ready sooner.
+    const startedAt = Date.now();
+    let done = false;
+    const hide = () => {
+      if (done) return;
+      done = true;
+      const remaining = Math.max(0, 1000 - (Date.now() - startedAt));
+      window.setTimeout(() => {
+        docEl.style.overflow = '';
+        loader.classList.add('pointer-events-none', 'opacity-0');
+        window.setTimeout(() => loader.remove(), 750);
+      }, remaining);
+    };
+
+    // Fade the tagline in only after fonts have loaded, so no fallback is ever painted.
+    const tagline = loader.querySelector('p');
+    document.fonts.ready.then(() => tagline?.classList.add('opacity-100'));
+
+    // Ready when the hero video can play through (or is already playable) AND fonts are settled.
+    const videoReady = new Promise<void>((resolve) => {
+      const video = document.querySelector<HTMLVideoElement>('video[data-hero-bg]');
+      if (!video || video.readyState >= 3) {
+        resolve();
+      } else {
+        video.addEventListener('canplaythrough', () => resolve(), { once: true });
+      }
+    });
+    Promise.all([videoReady, document.fonts.ready]).then(() => hide());
+
+    // Safety net: never trap visitors if the video stalls or errors.
+    window.setTimeout(hide, 10000);
+  }
+</script>

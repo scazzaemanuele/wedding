@@ -2,6 +2,7 @@
 import type { I18nContent } from '../data/types';
 import { WEDDING_CONFIG } from '../data/wedding-data';
 import Ornament from './Ornament.astro';
+import videoUrl from '../assets/videos/scazzaemanuele_and_Yeji_the.mp4?url';
 
 interface Props {
   hero: I18nContent['hero'];
@@ -13,13 +14,18 @@ const { couple } = WEDDING_CONFIG;
 
 <section id="home" data-hero class="relative h-svh min-h-[580px] overflow-hidden">
   <div class="absolute inset-0 overflow-hidden">
-    <img
+    <video
       data-hero-bg
-      src="/images/hero.jpg"
-      alt=""
+      src={videoUrl}
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="/images/hero.jpg"
       class="absolute inset-x-0 -top-[15%] h-[130%] w-full object-cover"
       fetchpriority="high"
-    />
+    ></video>
     <div class="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/70"></div>
   </div>
 

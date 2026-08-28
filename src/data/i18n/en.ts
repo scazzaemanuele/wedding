@@ -2,9 +2,9 @@ import type { I18nContent } from '../types';
 
 export const enContent: I18nContent = {
   meta: {
-    title: 'Chiara & Ji-Hoon — Wedding Invitation | November 28, 2026 | Phuket, Thailand',
-    description: 'We joyfully invite you to celebrate the wedding of Chiara and Ji-Hoon in Phuket, Thailand. View itinerary, travel guides, RSVP, and details.',
-    ogImageAlt: 'Chiara & Ji-Hoon Wedding Celebration in Phuket'
+    title: 'Yeji & Emanuele — Wedding Invitation | January 3, 2027 | Phuket, Thailand',
+    description: 'We joyfully invite you to celebrate the wedding of Yeji and Emanuele in Phuket, Thailand. View itinerary, travel guides, RSVP, and details.',
+    ogImageAlt: 'Yeji & Emanuele Wedding Celebration in Phuket'
   },
   nav: {
     story: 'Our Story',
@@ -19,11 +19,11 @@ export const enContent: I18nContent = {
   },
   hero: {
     eyebrow: 'Save the Date & Wedding Invitation',
-    names: 'Chiara & Ji-Hoon',
+    names: 'Yeji & Emanuele',
     and: '&',
     tagline: 'Two Souls, Three Cultures, One Eternal Voyage',
-    date: 'Saturday, November 28, 2026',
-    location: 'The Secret Cliff Villa • Phuket, Thailand',
+        date: 'Sunday, January 3, 2027',
+    location: 'Thavorn Beach Village Resort • Phuket, Thailand',
     ctaRsvp: 'Confirm Attendance',
     ctaDetails: 'Explore Celebration',
     scrollPrompt: 'Scroll to Discover'
@@ -38,12 +38,12 @@ export const enContent: I18nContent = {
       'To celebrate this milestone, we could think of no better place than the enchanted shores of Phuket, Thailand — a breathtaking sanctuary bridging our worlds where turquoise waters meet lush tropical tranquility.',
     letterParagraph3:
       'We would be honored beyond words to have you stand beside us as we exchange our vows, honor traditional blessings, and dance beneath the starlit Andaman sky.',
-    signature: 'With all our love, Chiara & Ji-Hoon',
+    signature: 'With all our love, Yeji & Emanuele',
     ceremonyNotice: 'Please kindly respond by September 30, 2026'
   },
   countdown: {
     title: 'Counting Down To Our Forever',
-    subtitle: 'The countdown to November 28, 2026 at The Secret Cliff Estate',
+    subtitle: 'The countdown to January 3, 2027 at Thavorn Beach Village',
     days: 'Days',
     hours: 'Hours',
     minutes: 'Minutes',
@@ -76,13 +76,13 @@ export const enContent: I18nContent = {
         title: 'The Sunset Cliff Proposal',
         location: 'Phuket, Thailand',
         description:
-          'On a cliff overlooking the Andaman Sea, surrounded by flickering lanterns and blooming jasmine, Ji-Hoon asked the question that changed our lives forever. Chiara said yes with happy tears.',
+          'On a cliff overlooking the Andaman Sea, surrounded by flickering lanterns and blooming jasmine, Emanuele asked the question that changed our lives forever. Yeji said yes with happy tears.',
         image: '/images/proposal.jpg'
       },
       {
-        year: '2026',
+        year: '2027',
         title: 'Our Next Great Adventure',
-        location: 'Kata Noi Beach, Phuket',
+        location: 'Nakalay Beach, Phuket',
         description:
           'Now we bring together our families from Italy, Korea, and all over the world to unite our heritage and begin the next chapter of our story.',
         image: '/images/hero.jpg'
@@ -94,12 +94,12 @@ export const enContent: I18nContent = {
     title: 'Schedule of Events',
     subtitle: 'Three days of festivities, cultural traditions, and seaside celebration',
     addToCalendar: 'Add to Calendar',
-    calendarSummary: 'Chiara & Ji-Hoon Wedding Weekend',
-    calendarDesc: 'Join Chiara and Ji-Hoon in celebrating their wedding in Phuket, Thailand.',
+    calendarSummary: 'Yeji & Emanuele Wedding Weekend',
+    calendarDesc: 'Join Yeji and Emanuele in celebrating their wedding in Phuket, Thailand.',
     days: [
       {
         dayNumber: 'Day 01',
-        date: 'Friday, November 27, 2026',
+        date: 'Saturday, January 2, 2027',
         dayTitle: 'Welcome Sunset Cocktails & Feast',
         events: [
           {
@@ -107,7 +107,7 @@ export const enContent: I18nContent = {
             title: 'Seaside Welcome Reception & Thai Feast',
             location: 'The Oceanfront Sunset Deck',
             description:
-              'Kick off the wedding weekend with handcrafted tropical cocktails, Italian spritzes, fresh seafood BBQ, and live acoustic lounge music as the sun sets over Kata Noi.',
+              'Kick off the wedding weekend with handcrafted tropical cocktails, Italian spritzes, fresh seafood BBQ, and live acoustic lounge music as the sun sets over Nakalay Bay.',
             dressCode: 'Resort Chic / Tropical Elegance (Light linens & breezy dresses)',
             icon: 'cocktail'
           }
@@ -115,7 +115,7 @@ export const enContent: I18nContent = {
       },
       {
         dayNumber: 'Day 02',
-        date: 'Saturday, November 28, 2026',
+    date: 'Sunday, January 3, 2027',
         dayTitle: 'The Wedding Day: Blessings & Celebration',
         events: [
           {
@@ -130,9 +130,9 @@ export const enContent: I18nContent = {
           {
             time: '15:30 – 16:30',
             title: 'Oceanfront Vow Exchange & Ring Ceremony',
-            location: 'The Cliffside Infinity Lawn',
+            location: 'The Amor Pier, Thavorn Private Beach',
             description:
-              'Witness Chiara and Ji-Hoon exchange personal vows and rings with panoramic ocean views, accompanied by string quartet melodies.',
+              'Witness Yeji and Emanuele exchange personal vows and rings with panoramic ocean views, accompanied by string quartet melodies.',
             dressCode: 'Formal Tropical Black Tie',
             icon: 'ring'
           },
@@ -164,7 +164,7 @@ export const enContent: I18nContent = {
       },
       {
         dayNumber: 'Day 03',
-        date: 'Sunday, November 29, 2026',
+        date: 'Monday, January 4, 2027',
         dayTitle: 'Farewell Recovery Brunch',
         events: [
           {
@@ -181,23 +181,23 @@ export const enContent: I18nContent = {
     ]
   },
   venue: {
-    eyebrow: 'Destination Sanctuary',
+    eyebrow: 'Beachfront Paradise',
     title: 'The Venue & Travel',
-    subtitle: 'Where tropical cliffs meet the turquoise waters of the Andaman Sea',
-    resortName: 'The Secret Cliff Villa & Sanctuary Estate',
-    resortSubtitle: 'Kata Noi Beach • Phuket, Thailand',
-    address: '88/12 Kata-Sai Yuan Road, Karon, Mueang Phuket District, Phuket 83100',
+    subtitle: 'Where the private sands of Nakalay Bay meet the turquoise waters of the Andaman Sea',
+    resortName: 'Thavorn Beach Village Resort',
+    resortSubtitle: 'Nakalay Beach • Phuket, Thailand',
+    address: '6/2 Moo 6 Kamala, Kathu, Phuket 83150',
     viewMap: 'Open in Google Maps',
-    aboutTitle: 'About The Sanctuary',
+    aboutTitle: 'About the Resort',
     aboutDesc:
-      'Perched majestically atop private sea-cliffs between Karon and Kata Noi beaches, our venue offers panoramic vistas of the Andaman Sea, cascading infinity pools, lush botanical gardens, and total serenity away from city hustle.',
-    villaHighlightsTitle: 'Sanctuary Amenities',
+      'Set on the private shores of Nakalay Bay between Kamala and Patong, our beachfront resort offers its own secluded beach, one of Thailand’s largest tropical lagoon pools, lush botanical gardens, and total serenity away from city hustle.',
+    villaHighlightsTitle: 'Resort Amenities',
     highlights: [
-      'Private cliffside oceanfront access',
+      'Private beach on Nakalay Bay',
       'Panoramic sunset views over the Andaman Sea',
-      'Dual multi-tiered infinity edge pools',
+      'One of Thailand’s largest tropical lagoon pools',
       'Full-service luxury spa & wellness pavilion',
-      'Complimentary golf cart shuttle within estate grounds'
+      'Complimentary shuttle to Kamala & Patong beaches'
     ],
     travelCards: {
       flightTitle: 'Air Travel to Phuket (HKT)',
@@ -205,19 +205,19 @@ export const enContent: I18nContent = {
         'Fly into Phuket International Airport (HKT). Non-stop and one-stop flights connect easily from Rome (FCO), Milan (MXP), Seoul (ICN), Bangkok (BKK), and Singapore (SIN).',
       transferTitle: 'Airport Transfers & Shuttle',
       transferDesc:
-        'The venue is approximately 45–55 minutes by car from HKT Airport. We are organizing scheduled private shuttle vans for our guests on Nov 27 & Nov 28.',
+        'The venue is approximately 40–50 minutes by car from HKT Airport. We are organizing scheduled private shuttle vans for our guests on Jan 2 & Jan 3.',
       visaTitle: 'Passport & Visa Requirements',
       visaDesc:
         'Passports must be valid for at least 6 months from entry date. Italian, Korean, and EU/US passport holders enjoy visa-free tourist entry for up to 60 days.',
-      weatherTitle: 'Tropical November Climate',
+      weatherTitle: 'Tropical January Climate',
       weatherDesc:
-        'Late November marks the beginning of Phuket’s sunny dry season. Expect pleasant temperatures around 28°C–31°C (82°F–88°F) with balmy sea breezes in the evening.'
+        'Early January falls in the heart of Phuket’s sunny dry season. Expect pleasant temperatures around 28°C–31°C (82°F–88°F) with balmy sea breezes in the evening.'
     },
     hotelBooking: {
       title: 'Guest Accommodation & Partner Villas',
       desc: 'We have reserved a block of luxury oceanfront suites and pool villas at preferential rates for our wedding guests.',
       codeLabel: 'Group Booking Code:',
-      code: 'CHIARAJIHOON2026',
+      code: 'YEJIEMANUELE2026',
       discountText: '25% discount on 3+ night bookings including daily champagne breakfast & spa credits.',
       bookButton: 'Book With Discount Code'
     }
@@ -241,7 +241,7 @@ export const enContent: I18nContent = {
     ],
     tipsTitle: 'Important Style Notes',
     tips: [
-      'The ceremony takes place on manicured lawn terraces and wooden decks. Block heels, elegant wedges, or flat dress shoes are recommended over thin stilettos.',
+      'The ceremony takes place on the Amor Pier by the resort’s private beach. Block heels, elegant wedges, or flat dress shoes are recommended over thin stilettos.',
       'Evenings are warm and breezy; light breathable fabrics like silk, chiffon, linen, and lightweight wool blends will keep you comfortable.',
       'We kindly request guests to avoid stark white, bright neon colors, and casual beachwear for the Saturday main ceremony.'
     ]
@@ -252,7 +252,7 @@ export const enContent: I18nContent = {
     subtitle: 'A glimpse into our milestones, engagement, and wedding sanctuary',
     filterAll: 'All Photos',
     filterStory: 'Our Story',
-    filterVenue: 'Sanctuary',
+    filterVenue: 'The Resort',
     filterCeremony: 'Blessings',
     filterReception: 'Celebration',
     filterDetails: 'Details',
@@ -262,14 +262,14 @@ export const enContent: I18nContent = {
         title: 'Golden Hour Vows',
         category: 'ceremony',
         src: '/images/hero.jpg',
-        alt: 'Chiara and Ji-Hoon under floral arch overlooking ocean'
+        alt: 'Yeji and Emanuele under floral arch overlooking ocean'
       },
       {
         id: 'venue',
-        title: 'The Cliffside Sanctuary',
+        title: 'The Beachfront Resort',
         category: 'venue',
         src: '/images/venue.jpg',
-        alt: 'Cliffside resort villa with infinity pool at dusk'
+        alt: 'Beachfront resort with lagoon pool at dusk'
       },
       {
         id: 'water-blessing',
@@ -297,7 +297,7 @@ export const enContent: I18nContent = {
         title: 'The Sunset Cliff Proposal',
         category: 'story',
         src: '/images/proposal.jpg',
-        alt: 'Ji-Hoon proposing to Chiara on cliffside with lanterns'
+        alt: 'Emanuele proposing to Yeji on cliffside with lanterns'
       },
       {
         id: 'rings',
@@ -328,7 +328,7 @@ export const enContent: I18nContent = {
       {
         question: 'Are plus-ones and children invited?',
         answer:
-          'Due to intimate cliffside venue capacities, we can only accommodate guests specifically named on your formal invitation. If you have any special family circumstances or nursing infants, please reach out directly to us!'
+          'Due to intimate beachfront venue capacities, we can only accommodate guests specifically named on your formal invitation. If you have any special family circumstances or nursing infants, please reach out directly to us!'
       },
       {
         question: 'Will transportation be provided to the venue?',
@@ -369,9 +369,9 @@ export const enContent: I18nContent = {
       attendingNo: 'Regretfully Decline (Celebrating in spirit)',
       guestCount: 'Total Number of Attending Guests',
       eventsAttending: 'Which events will you attend?',
-      eventWelcome: 'Welcome Sunset Cocktails (Fri, Nov 27)',
-      eventMain: 'Main Wedding & Reception Party (Sat, Nov 28)',
-      eventBrunch: 'Farewell Recovery Pool Brunch (Sun, Nov 29)',
+      eventWelcome: 'Welcome Sunset Cocktails (Sat, Jan 2)',
+      eventMain: 'Main Wedding & Reception Party (Sun, Jan 3)',
+      eventBrunch: 'Farewell Recovery Pool Brunch (Mon, Jan 4)',
       dietary: 'Dietary Restrictions & Allergies',
       dietaryPlaceholder: 'e.g. Vegetarian, Gluten-Free, Shellfish Allergy, None',
       dietaryOptions: ['None / No Restrictions', 'Vegetarian', 'Vegan', 'Gluten-Free', 'Halal', 'Nut Allergy', 'Seafood Allergy'],
@@ -381,7 +381,7 @@ export const enContent: I18nContent = {
       songRequest: 'A song that will get you on the dancefloor',
       songRequestPlaceholder: 'Artist & Song Title',
       warmMessage: 'A Warm Message / Blessing for the Couple',
-      warmMessagePlaceholder: 'Leave a note for Chiara & Ji-Hoon...',
+      warmMessagePlaceholder: 'Leave a note for Yeji & Emanuele...',
       submitBtn: 'Send RSVP Confirmation',
       submittingBtn: 'Registering Your Response...',
       successTitle: 'Thank You for Your RSVP!',
@@ -396,7 +396,7 @@ export const enContent: I18nContent = {
   wishes: {
     eyebrow: 'Digital Guestbook',
     title: 'Love Letters & Wishes',
-    subtitle: 'Leave a heartfelt blessing for Chiara & Ji-Hoon to cherish forever',
+    subtitle: 'Leave a heartfelt blessing for Yeji & Emanuele to cherish forever',
     leaveWishTitle: 'Sign the Guestbook',
     namePlaceholder: 'Your Name(s)',
     locationPlaceholder: 'Your City / Country (e.g. Rome, Italy or Seoul, Korea)',
@@ -411,7 +411,7 @@ export const enContent: I18nContent = {
         author: 'Sofia & Marco',
         location: 'Florence, Italy',
         message:
-          'Carissimi Chiara e Ji-Hoon, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
+          'Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
         stamp: '🥂',
         date: 'August 2026'
       },
@@ -420,7 +420,7 @@ export const enContent: I18nContent = {
         author: 'Min-Jun & Yu-Jin',
         location: 'Seoul, South Korea',
         message:
-          '지훈아, 키아라! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
+          '예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
         stamp: '💐',
         date: 'August 2026'
       },
@@ -429,7 +429,7 @@ export const enContent: I18nContent = {
         author: 'Elena & Lucas',
         location: 'Bangkok, Thailand',
         message:
-          'Sawaddee krub! We are counting down the days until November. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
+          'Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
         stamp: '✨',
         date: 'August 2026'
       }
@@ -440,15 +440,15 @@ export const enContent: I18nContent = {
     pause: 'Pause Melody',
     label: 'Ambient Music',
     nowPlaying: 'Now Playing',
-    trackTitle: 'Sunset Serenades in Kata Noi (Acoustic Melodies)'
+    trackTitle: 'Sunset Serenades in Nakalay Bay (Acoustic Melodies)'
   },
   footer: {
-    names: 'Chiara & Ji-Hoon',
-    date: 'November 28, 2026',
-    location: 'The Secret Cliff Villa • Phuket, Thailand',
+    names: 'Yeji & Emanuele',
+    date: 'January 3, 2027',
+    location: 'Thavorn Beach Village Resort • Phuket, Thailand',
     quote: '“Love does not consist of gazing at each other, but in looking outward together in the same direction.”',
     loveNote: 'Made with endless love & excitement for our beloved guests.',
     backToTop: 'Back to Top',
-    copyright: '© 2026 Chiara & Ji-Hoon Wedding Celebration. All Rights Reserved.'
+    copyright: '© 2026 Yeji & Emanuele Wedding Celebration. All Rights Reserved.'
   }
 };

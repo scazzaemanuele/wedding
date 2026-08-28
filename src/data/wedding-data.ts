@@ -1,37 +1,37 @@
 export const WEDDING_CONFIG = {
   couple: {
-    partner1: 'Chiara',
-    partner2: 'Ji-Hoon',
-    monogram: 'C & J',
-    hashtag: '#ChiaraJiHoonInPhuket'
+    partner1: 'Yeji',
+    partner2: 'Emanuele',
+    monogram: 'Y & E',
+    hashtag: '#YejiEmanueleInPhuket'
   },
   date: {
-    weddingDateISO: '2026-11-28T15:30:00+07:00', // Nov 28, 2026 15:30 Indochina Time (UTC+7)
-    welcomeDateISO: '2026-11-27T18:00:00+07:00',
-    brunchDateISO: '2026-11-29T11:00:00+07:00',
+    weddingDateISO: '2027-01-03T15:30:00+07:00', // Jan 3, 2027 15:30 Indochina Time (UTC+7)
+    welcomeDateISO: '2027-01-02T18:00:00+07:00',
+    brunchDateISO: '2027-01-04T11:00:00+07:00',
     rsvpDeadlineISO: '2026-09-30T23:59:59+07:00',
-    displayDate: 'November 28, 2026'
+    displayDate: 'January 3, 2027'
   },
   location: {
-    venueName: 'The Secret Cliff Villa & Estate',
-    subLocation: 'Kata Noi Beach, Phuket, Thailand',
-    fullAddress: '88/12 Kata-Sai Yuan Road, Karon, Mueang Phuket District, Phuket 83100, Thailand',
+    venueName: 'Thavorn Beach Village Resort',
+    subLocation: 'Nakalay Beach, Phuket, Thailand',
+    fullAddress: '6/2 Moo 6 Kamala, Kathu, Phuket 83150, Thailand',
     coordinates: {
-      lat: 7.8015,
-      lng: 98.2985
+      lat: 7.9555,
+      lng: 98.2494
     },
-    googleMapsUrl: 'https://maps.google.com/?q=Kata+Noi+Phuket+Thailand',
+    googleMapsUrl: 'https://maps.google.com/?q=Thavorn+Beach+Village+Resort+Phuket',
     airportCode: 'HKT',
-    airportName: 'Phuket International Airport (45 mins by car)'
+    airportName: 'Phuket International Airport (40 mins by car)'
   },
   resortBooking: {
-    partnerHotel: 'The Secret Cliff Sanctuary Resort',
-    bookingCode: 'CHIARAJIHOON2026',
+    partnerHotel: 'Thavorn Beach Village Resort',
+    bookingCode: 'YEJIEMANUELE2026',
     discountPercentage: '25% Special Guest Discount',
-    bookingLink: 'https://example.com/secret-cliff-booking'
+    bookingLink: 'https://example.com/thavorn-booking'
   },
   contact: {
-    email: 'rsvp@chiara-jihoon.wedding',
+    email: 'rsvp@yeji-emanuele.wedding',
     phone: '+66 76 123 4567'
   }
 };

@@ -15,6 +15,7 @@ import WishesSection from '../../components/WishesSection.astro';
 import RsvpSection from '../../components/RsvpSection.astro';
 import Footer from '../../components/Footer.astro';
 import ScrollAnimations from '../../components/ScrollAnimations.astro';
+import SiteLoader from '../../components/SiteLoader.astro';
 
 export function getStaticPaths() {
   return supportedLocales.map((loc) => ({
@@ -46,5 +47,6 @@ const content = getI18n(currentLocale);
 
   <Footer content={content.footer} />
 
+  <SiteLoader />
   <ScrollAnimations />
 </Base>

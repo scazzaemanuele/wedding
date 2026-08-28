@@ -57,18 +57,19 @@ export const RsvpForm: React.FC<RsvpFormProps> = ({ content }) => {
   };
 
   const generateIcsCalendarFile = () => {
+    const toIcsDate = (iso: string) => iso.replace(/[-:]/g, '').split('+')[0];
     const event = {
-      title: 'Chiara & Ji-Hoon Wedding Celebration',
-      description: 'Wedding celebration of Chiara & Ji-Hoon in Phuket, Thailand.',
+      title: 'Yeji & Emanuele Wedding Celebration',
+      description: 'Wedding celebration of Yeji & Emanuele in Phuket, Thailand.',
       location: WEDDING_CONFIG.location.fullAddress,
-      start: '20261127T180000',
-      end: '20261129T160000'
+      start: toIcsDate(WEDDING_CONFIG.date.welcomeDateISO),
+      end: `${toIcsDate(WEDDING_CONFIG.date.brunchDateISO).slice(0, 8)}T160000`
     };
 
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Chiara JiHoon Wedding//EN',
+      'PRODID:-//Yeji Emanuele Wedding//EN',
       'CALSCALE:GREGORIAN',
       'BEGIN:VEVENT',
       `DTSTART:${event.start}`,
@@ -84,7 +85,7 @@ export const RsvpForm: React.FC<RsvpFormProps> = ({ content }) => {
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
     const link = document.createElement('a');
     link.href = window.URL.createObjectURL(blob);
-    link.setAttribute('download', 'chiara-jihoon-wedding.ics');
+    link.setAttribute('download', 'yeji-emanuele-wedding.ics');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

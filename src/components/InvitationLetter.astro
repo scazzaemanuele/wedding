@@ -1,11 +1,13 @@
 ---
 import type { I18nContent } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
 
 interface Props {
   content: I18nContent['invitation'];
 }
 
 const { content } = Astro.props;
+const { monogram } = WEDDING_CONFIG.couple;
 ---
 
 <section id="invitation" class="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -19,7 +21,7 @@ const { content } = Astro.props;
       {/* Wax Seal / Monogram Emblem */}
       <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto -mt-16 sm:-mt-24 mb-6 rounded-full bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 p-1 shadow-xl flex items-center justify-center">
         <div class="w-full h-full rounded-full bg-emerald-950 flex items-center justify-center border border-gold-300">
-          <span class="font-script text-2xl sm:text-3xl text-gold-200">C & J</span>
+          <span class="font-script text-2xl sm:text-3xl text-gold-200">{monogram}</span>
         </div>
       </div>
 
