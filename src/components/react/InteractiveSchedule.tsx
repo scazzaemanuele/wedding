@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import type { I18nContent, ScheduleDay, ScheduleEvent } from '../../data/types';
+import React from 'react';
+import type { I18nContent, ScheduleEvent } from '../../data/types';
 import { WEDDING_CONFIG } from '../../data/wedding-data';
 
 interface InteractiveScheduleProps {
@@ -7,9 +7,7 @@ interface InteractiveScheduleProps {
 }
 
 export const InteractiveSchedule: React.FC<InteractiveScheduleProps> = ({ content }) => {
-  const [activeDayIndex, setActiveDayIndex] = useState(0);
-
-  const activeDay: ScheduleDay = content.days[activeDayIndex] || content.days[0];
+  const day = content.days[0];
 
   const getIcon = (icon: ScheduleEvent['icon']) => {
     switch (icon) {
@@ -31,15 +29,14 @@ export const InteractiveSchedule: React.FC<InteractiveScheduleProps> = ({ conten
   };
 
   const handleDownloadIcs = () => {
-    const toIcsDate = (iso: string) => iso.replace(/[-:]/g, '').split('+')[0];
     const icsContent = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
       'PRODID:-//Yeji Emanuele Wedding//EN',
       'CALSCALE:GREGORIAN',
       'BEGIN:VEVENT',
-      `DTSTART:${toIcsDate(WEDDING_CONFIG.date.welcomeDateISO)}`,
-      `DTEND:${toIcsDate(WEDDING_CONFIG.date.brunchDateISO).slice(0, 8)}T160000`,
+      'DTSTART:20270103T160000',
+      'DTEND:20270103T203000',
       `SUMMARY:${content.calendarSummary}`,
       `DESCRIPTION:${content.calendarDesc}`,
       `LOCATION:${WEDDING_CONFIG.location.fullAddress}`,
@@ -59,42 +56,14 @@ export const InteractiveSchedule: React.FC<InteractiveScheduleProps> = ({ conten
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      {/* Day Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-8">
-        {content.days.map((day, idx) => {
-          const isActive = idx === activeDayIndex;
-          return (
-            <button
-              key={idx}
-              type="button"
-              onClick={() => setActiveDayIndex(idx)}
-              className={`px-4 sm:px-6 py-3 rounded-2xl text-xs sm:text-sm font-serif transition-all duration-300 flex flex-col items-center gap-0.5 ${
-                isActive
-                  ? 'bg-emerald-900 text-gold-100 shadow-lg shadow-emerald-950/15 scale-105 border border-gold-400'
-                  : 'bg-white/80 hover:bg-white text-stone-700 border border-gold-200 hover:border-gold-300'
-              }`}
-            >
-              <span className="font-sans font-bold text-[10px] sm:text-xs uppercase tracking-widest text-gold-400">
-                {day.dayNumber}
-              </span>
-              <span className="font-semibold text-xs sm:text-base">
-                {day.dayTitle}
-              </span>
-              <span className="text-[11px] opacity-80 font-sans">{day.date}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Active Day Timeline Container */}
       <div className="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-white/90 backdrop-blur-md border border-gold-200/90 shadow-xl">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-gold-100 pb-5 mb-8 gap-4">
           <div>
             <span className="text-xs font-sans font-bold uppercase tracking-widest text-gold-700 block">
-              {activeDay.dayNumber} • {activeDay.date}
+              {day.date}
             </span>
             <h3 className="text-2xl sm:text-3xl font-serif font-bold text-emerald-950 mt-1">
-              {activeDay.dayTitle}
+              {day.dayTitle}
             </h3>
           </div>
 
@@ -112,7 +81,7 @@ export const InteractiveSchedule: React.FC<InteractiveScheduleProps> = ({ conten
 
         {/* Timeline Events List */}
         <div className="relative pl-6 sm:pl-10 space-y-8 before:absolute before:left-2 sm:before:left-3.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-gradient-to-b before:from-gold-400 before:via-gold-300 before:to-emerald-800/30">
-          {activeDay.events.map((event, idx) => (
+          {day.events.map((event, idx) => (
             <div key={idx} className="relative group">
               {/* Timeline Node Icon Pin */}
               <div className="absolute -left-6 sm:-left-10 top-0.5 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white border-2 border-gold-400 text-xs sm:text-sm flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-emerald-700 transition-all duration-200">

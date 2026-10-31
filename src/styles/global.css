@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Short portrait phones (e.g. iPhone SE): tighter hero spacing so text clears the photo. */
+@custom-variant short (@media (orientation: portrait) and (max-height: 720px));
+
 @theme {
   /* Opencode palette */
   --color-ivory: #faf6ef;

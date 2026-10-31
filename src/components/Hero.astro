@@ -2,7 +2,8 @@
 import type { I18nContent } from '../data/types';
 import { WEDDING_CONFIG } from '../data/wedding-data';
 import Ornament from './Ornament.astro';
-import videoUrl from '../assets/videos/scazzaemanuele_and_Yeji_the.mp4?url';
+import { Image } from 'astro:assets';
+import heroImage from '../assets/hero.jpeg';
 
 interface Props {
   hero: I18nContent['hero'];
@@ -13,51 +14,46 @@ const { couple } = WEDDING_CONFIG;
 ---
 
 <section id="home" data-hero class="relative h-svh min-h-[580px] overflow-hidden">
-  <div class="absolute inset-0 overflow-hidden">
-    <video
+  <!-- Portrait screens: show the whole photo at full width, fading its top edge into the sky colour. -->
+  <div class="absolute inset-0 overflow-hidden portrait:bg-[#4094e0]">
+    <Image
       data-hero-bg
-      src={videoUrl}
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-      poster="/images/hero.jpg"
-      class="absolute inset-x-0 -top-[15%] h-[130%] w-full object-cover"
+      src={heroImage}
+      alt=""
+      widths={[640, 1024, 1600, 2400]}
+      sizes="100vw"
+      loading="eager"
       fetchpriority="high"
-    ></video>
+      class="absolute inset-x-0 w-full portrait:-bottom-[13.34vw] portrait:h-auto portrait:[mask-image:linear-gradient(to_bottom,transparent,black_20%)] landscape:-top-[15%] landscape:h-[130%] landscape:object-cover"
+    />
     <div class="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/70"></div>
   </div>
 
-  <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-ivory">
+  <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 portrait:justify-start portrait:pt-24 short:pt-20 text-center text-ivory">
     <p data-hero-item class="text-[11px] font-light tracking-[0.45em] text-gold-light uppercase sm:text-sm">
       {hero.eyebrow}
     </p>
 
-    <h1 class="mt-6 font-display leading-none">
-      <span data-hero-item class="block text-5xl font-medium sm:text-7xl lg:text-8xl">
+    <h1 class="mt-6 short:mt-4 font-display leading-none">
+      <span data-hero-item class="block text-5xl short:text-4xl font-medium sm:text-7xl lg:text-8xl">
         {couple.partner1.split(' ')[0]}
       </span>
-      <span data-hero-item class="my-2 block font-script text-4xl text-gold-light sm:my-3 sm:text-6xl">
+      <span data-hero-item class="mt-2 -mb-3 block font-script text-4xl text-gold-light sm:mt-3 sm:-mb-5 sm:text-6xl">
         &amp;
       </span>
-      <span data-hero-item class="block text-5xl font-medium sm:text-7xl lg:text-8xl">
+      <span data-hero-item class="block text-5xl short:text-4xl font-medium sm:text-7xl lg:text-8xl">
         {couple.partner2.split(' ')[0]}
       </span>
     </h1>
 
-    <Ornament data-hero-item class="mt-8" />
+    <Ornament data-hero-item class="mt-8 short:mt-4" />
 
-    <p data-hero-item class="mt-8 text-base font-light tracking-[0.2em] uppercase sm:text-lg">
+    <p data-hero-item class="mt-8 short:mt-4 text-base font-light tracking-[0.2em] uppercase sm:text-lg">
       {hero.date}
     </p>
     <p data-hero-item class="mt-2 text-sm font-light tracking-[0.2em] text-ivory/80 uppercase">
       {hero.location}
     </p>
-
-    <a data-hero-item href="#rsvp" class="btn-gold mt-10">
-      {hero.ctaRsvp}
-    </a>
   </div>
 
   <div data-hero-item class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-ivory/70">

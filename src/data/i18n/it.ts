@@ -24,7 +24,6 @@ export const itContent: I18nContent = {
     tagline: 'Due Anime, Tre Culture, Un Eterno Viaggio Insieme',
         date: 'Domenica, 3 Gennaio 2027',
     location: 'Thavorn Beach Village Resort • Phuket, Thailandia',
-    ctaRsvp: 'Conferma Presenza',
     ctaDetails: 'Scopri i Dettagli',
     scrollPrompt: 'Scorri per Scoprire'
   },
@@ -33,7 +32,7 @@ export const itContent: I18nContent = {
     title: 'Con il Cuore Pieno di Gioia',
     greeting: 'Carissima Famiglia e Amici,',
     letterParagraph1:
-      'Da un incontro fortuito sotto le luci calde del tramonto a Roma fino alle avventure gastronomiche notturne a Seoul, il nostro cammino ha attraversato continenti e mari. Lungo la strada, il vostro affetto e la vostra amicizia sono stati la nostra bussola costante.',
+      'È tutto cominciato con un incontro per caso sulle spiagge di Boracay, nelle Filippine — un tramonto dorato, la brezza del mare e una chiacchierata che non volevamo finire. Da lì ci hanno portati tra continenti, fino alle avventure notturne a Seoul e oltre. In tutto questo, il vostro affetto e la vostra amicizia sono stati il nostro regalo più grande.',
     letterParagraph2:
       'Per celebrare questo grande capitolo, non potevamo immaginare un luogo più magico delle spiagge incantate di Phuket, in Thailandia: un rifugio mozzafiato che unisce i nostri mondi, dove acque turchesi abbracciano la quiete tropicale.',
     letterParagraph3:
@@ -90,91 +89,32 @@ export const itContent: I18nContent = {
     ]
   },
   schedule: {
-    eyebrow: 'Il Fine Settimana',
+    eyebrow: 'Il Giorno delle Nozze',
     title: 'Programma delle Celebrazioni',
-    subtitle: 'Tre giorni di festa, riti tradizionali e momenti speciali in riva al mare',
+    subtitle: 'Una sera di festa sulla spiaggia della Baia di Nakalay',
     addToCalendar: 'Aggiungi al Calendario',
     calendarSummary: 'Matrimonio di Yeji & Emanuele a Phuket',
     calendarDesc: 'Celebrazione di matrimonio di Yeji e Emanuele a Phuket, Thailandia.',
     days: [
       {
-        dayNumber: 'Giorno 01',
-        date: 'Sabato, 2 Gennaio 2027',
-        dayTitle: 'Cocktail di Benvenuto al Tramonto & Banchetto',
+        date: 'Domenica, 3 Gennaio 2027',
+        dayTitle: 'Il Giorno delle Nozze',
         events: [
           {
-            time: '18:00 – 21:30',
-            title: 'Aperitivo sul Mare & Grigliata Thai',
-            location: 'Terrazza Panoramica Tramonto',
+            time: '16:00 – 18:00',
+            title: 'Cerimonia',
+            location: 'Pontile AMOR',
             description:
-              'Iniziamo il weekend di festa con cocktail tropicali d’autore, spritz italiani, specialità di pesce fresco alla griglia e musica acustica dal vivo al calar del sole sulla Baia di Nakalay.',
-            dressCode: 'Resort Chic / Eleganza Tropicale (Lino leggero ed abiti estivi raffinati)',
-            icon: 'cocktail'
-          }
-        ]
-      },
-      {
-        dayNumber: 'Giorno 02',
-    date: 'Domenica, 3 Gennaio 2027',
-        dayTitle: 'Il Giorno delle Nozze: Benedizioni & Festa',
-        events: [
-          {
-            time: '09:30 – 11:30',
-            title: 'Benedizione Tradizionale dell’Acqua (Rod Nam Sang)',
-            location: 'Padiglione delle Orchidee',
-            description:
-              'Un rito sacro della tradizione thailandese in cui familiari e persone care versano acqua sacra profumata alle erbe e fiori sulle mani degli sposi per augurare prosperità e armonia duratura.',
-            dressCode: 'Formale Elegante o Abito Tradizionale',
-            icon: 'water'
-          },
-          {
-            time: '15:30 – 16:30',
-            title: 'Scambio dei Voti & Cerimonia delle Fedi',
-            location: 'Il Pontile Amor, Spiaggia Privata del Thavorn',
-            description:
-              'La cerimonia all’aperto con vista spettacolare sull’oceano, accompagnata dalle note di un quartetto d’archi, durante la quale Yeji e Emanuele si scambieranno le promesse e le fedi.',
-            dressCode: 'Tropical Black Tie / Abito Formale Scuro',
+              'Yeji e Emanuele si scambieranno voti e fedi sopra il Mare delle Andamane.',
             icon: 'ring'
           },
           {
-            time: '16:45 – 18:00',
-            title: 'Brindisi al Tramonto & Canapés',
-            location: 'Terrazza delle Palme',
+            time: '18:30 – 20:30',
+            title: 'Cena di Ricevimento',
+            location: 'Prato Fronte Mare',
             description:
-              'Champagne d’annata, aperitivi italiani, finger food coreani e fotografie di gruppo con gli sposi nella luce dorata dell’imbrunire.',
-            icon: 'cocktail'
-          },
-          {
-            time: '18:30 – 21:00',
-            title: 'Cena di Gala, Discorsi & Taglio della Torta',
-            location: 'Padiglione Sotto le Stelle',
-            description:
-              'Un raffinato menu degustazione a 5 portate che unisce l’eccellenza culinaria italiana, prelibatezze gourmet coreane e aromi esotici thai.',
+              'Cena e festeggiamenti sul prato affacciato sulla spiaggia.',
             icon: 'dinner'
-          },
-          {
-            time: '21:00 – 01:30',
-            title: 'Lancio delle Lanterne dei Desideri & DJ Party',
-            location: 'Spiaggia & Club Piscina',
-            description:
-              'Lancio delle tradizionali lanterne fluttuanti verso il cielo notturno, seguito da open bar, DJ set internazionale e balli fino a tarda notte.',
-            icon: 'party'
-          }
-        ]
-      },
-      {
-        dayNumber: 'Giorno 03',
-        date: 'Lunedì, 4 Gennaio 2027',
-        dayTitle: 'Brunch di Saluto & Relax a Bordo Piscina',
-        events: [
-          {
-            time: '11:00 – 15:00',
-            title: 'Brunch Rigenerante & Saluti in Piscina',
-            location: 'Lounge Piscina Infinity',
-            description:
-              'Riviviamo i ricordi più belli con smoothie di frutta tropicale fresca, noci di cocco fresche, mimosa, pasta artigianale e bagni rilassanti con vista panoramica.',
-            dressCode: 'Casual da Spiaggia / Resort & Costume',
-            icon: 'brunch'
           }
         ]
       }

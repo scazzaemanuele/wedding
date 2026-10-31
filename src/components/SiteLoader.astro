@@ -39,18 +39,19 @@ const { couple } = WEDDING_CONFIG;
     const tagline = loader.querySelector('p');
     document.fonts.ready.then(() => tagline?.classList.add('opacity-100'));
 
-    // Ready when the hero video can play through (or is already playable) AND fonts are settled.
-    const videoReady = new Promise<void>((resolve) => {
-      const video = document.querySelector<HTMLVideoElement>('video[data-hero-bg]');
-      if (!video || video.readyState >= 3) {
+    // Ready when the hero image has loaded (or failed) AND fonts are settled.
+    const imageReady = new Promise<void>((resolve) => {
+      const image = document.querySelector<HTMLImageElement>('img[data-hero-bg]');
+      if (!image || image.complete) {
         resolve();
       } else {
-        video.addEventListener('canplaythrough', () => resolve(), { once: true });
+        image.addEventListener('load', () => resolve(), { once: true });
+        image.addEventListener('error', () => resolve(), { once: true });
       }
     });
-    Promise.all([videoReady, document.fonts.ready]).then(() => hide());
+    Promise.all([imageReady, document.fonts.ready]).then(() => hide());
 
-    // Safety net: never trap visitors if the video stalls or errors.
+    // Safety net: never trap visitors if the image stalls.
     window.setTimeout(hide, 10000);
   }
 </script>

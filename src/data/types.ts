@@ -18,7 +18,6 @@ export interface ScheduleEvent {
 }
 
 export interface ScheduleDay {
-  dayNumber: string;
   date: string;
   dayTitle: string;
   events: ScheduleEvent[];
@@ -79,7 +78,6 @@ export interface I18nContent {
     tagline: string;
     date: string;
     location: string;
-    ctaRsvp: string;
     ctaDetails: string;
     scrollPrompt: string;
   };
