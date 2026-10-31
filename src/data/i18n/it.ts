@@ -54,14 +54,14 @@ export const itContent: I18nContent = {
     title: 'La Nostra Storia d’Amore',
     subtitle: 'Otto luoghi, una sola storia.',
     milestones: [
-      { date: '2025.05', title: 'Boracay', description: 'Dove tutto è iniziato: un incontro per caso sulla sabbia bianca.' },
-      { date: '2025.08', title: 'Corea', description: 'La nostra prima avventura insieme, tra luci della città e street food.' },
-      { date: '2025.10', title: 'Giappone', description: 'Templi, ramen e lunghe passeggiate mano nella mano.' },
-      { date: '2026.03', title: 'Thailandia', description: 'Di nuovo al mare, sotto caldi tramonti tropicali.' },
-      { date: '2026.04', title: 'Italia', description: 'Famiglia, cene lunghe e la dolce vita.' },
-      { date: '2026.06', title: 'Portogallo', description: 'Brezza atlantica e pastéis de nata.' },
-      { date: '2026.06', title: 'Bali', description: 'Risaie a terrazza, onde e mattine lente.' },
-      { date: '2026.08', title: 'Vietnam', description: 'Vicoli illuminati dalle lanterne e il cammino davanti a noi.' }
+      { date: '2025.05', title: 'Boracay', description: 'Due sconosciuti sulla stessa riva: la marea ci ha fatti incontrare.' },
+      { date: '2025.08', title: 'Corea', description: 'Tra due culture, abbiamo scelto l’uno l’altra per la vita.' },
+      { date: '2025.10', title: 'Giappone', description: 'Le prime valigie fatte insieme, la prima mappa condivisa.' },
+      { date: '2026.03', title: 'Thailandia', description: 'Abbiamo camminato sulla sabbia dove diremo “sì”, immaginando il per sempre.' },
+      { date: '2026.04', title: 'Italia', description: 'Alla tavola della famiglia di Emanuele, una nuova casa ci ha accolti a braccia aperte.' },
+      { date: '2026.06', title: 'Portogallo', description: 'Un paese nuovo per entrambi: scoprirlo, e scoprirci, insieme.' },
+      { date: '2026.06', title: 'Bali', description: 'La vacanza sognata da sempre, finalmente nostra.' },
+      { date: '2026.08', title: 'Vietnam', description: 'E il viaggio continua, un orizzonte alla volta.' }
     ]
   },
   schedule: {

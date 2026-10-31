@@ -54,14 +54,14 @@ export const koContent: I18nContent = {
     title: '우리의 러브 스토리',
     subtitle: '여덟 곳의 여행, 하나의 이야기.',
     milestones: [
-      { date: '2025.05', title: '보라카이', description: '모든 것이 시작된 곳, 하얀 모래 위의 우연한 만남.' },
-      { date: '2025.08', title: '한국', description: '도시의 불빛과 길거리 음식 사이, 함께한 첫 여행.' },
-      { date: '2025.10', title: '일본', description: '사찰과 라멘, 손잡고 걷던 긴 산책.' },
-      { date: '2026.03', title: '태국', description: '따뜻한 열대의 노을 아래, 다시 바다로.' },
-      { date: '2026.04', title: '이탈리아', description: '가족, 긴 저녁 식사, 그리고 라 돌체 비타.' },
-      { date: '2026.06', title: '포르투갈', description: '대서양의 바람과 에그타르트.' },
-      { date: '2026.06', title: '발리', description: '계단식 논과 파도, 느긋한 아침.' },
-      { date: '2026.08', title: '베트남', description: '등불이 밝힌 거리, 그리고 앞으로의 길.' }
+      { date: '2025.05', title: '보라카이', description: '같은 해변 위의 두 낯선 사람, 파도가 우리를 이어 주었어요.' },
+      { date: '2025.08', title: '한국', description: '두 문화 사이에서, 우리는 평생을 함께하기로 했어요.' },
+      { date: '2025.10', title: '일본', description: '처음으로 나란히 싼 여행 가방, 처음으로 함께 펼친 지도.' },
+      { date: '2026.03', title: '태국', description: '‘네’라고 말할 그 모래 위를 걸으며 영원을 그려 보았어요.' },
+      { date: '2026.04', title: '이탈리아', description: '에마누엘레 가족의 식탁에서, 새로운 집이 두 팔 벌려 반겨 주었어요.' },
+      { date: '2026.06', title: '포르투갈', description: '둘 다 처음인 나라에서, 그곳을 그리고 서로를 새롭게 발견했어요.' },
+      { date: '2026.06', title: '발리', description: '늘 꿈꾸던 휴가가 마침내 우리의 것이 되었어요.' },
+      { date: '2026.08', title: '베트남', description: '그리고 우리의 여행은 계속돼요, 새로운 수평선을 향해.' }
     ]
   },
   schedule: {
