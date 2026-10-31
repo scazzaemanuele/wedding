@@ -6,6 +6,10 @@ interface Props {
 }
 
 const { content } = Astro.props;
+
+// Small per-step variations so the timeline doesn't feel uniform.
+const tilts = [-3, 2.5, -1.5, 3, -2.5, 1.5, -3, 2];
+const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'];
 ---
 
 <section id="story" class="py-24 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -24,36 +28,117 @@ const { content } = Astro.props;
       <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4" />
     </div>
 
-    {/* Zigzag timeline: photo + date on one side, text on the other, dot on the centre line */}
-    <ol class="relative mx-auto max-w-3xl space-y-12 sm:space-y-16 before:absolute before:inset-y-0 before:left-1/2 before:w-px before:-translate-x-1/2 before:bg-gold-300/60">
+    {/* Zigzag timeline: polaroid photo on one side, text on the other, dot on the centre line */}
+    <ol data-story-timeline class="relative mx-auto max-w-3xl space-y-12 sm:space-y-16">
+      <span class="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gold-300/40" aria-hidden="true"></span>
+      <span data-story-progress class="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 origin-top bg-gold-500" aria-hidden="true"></span>
+
       {content.milestones.map((item, idx) => {
         const photoLeft = idx % 2 === 0;
+        const year = item.date.slice(0, 4);
+        const newYear = idx === 0 || content.milestones[idx - 1].date.slice(0, 4) !== year;
         return (
-          <li class="relative grid grid-cols-[1fr_auto_1fr] items-center gap-x-5 sm:gap-x-12 gsap-reveal">
-            <div class={`row-start-1 flex flex-col items-center ${photoLeft ? 'col-start-1' : 'col-start-3'}`}>
-              <div class="aspect-square w-full max-w-60 overflow-hidden rounded-lg shadow-md">
-                {item.image ? (
-                  <img src={item.image} alt={item.title} loading="lazy" class="h-full w-full object-cover" />
-                ) : (
-                  <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-gold-200/60 to-stone-200 font-serif text-sm text-stone-500">
-                    {item.title}
+          <>
+            {newYear && (
+              <li data-story-year class="relative flex justify-center">
+                <span class="bg-ivory px-4 py-1 font-display text-2xl tracking-[0.2em] text-gold-700 italic sm:text-3xl">
+                  {year}
+                </span>
+              </li>
+            )}
+            <li data-story-step data-side={photoLeft ? 'left' : 'right'} class="relative grid grid-cols-[1fr_auto_1fr] items-center gap-x-5 sm:gap-x-12">
+              <div data-story-photo class={`row-start-1 flex justify-center ${photoLeft ? 'col-start-1' : 'col-start-3'}`}>
+                <figure
+                  style={`--tilt: ${tilts[idx % tilts.length]}deg`}
+                  class="w-full max-w-56 rotate-(--tilt) bg-white p-2 pb-1 shadow-[0_8px_24px_-8px_rgba(60,40,20,0.35)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.04]"
+                >
+                  <div class={`${aspects[idx % aspects.length]} w-full overflow-hidden`}>
+                    {item.image ? (
+                      <img src={item.image} alt={item.title} loading="lazy" class="h-full w-full object-cover" />
+                    ) : (
+                      <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-gold-200/60 to-stone-200 font-serif text-sm text-stone-500">
+                        {item.title}
+                      </div>
+                    )}
                   </div>
+                  <figcaption class="py-1.5 text-center font-script text-xl text-stone-600 sm:text-2xl">
+                    <time>{item.date}</time>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <span class="relative col-start-2 row-start-1 flex h-3 w-3 items-center justify-center" aria-hidden="true">
+                <span data-story-ring class="absolute inset-0 rounded-full bg-gold-400 opacity-0"></span>
+                <span data-story-dot class="relative h-3 w-3 rounded-full bg-gold-500 ring-4 ring-ivory"></span>
+              </span>
+
+              <div data-story-text class={`row-start-1 text-center ${photoLeft ? 'col-start-3' : 'col-start-1'}`}>
+                <h3 class="font-serif text-lg text-emerald-950 sm:text-2xl">{item.title}</h3>
+                {item.description && (
+                  <p class="mt-2 font-serif text-sm leading-relaxed text-stone-700 italic sm:text-base">{item.description}</p>
                 )}
               </div>
-              <time class="mt-3 font-serif text-sm tracking-wider text-stone-500 sm:text-base">{item.date}</time>
-            </div>
-
-            <span class="col-start-2 row-start-1 h-2.5 w-2.5 rounded-full bg-gold-400 ring-4 ring-ivory" aria-hidden="true"></span>
-
-            <div class={`row-start-1 text-center ${photoLeft ? 'col-start-3' : 'col-start-1'}`}>
-              <h3 class="font-serif text-lg text-emerald-950 sm:text-2xl">{item.title}</h3>
-              {item.description && (
-                <p class="mt-2 font-serif text-sm leading-relaxed text-stone-700 sm:text-base">{item.description}</p>
-              )}
-            </div>
-          </li>
+            </li>
+          </>
         );
       })}
     </ol>
   </div>
 </section>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const timeline = document.querySelector<HTMLElement>('[data-story-timeline]');
+
+  if (timeline && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Centre line draws itself as the reader scrolls through the story.
+    gsap.fromTo(
+      '[data-story-progress]',
+      { scaleY: 0 },
+      {
+        scaleY: 1,
+        ease: 'none',
+        scrollTrigger: { trigger: timeline, start: 'top 60%', end: 'bottom 60%', scrub: 0.6 }
+      }
+    );
+
+    timeline.querySelectorAll<HTMLElement>('[data-story-year]').forEach((el) => {
+      gsap.from(el, {
+        scale: 0.6,
+        autoAlpha: 0,
+        duration: 0.8,
+        ease: 'back.out(2)',
+        scrollTrigger: { trigger: el, start: 'top 80%', once: true }
+      });
+    });
+
+    timeline.querySelectorAll<HTMLElement>('[data-story-step]').forEach((step) => {
+      const dir = step.dataset.side === 'left' ? -1 : 1;
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: step, start: 'top 78%', once: true }
+      });
+
+      tl.from(step.querySelector('[data-story-dot]'), { scale: 0, duration: 0.5, ease: 'back.out(3)' })
+        .fromTo(
+          step.querySelector('[data-story-ring]'),
+          { scale: 1, opacity: 0.6 },
+          { scale: 3.5, opacity: 0, duration: 1, ease: 'power2.out' },
+          '<0.1'
+        )
+        .from(
+          step.querySelector('[data-story-photo]'),
+          { x: 60 * dir, y: 20, rotation: 10 * dir, autoAlpha: 0, duration: 1, ease: 'power3.out' },
+          '<'
+        )
+        .from(
+          step.querySelectorAll('[data-story-text] > *'),
+          { x: -30 * dir, autoAlpha: 0, duration: 0.8, stagger: 0.12, ease: 'power2.out' },
+          '<0.2'
+        );
+    });
+  }
+</script>
