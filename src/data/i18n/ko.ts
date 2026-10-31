@@ -9,12 +9,8 @@ export const koContent: I18nContent = {
   nav: {
     story: '러브 스토리',
     schedule: '웨딩 일정',
-    travel: '여행 팁',
-    dressCode: '드레스 코드',
-    gallery: '갤러리',
-    faq: '자주 묻는 질문',
-    wishes: '방명록',
-    rsvp: '참석 회신 (RSVP)'
+    guide: '하객 안내',
+    gallery: '갤러리'
   },
   hero: {
     eyebrow: 'Save the Date & 모바일 청첩장',
@@ -67,6 +63,15 @@ export const koContent: I18nContent = {
       { time: '18:30 – 20:30', title: '리셉션 디너', location: '비치프론트 론' }
     ]
   },
+  guide: {
+    eyebrow: '하객 안내',
+    title: '알아두면 좋은 정보',
+    subtitle: '푸켓 여행 팁과 결혼식 날 복장 안내예요.',
+    teaserTitle: '여행 팁 & 드레스 코드',
+    teaserText: '떠나기 전에 꼭 필요한 정보: 푸켓 여행을 위한 팁과 결혼식 복장 안내를 확인해 주세요.',
+    cta: '안내 보기',
+    back: '청첩장으로 돌아가기'
+  },
   travelTips: {
     eyebrow: '떠나기 전에',
     title: '여행 팁 & 알아두면 좋은 정보',
@@ -80,152 +85,33 @@ export const koContent: I18nContent = {
     closing: '무엇보다, 편히 쉬고 햇살을 즐기며 저희와 함께 축하해 주세요!'
   },
   dressCode: {
-    eyebrow: '스타일 가이드',
-    title: '드레스 코드 & 웨딩 컬러 팔레트',
-    subtitle: '트로피컬 블랙타이 / 포멀 코스탈 엘레강스',
-    attireTitle: '복장 가이드',
-    attireDesc:
-      '토요일 본식에는 남성분들의 경우 가벼운 턱시도, 어두운 톤의 포멀 수트(통기성 좋은 린넨 또는 썸머 울 소재)를 추천합니다. 여성분들은 우아한 롱 드레스, 미디 실크 원피스, 또는 세련된 포멀 점프수트를 추천해 드립니다.',
-    paletteTitle: '추천 컬러 팔레트',
-    paletteSubtitle:
-      '샴페인 골드, 테라코타 로즈, 세이지 그린, 에메랄드, 아이보리 등 예식장 분위기와 자연스럽게 어우러지는 톤을 추천합니다.',
-    palettes: [
-      { name: '샴페인 실크', hex: '#F4EDE4', textDark: true, description: '은은하고 고급스러운 아이보리 & 샴페인' },
-      { name: '테라코타 로즈', hex: '#D48166', textDark: false, description: '따뜻한 노을빛 로즈 & 블러시 클레이' },
-      { name: '세이지 보태니컬', hex: '#8F9E8B', textDark: false, description: '차분한 올리브 & 세이지 그린' },
-      { name: '딥 에메랄드', hex: '#234E42', textDark: false, description: '싱그러운 열대 자연의 숲속 컬러' },
-      { name: '웜 골드', hex: '#C5A059', textDark: false, description: '황금빛 노을의 반짝임' }
+    eyebrow: '복장 안내',
+    title: '드레스 코드',
+    subtitle: '캐주얼 & 편안하게',
+    intro: '저희 결혼식은 열대 지역의 야외에서 진행되니, 더운 날씨에 맞는 가볍고 편안한 옷차림을 추천드려요.',
+    groups: [
+      {
+        title: '남성 하객',
+        items: [
+          '밝은 색의 셔츠를 추천드려요.',
+          '린넨이나 가벼운 소재의 바지가 좋아요.',
+          '반바지도 환영이에요!',
+          '편한 신발이나 샌들은 괜찮지만, 슬리퍼나 쪼리는 삼가 주세요.'
+        ]
+      },
+      {
+        title: '여성 하객',
+        items: [
+          '원피스를 추천드려요.',
+          '가볍고 편안한 원피스가 열대 날씨에 가장 좋아요.'
+        ]
+      }
     ],
-    tipsTitle: '참고 사항',
-    tips: [
-      '예식은 리조트 프라이빗 비치의 아모르 부두에서 진행됩니다. 얇은 스틸레토 힐보다는 블록 힐, 웨지 힐, 또는 단정한 플랫 슈즈를 착용하시는 것을 권장합니다.',
-      '저녁 시간에도 온화한 바람이 불어 따뜻하므로 실크, 시폰, 고급 린넨 등 통기성이 우수한 소재를 추천합니다.',
-      '토요일 본식에는 전체 화이트 의상, 과도한 형광색 및 캐주얼한 비치웨어는 피해 주시기를 부탁드립니다.'
-    ]
+    closing: '격식 있게 입으셔도, 편하게 입으셔도 좋아요. 모두가 편안하게 축하의 시간을 즐기시길 바라요!'
   },
   gallery: {
     eyebrow: '우리의 순간들',
     title: '갤러리',
-  },
-  faq: {
-    eyebrow: '궁금한 점들',
-    title: '자주 묻는 질문 (FAQ)',
-    subtitle: '결혼식 참석을 준비하시는 데 필요한 모든 안내',
-    items: [
-      {
-        question: '참석 여부 회신(RSVP) 마감일은 언제인가요?',
-        answer:
-          '리조트의 케이터링 인원 확정 및 셔틀버스 배차를 위해 2026년 9월 30일까지 본 웹사이트의 RSVP 양식을 통해 회신해 주시면 감사하겠습니다.'
-      },
-      {
-        question: '동반인(Plus-One) 및 아이들도 함께 참석할 수 있나요?',
-        answer:
-          '비치프론트 리조트의 안전 및 좌석 정원 제한으로 인해 공식 초대장에 기재된 분들을 우선 모시고 있습니다. 가족 관련 특별한 사정이나 유아가 있으신 경우 편하게 신랑 신부에게 직접 문의해 주세요!'
-      },
-      {
-        question: '공항 및 숙소 간 교통편이 제공되나요?',
-        answer:
-          '네! 1월 2일 푸켓 국제공항(HKT)에서 제휴 호텔까지의 픽업 셔틀과 3일 본식 당일 호텔-빌라 간 왕복 전용 셔틀버스를 운행할 예정입니다.'
-      },
-      {
-        question: '축의금 및 선물 전달은 어떻게 하나요?',
-        answer:
-          '먼 길을 발걸음해 주시는 것만으로도 저희에게는 평생 잊지 못할 가장 큰 선물입니다. 따뜻한 마음을 전하고자 하시는 분들을 위해 신혼여행 및 새 출발 펀드를 위한 디지털 축의금 계좌가 준비되어 있습니다.'
-      },
-      {
-        question: '예식은 어떤 언어로 진행되나요?',
-        answer:
-          '다국어 예식으로 진행됩니다! 태국 전통 물 축복식은 한국어 및 영어 안내가 함께 제공되며, 서약식과 피로연 축사는 한국어, 이탈리아어, 영어가 조화롭게 어우러집니다.'
-      },
-      {
-        question: '식단 제한이나 알레르기 배려가 가능한가요?',
-        answer:
-          '네, 리조트 셰프팀에서 채식(비건/락토오보), 할랄, 글루텐 프리, 갑각류/견과류 알레르기 맞춤 코스를 정성껏 준비합니다. RSVP 폼에 상세히 기재해 주시기 바랍니다.'
-      }
-    ]
-  },
-  rsvp: {
-    eyebrow: '소중한 축하의 걸음',
-    title: '참석 여부 회신 (RSVP)',
-    subtitle: '푸켓에서 함께해 주실 수 있는지 알려주세요',
-    deadlineNotice: '2026년 9월 30일까지 참석 여부를 알려주세요',
-    form: {
-      fullName: '참석자 성함',
-      fullNamePlaceholder: '예: 홍길동 (동반인 포함 시 함께 기재)',
-      email: '이메일 주소',
-      emailPlaceholder: 'name@example.com',
-      phone: '연락처 (휴대폰 번호)',
-      phonePlaceholder: '010-1234-5678',
-      attending: '참석 여부',
-      attendingYes: '참석합니다 (기쁜 마음으로 함께할게요!)',
-      attendingNo: '참석이 어렵습니다 (마음으로 축복할게요)',
-      guestCount: '총 참석 인원수',
-      eventsAttending: '참석하시는 행사',
-      eventWelcome: '웰컴 선셋 칵테일 (1/2 토)',
-      eventMain: '본식 및 애프터파티 (1/3 일)',
-      eventBrunch: '송별 풀사이드 브런치 (1/4 월)',
-      dietary: '식단 제한 및 알레르기 사항',
-      dietaryPlaceholder: '예: 채식주의, 글루텐 프리, 갑각류 알레르기 등',
-      dietaryOptions: ['제한 없음 (일반식)', '채식 (Vegetarian)', '비건 (Vegan)', '글루텐 프리 (Gluten-Free)', '할랄 (Halal)', '견과류 알레르기', '해산물/갑각류 알레르기'],
-      shuttleRequired: '공항/숙소 셔틀버스 탑승 필요 여부',
-      shuttleYes: '네, 셔틀버스 이용을 희망합니다',
-      shuttleNo: '아니오, 개별 이동(렌터카/택시) 예정입니다',
-      songRequest: '파티에서 함께 춤추고 싶은 신청곡',
-      songRequestPlaceholder: '가수 이름 및 노래 제목',
-      warmMessage: '신랑 신부에게 전하는 축하 메시지',
-      warmMessagePlaceholder: '예지와 에마누엘레에게 따뜻한 응원의 한마디를 남겨주세요...',
-      submitBtn: '참석 회신 제출하기',
-      submittingBtn: '회신 등록 중...',
-      successTitle: '소중한 회신에 진심으로 감사드립니다!',
-      successMessage:
-        '참석 여부가 성공적으로 접수되었습니다. 푸켓의 눈부신 노을과 별빛 아래서 반갑게 뵙겠습니다!',
-      successDetails: '응답 내역이 브라우저에 안전하게 저장되었습니다.',
-      addCalendarBtn: '캘린더에 일정 저장하기 (.ics)',
-      closeBtn: '닫기',
-      errorMessage: '* 표시된 필수 입력 항목을 모두 작성해 주세요.'
-    }
-  },
-  wishes: {
-    eyebrow: '온라인 방명록',
-    title: '축복과 응원의 메시지',
-    subtitle: '신랑 신부의 앞날을 축복하는 따뜻한 메시지를 남겨주세요',
-    leaveWishTitle: '방명록 작성하기',
-    namePlaceholder: '작성자 이름',
-    locationPlaceholder: '거주 도시 / 지역 (예: 서울, 로마, 부산)',
-    messagePlaceholder: '따뜻한 축복의 글이나 추억, 덕담을 남겨주세요...',
-    stampLabel: '축복 스탬프 선택:',
-    postButton: '축하 메시지 남기기',
-    recentWishesTitle: '하객분들이 남겨주신 따뜻한 축복',
-    emptyWishes: '첫 번째 축하 메시지의 주인공이 되어주세요!',
-    sampleWishes: [
-      {
-        id: '1',
-        author: 'Sofia & Marco',
-    location: '이탈리아 피렌체',
-        message:
-          'Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
-        stamp: '🥂',
-    date: '2026년 8월'
-      },
-      {
-        id: '2',
-        author: '민준 & 유진',
-    location: '대한민국 서울',
-        message:
-          '예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
-        stamp: '💐',
-    date: '2026년 8월'
-      },
-      {
-        id: '3',
-        author: 'Elena & Lucas',
-    location: '태국 방콕',
-        message:
-          'Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
-        stamp: '✨',
-    date: '2026년 8월'
-      }
-    ]
   },
   footer: {
     names: '예지 & 에마누엘레',

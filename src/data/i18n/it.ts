@@ -9,12 +9,8 @@ export const itContent: I18nContent = {
   nav: {
     story: 'La Nostra Storia',
     schedule: 'Programma',
-    travel: 'Info Viaggio',
-    dressCode: 'Dress Code',
-    gallery: 'Galleria',
-    faq: 'Domande & Risposte',
-    wishes: 'Libro degli Ospiti',
-    rsvp: 'RSVP'
+    guide: 'Guida Ospiti',
+    gallery: 'Galleria'
   },
   hero: {
     eyebrow: 'Save the Date & Invito Ufficiale',
@@ -67,6 +63,15 @@ export const itContent: I18nContent = {
       { time: '18:30 – 20:30', title: 'Cena di Ricevimento', location: 'Prato Fronte Mare' }
     ]
   },
+  guide: {
+    eyebrow: 'Guida Ospiti',
+    title: 'Info Utili',
+    subtitle: 'Consigli di viaggio per Phuket e cosa indossare il giorno delle nozze.',
+    teaserTitle: 'Consigli di Viaggio & Dress Code',
+    teaserText: 'Tutto quello che serve prima di partire: consigli utili per il soggiorno a Phuket e cosa indossare per la festa.',
+    cta: 'Leggi la guida',
+    back: 'Torna all’invito'
+  },
   travelTips: {
     eyebrow: 'Prima di Partire',
     title: 'Consigli di Viaggio & Info Utili',
@@ -80,152 +85,33 @@ export const itContent: I18nContent = {
     closing: 'Soprattutto, rilassatevi, godetevi il sole e festeggiate con noi!'
   },
   dressCode: {
-    eyebrow: 'Ispirazione di Stile',
-    title: 'Dress Code & Palette di Colori',
-    subtitle: 'Tropical Black Tie / Eleganza Formale Costiera',
-    attireTitle: 'Indicazioni di Abbigliamento',
-    attireDesc:
-      'Per la giornata di sabato, invitiamo i signori uomini a indossare smoking estivo, tight leggero o abiti formali scuri in tessuti traspiranti come lino pregiato o fresco lana. Le gentili signore possono scegliere abiti lunghi da sera, abiti midi in seta o raffinate tute eleganti.',
-    paletteTitle: 'Palette Cromatica Consigliata',
-    paletteSubtitle:
-      'Saremo felici se sceglierete sfumature che si armonizzano con i colori del nostro matrimonio: champagne dorato, rosa terracotta, verde salvia, smeraldo e seta avorio.',
-    palettes: [
-      { name: 'Seta Champagne', hex: '#F4EDE4', textDark: true, description: 'Avorio luminoso e caldo champagne' },
-      { name: 'Rosa Terracotta', hex: '#D48166', textDark: false, description: 'Rosa caldo del tramonto e argilla' },
-      { name: 'Salvia Botanica', hex: '#8F9E8B', textDark: false, description: 'Olivo delicato e verde salvia' },
-      { name: 'Smeraldo Intenso', hex: '#234E42', textDark: false, description: 'Vegetazione tropicale lussureggiante' },
-      { name: 'Oro Caldo', hex: '#C5A059', textDark: false, description: 'Riflessi della luce dorata' }
+    eyebrow: 'Cosa Indossare',
+    title: 'Dress Code',
+    subtitle: 'Casual & Comodo',
+    intro: 'Il matrimonio si terrà all’aperto, in un contesto tropicale: vi consigliamo abiti leggeri e comodi, adatti al clima caldo.',
+    groups: [
+      {
+        title: 'Per Lui',
+        items: [
+          'Consigliate camicie dai colori chiari.',
+          'Pantaloni in lino o altri tessuti leggeri sono perfetti.',
+          'Anche i pantaloncini sono benvenuti!',
+          'Vanno bene scarpe comode o sandali, ma niente infradito o ciabatte.'
+        ]
+      },
+      {
+        title: 'Per Lei',
+        items: [
+          'Preferibile un abito.',
+          'Abiti leggeri e comodi sono ideali per il clima tropicale.'
+        ]
+      }
     ],
-    tipsTitle: 'Consigli Pratici',
-    tips: [
-      'La cerimonia si svolgerà sul pontile Amor accanto alla spiaggia privata del resort. Consigliamo tacchi larghi, zeppe eleganti o scarpe eleganti a pianta piatta anziché tacchi a spillo sottili.',
-      'Le serate sono calde e piacevolmente ventilate; tessuti naturali come seta, chiffon, cotone di qualità e lino garantiranno il massimo comfort.',
-      'Si prega cortesemente di evitare il bianco totale, colori fluorescenti ed abbigliamento informale da spiaggia per la cerimonia di sabato.'
-    ]
+    closing: 'Sentitevi liberi di vestirvi eleganti o casual: vogliamo solo che tutti stiano comodi e si godano la festa!'
   },
   gallery: {
     eyebrow: 'I Nostri Ricordi',
     title: 'Galleria',
-  },
-  faq: {
-    eyebrow: 'Domande Frequenti',
-    title: 'Informazioni Utili',
-    subtitle: 'Tutto ciò che c’è da sapere per prepararsi al weekend di nozze',
-    items: [
-      {
-        question: 'Entro quando bisogna confermare la presenza (RSVP)?',
-        answer:
-          'Vi chiediamo gentilmente di inviare la vostra conferma tramite questo sito entro il 30 Settembre 2026, in modo da poter definire con la tenuta il numero esatto per il catering e le navette.'
-      },
-      {
-        question: 'È possibile portare un accompagnatore o bambini?',
-        answer:
-          'Data la capienza esclusiva del resort sulla spiaggia, possiamo accogliere solo gli ospiti espressamente indicati sul vostro invito personale. Per situazioni particolari o neonati, contattateci direttamente!'
-      },
-      {
-        question: 'Come funzioneranno i trasporti e le navette?',
-        answer:
-          'Sì, metteremo a disposizione un servizio di navette private con autista dall’aeroporto all’hotel venerdì e collegamenti dedicati tra le sistemazioni convenzionate e la villa per la giornata di sabato.'
-      },
-      {
-        question: 'Qual è la lista nozze o desiderio per i regali?',
-        answer:
-          'Il regalo più grande e prezioso è il vostro viaggio dall’altro capo del mondo per stare con noi. Se desiderate farci un dono speciale, un contributo per il nostro viaggio di nozze e per la nostra nuova casa sarà accolto con profonda gratitudine nel nostro salvadanaio digitale.'
-      },
-      {
-        question: 'In quale lingua si svolgeranno le cerimonie?',
-        answer:
-          'Il matrimonio sarà multilingue! La benedizione thai comprenderà spiegazioni in italiano e coreano, mentre lo scambio dei voti e i discorsi uniranno italiano, inglese e coreano.'
-      },
-      {
-        question: 'È possibile segnalare intolleranze o preferenze alimentari?',
-        answer:
-          'Certamente! Gli chef della tenuta prepareranno menu personalizzati per ospiti vegetariani, vegani, celiaci o con allergie alimentari. Vi preghiamo di specificarlo nel modulo RSVP.'
-      }
-    ]
-  },
-  rsvp: {
-    eyebrow: 'Festeggia Con Noi',
-    title: 'RSVP & Conferma di Partecipazione',
-    subtitle: 'Fateci sapere se potrete essere dei nostri in Thailandia',
-    deadlineNotice: 'Si prega di confermare entro il 30 Settembre 2026',
-    form: {
-      fullName: 'Nome e Cognome Ospite/i',
-      fullNamePlaceholder: 'es. Matteo Rossi e Accompagnatore',
-      email: 'Indirizzo Email',
-      emailPlaceholder: 'nome@esempio.it',
-      phone: 'Numero di Telefono / WhatsApp',
-      phonePlaceholder: '+39 340 123 4567',
-      attending: 'Sarai presente al matrimonio?',
-      attendingYes: 'Accetto con Gioia (Sì, ci sarò!)',
-      attendingNo: 'Purtroppo non posso (Presente con il cuore)',
-      guestCount: 'Numero Totale di Partecipanti',
-      eventsAttending: 'A quali eventi parteciperai?',
-      eventWelcome: 'Cocktail di Benvenuto (Sab 2 Gen)',
-      eventMain: 'Cerimonia Principale & Banchetto (Dom 3 Gen)',
-      eventBrunch: 'Brunch di Saluto in Piscina (Lun 4 Gen)',
-      dietary: 'Restrizioni Alimentari & Allergie',
-      dietaryPlaceholder: 'es. Vegetariano, Senza Glutine, Allergia ai Crostacei, Nessuna',
-      dietaryOptions: ['Nessuna restrizione', 'Vegetariano', 'Vegano', 'Senza Glutine (Celiaco)', 'Halal', 'Allergia Frutta a Guscio', 'Allergia Frutti di Mare'],
-      shuttleRequired: 'Hai bisogno del Servizio Navetta Aeroporto/Villa?',
-      shuttleYes: 'Sì, desidero usufruire del servizio navetta dedicato',
-      shuttleNo: 'No, noleggerò un’auto o mi sposterò autonomamente',
-      songRequest: 'Una canzone che ti farà ballare tutta la notte',
-      songRequestPlaceholder: 'Artista e Titolo della canzone',
-      warmMessage: 'Un Messaggio o Augurio per gli Sposi',
-      warmMessagePlaceholder: 'Scrivi un pensiero per Yeji & Emanuele...',
-      submitBtn: 'Invia Conferma RSVP',
-      submittingBtn: 'Registrazione in corso...',
-      successTitle: 'Grazie di Cuore per la Tua Conferma!',
-      successMessage:
-        'La tua risposta è stata registrata con successo. Non vediamo l’ora di abbracciarti e festeggiare sotto le stelle di Phuket!',
-      successDetails: 'Il riepilogo della tua risposta è stato salvato in locale.',
-      addCalendarBtn: 'Salva Data nel Calendario (.ics)',
-      closeBtn: 'Chiudi',
-      errorMessage: 'Per favore compila tutti i campi obbligatori contrassegnati da *'
-    }
-  },
-  wishes: {
-    eyebrow: 'Libro degli Ospiti',
-    title: 'Messaggi & Auguri dal Mondo',
-    subtitle: 'Lascia una dedica affettuosa che Yeji e Emanuele custodiranno per sempre',
-    leaveWishTitle: 'Firma il Guestbook Digitale',
-    namePlaceholder: 'Il tuo nome / I vostri nomi',
-    locationPlaceholder: 'La tua città / nazione (es. Roma, Italia)',
-    messagePlaceholder: 'Scrivi qui i tuoi auguri, ricordi o consigli per gli sposi...',
-    stampLabel: 'Scegli un timbro portafortuna:',
-    postButton: 'Pubblica il Tuo Augurio',
-    recentWishesTitle: 'Le Dediche dei Nostri Cari',
-    emptyWishes: 'Sii il primo a lasciare una dedica affettuosa sul nostro guestbook!',
-    sampleWishes: [
-      {
-        id: '1',
-        author: 'Sofia & Marco',
-    location: 'Firenze, Italia',
-        message:
-          'Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
-        stamp: '🥂',
-    date: 'Agosto 2026'
-      },
-      {
-        id: '2',
-        author: 'Min-Jun & Yu-Jin',
-    location: 'Seoul, Corea del Sud',
-        message:
-          '예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
-        stamp: '💐',
-    date: 'Agosto 2026'
-      },
-      {
-        id: '3',
-        author: 'Elena & Lucas',
-    location: 'Bangkok, Thailandia',
-        message:
-          'Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
-        stamp: '✨',
-    date: 'Agosto 2026'
-      }
-    ]
   },
   footer: {
     names: 'Yeji & Emanuele',

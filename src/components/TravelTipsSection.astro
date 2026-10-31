@@ -18,10 +18,10 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
 
     <ol class="mx-auto max-w-2xl divide-y divide-gold-200 border-y border-gold-200">
       {content.tips.map((tip, i) => (
-        <li data-reveal class="grid grid-cols-[auto_1fr] gap-x-6 py-8 sm:gap-x-10 sm:py-10">
+        <li data-reveal class="grid grid-cols-[3rem_1fr] gap-x-5 py-8 sm:grid-cols-[4rem_1fr] sm:gap-x-8 sm:py-10">
           <span class="font-serif text-4xl leading-none text-gold-500 italic sm:text-5xl">{pad(i)}</span>
           <div>
-            <h3 class="font-serif text-xl font-bold text-emerald-950 sm:text-2xl">{tip.title}</h3>
+            <h3 class="font-serif text-xl font-bold text-espresso-950 sm:text-2xl">{tip.title}</h3>
             <p class="mt-2 font-serif text-base leading-relaxed text-stone-600">{tip.text}</p>
           </div>
         </li>

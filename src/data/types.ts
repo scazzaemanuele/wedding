@@ -13,28 +13,6 @@ export interface ScheduleEvent {
   location: string;
 }
 
-export interface PaletteColor {
-  name: string;
-  hex: string;
-  textDark: boolean;
-  description: string;
-}
-
-export interface FaqItem {
-  question: string;
-  answer: string;
-  category?: string;
-}
-
-export interface WishMessage {
-  id: string;
-  author: string;
-  location: string;
-  message: string;
-  stamp: string;
-  date: string;
-}
-
 export interface I18nContent {
   meta: {
     title: string;
@@ -44,12 +22,8 @@ export interface I18nContent {
   nav: {
     story: string;
     schedule: string;
-    travel: string;
-    dressCode: string;
+    guide: string;
     gallery: string;
-    faq: string;
-    wishes: string;
-    rsvp: string;
   };
   hero: {
     eyebrow: string;
@@ -87,6 +61,15 @@ export interface I18nContent {
   schedule: {
     events: ScheduleEvent[];
   };
+  guide: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    teaserTitle: string;
+    teaserText: string;
+    cta: string;
+    back: string;
+  };
   travelTips: {
     eyebrow: string;
     title: string;
@@ -98,78 +81,17 @@ export interface I18nContent {
     eyebrow: string;
     title: string;
     subtitle: string;
-    attireTitle: string;
-    attireDesc: string;
-    paletteTitle: string;
-    paletteSubtitle: string;
-    palettes: PaletteColor[];
-    tipsTitle: string;
-    tips: string[];
+    intro: string;
+    groups: { title: string; items: string[] }[];
+    closing: string;
   };
   gallery: {
     eyebrow: string;
     title: string;
   };
-  faq: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    items: FaqItem[];
-  };
-  rsvp: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    deadlineNotice: string;
-    form: {
-      fullName: string;
-      fullNamePlaceholder: string;
-      email: string;
-      emailPlaceholder: string;
-      phone: string;
-      phonePlaceholder: string;
-      attending: string;
-      attendingYes: string;
-      attendingNo: string;
-      guestCount: string;
-      eventsAttending: string;
-      eventWelcome: string;
-      eventMain: string;
-      eventBrunch: string;
-      dietary: string;
-      dietaryPlaceholder: string;
-      dietaryOptions: string[];
-      shuttleRequired: string;
-      shuttleYes: string;
-      shuttleNo: string;
-      songRequest: string;
-      songRequestPlaceholder: string;
-      warmMessage: string;
-      warmMessagePlaceholder: string;
-      submitBtn: string;
-      submittingBtn: string;
-      successTitle: string;
-      successMessage: string;
-      successDetails: string;
-      addCalendarBtn: string;
-      closeBtn: string;
-      errorMessage: string;
-    };
-  };
-  wishes: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    leaveWishTitle: string;
-    namePlaceholder: string;
-    locationPlaceholder: string;
-    messagePlaceholder: string;
-    stampLabel: string;
-    postButton: string;
-    recentWishesTitle: string;
-    emptyWishes: string;
-    sampleWishes: WishMessage[];
-  };
+;
+;
+;
   footer: {
     names: string;
     date: string;

@@ -20,10 +20,10 @@
   --color-gold-900: #5d4127;
 
   /* Accent */
-  --color-emerald-700: #2e6254;
-  --color-emerald-800: #234e42;
-  --color-emerald-900: #16362d;
-  --color-emerald-950: #0d221c;
+  --color-espresso-700: #6a5040;
+  --color-espresso-800: #4f3a2d;
+  --color-espresso-900: #3a2a20;
+  --color-espresso-950: #2a1e17;
   --color-terracotta-500: #d48166;
 
   /* Neutrals come from Tailwind's warm `stone` scale. */
@@ -68,7 +68,7 @@ body {
 
 /* Shared section shell: same vertical rhythm everywhere; tint alternates sections. */
 .section {
-  @apply relative z-10 px-4 py-20 sm:px-6 sm:py-28 lg:px-8;
+  @apply relative z-10 px-4 py-14 sm:px-6 sm:py-20 lg:px-8;
 }
 
 .section-tint {

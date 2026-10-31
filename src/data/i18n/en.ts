@@ -11,12 +11,8 @@ export const enContent: I18nContent = {
   nav: {
     story: "Our Story",
     schedule: "Schedule",
-    travel: "Travel Tips",
-    dressCode: "Dress Code",
+    guide: "Guest Guide",
     gallery: "Gallery",
-    faq: "Q & A",
-    wishes: "Guestbook",
-    rsvp: "RSVP",
   },
   hero: {
     eyebrow: "Save the Date & Wedding Invitation",
@@ -69,6 +65,15 @@ export const enContent: I18nContent = {
       { time: "18:30 – 20:30", title: "Reception Dinner", location: "Beachfront Lawn" },
     ],
   },
+  guide: {
+    eyebrow: "Guest Guide",
+    title: "Good to Know",
+    subtitle: "Travel tips for Phuket and what to wear on the day.",
+    teaserTitle: "Travel Tips & Dress Code",
+    teaserText: "Everything you need before you fly: helpful tips for your stay in Phuket and what to wear for our celebration.",
+    cta: "Read the guide",
+    back: "Back to the invitation",
+  },
   travelTips: {
     eyebrow: "Before You Go",
     title: "Travel Tips & Good to Know",
@@ -82,190 +87,33 @@ export const enContent: I18nContent = {
     closing: "Most importantly, relax, enjoy the sunshine and celebrate with us!",
   },
   dressCode: {
-    eyebrow: "Style Inspiration",
-    title: "Dress Code & Color Palette",
-    subtitle: "Tropical Black Tie / Formal Coastal Elegance",
-    attireTitle: "Attire Guidance",
-    attireDesc:
-      "For our Saturday celebration, we invite gentlemen to wear lightweight black tie, summer tuxedos, or tailored dark suits in breathable linen or wool blends. Ladies are encouraged to wear floor-length or midi evening gowns, refined silk dresses, or dressy formal jumpsuits.",
-    paletteTitle: "Curated Wedding Palette",
-    paletteSubtitle:
-      "We welcome you to harmonize with our romantic palette of natural champagne, soft terracotta rose, calming sage green, emerald flora, and ivory silk.",
-    palettes: [
+    eyebrow: "What to Wear",
+    title: "Dress Code",
+    subtitle: "Casual & Comfortable",
+    intro: "As our wedding will be held outdoors in a tropical setting, we recommend light and comfortable outfits suitable for the warm weather.",
+    groups: [
       {
-        name: "Champagne Silk",
-        hex: "#F4EDE4",
-        textDark: true,
-        description: "Soft luminous ivory & warm champagne",
+        title: "For Gentlemen",
+        items: [
+          "Light-coloured shirts are recommended.",
+          "Linen or other lightweight trousers are perfect.",
+          "Shorts are also welcome!",
+          "Comfortable shoes or sandals are fine, but please no flip-flops or slippers.",
+        ],
       },
       {
-        name: "Terracotta Rose",
-        hex: "#D48166",
-        textDark: false,
-        description: "Warm sunset rose & blush clay",
-      },
-      {
-        name: "Sage Botanica",
-        hex: "#8F9E8B",
-        textDark: false,
-        description: "Muted olive & fragrant sage",
-      },
-      {
-        name: "Deep Emerald",
-        hex: "#234E42",
-        textDark: false,
-        description: "Lush tropical forest foliage",
-      },
-      {
-        name: "Warm Gold",
-        hex: "#C5A059",
-        textDark: false,
-        description: "Golden hour twilight shimmer",
+        title: "For Ladies",
+        items: [
+          "Dresses are preferred.",
+          "Light, comfortable dresses are ideal for the tropical weather.",
+        ],
       },
     ],
-    tipsTitle: "Important Style Notes",
-    tips: [
-      "The ceremony takes place on the Amor Pier by the resort’s private beach. Block heels, elegant wedges, or flat dress shoes are recommended over thin stilettos.",
-      "Evenings are warm and breezy; light breathable fabrics like silk, chiffon, linen, and lightweight wool blends will keep you comfortable.",
-      "We kindly request guests to avoid stark white, bright neon colors, and casual beachwear for the Saturday main ceremony.",
-    ],
+    closing: "Feel free to dress up or keep it casual. We just want everyone to feel comfortable and enjoy the celebration!",
   },
   gallery: {
     eyebrow: "Visual Memories",
     title: "Gallery",
-  },
-  faq: {
-    eyebrow: "Common Questions",
-    title: "Frequently Asked Questions",
-    subtitle: "Everything you need to know to prepare for our wedding weekend",
-    items: [
-      {
-        question: "When is the deadline to RSVP?",
-        answer:
-          "Please submit your RSVP through this website by September 30, 2026, so we can finalize catering numbers, dietary accommodations, and shuttle schedules with the resort.",
-      },
-      {
-        question: "Are plus-ones and children invited?",
-        answer:
-          "Due to intimate beachfront venue capacities, we can only accommodate guests specifically named on your formal invitation. If you have any special family circumstances or nursing infants, please reach out directly to us!",
-      },
-      {
-        question: "Will transportation be provided to the venue?",
-        answer:
-          "Yes! We are coordinating private group shuttle vans from Phuket International Airport (HKT) to the partner resort on Friday, as well as roundtrip shuttles between the hotel and villa on Saturday for the wedding.",
-      },
-      {
-        question: "What is the gift registry / wishing well policy?",
-        answer:
-          "Having you travel across the globe to celebrate with us is the greatest gift we could ever receive. Should you wish to honor us with a token of love, a contribution toward our honeymoon fund & newlywed home savings in our digital wishing well would be deeply appreciated.",
-      },
-      {
-        question: "What language will the ceremonies be conducted in?",
-        answer:
-          "Our ceremonies will be multilingual! The Thai Water Blessing will include English & Korean translations, while our Western vow exchange and speeches will blend English, Italian, and Korean.",
-      },
-      {
-        question: "What dietary preferences can you cater for?",
-        answer:
-          "Our resort master chefs can accommodate all dietary needs including Vegetarian, Vegan, Halal, Gluten-Free, Nut Allergies, and Pescatarian. Please indicate your specifics in the RSVP form.",
-      },
-    ],
-  },
-  rsvp: {
-    eyebrow: "Celebrate With Us",
-    title: "RSVP & Guest Confirmation",
-    subtitle: "Please let us know if you can join our celebration in Phuket",
-    deadlineNotice: "Kindly confirm your attendance by September 30, 2026",
-    form: {
-      fullName: "Full Name(s)",
-      fullNamePlaceholder: "e.g. Matteo Rossi & Guest",
-      email: "Email Address",
-      emailPlaceholder: "you@example.com",
-      phone: "Phone / WhatsApp Number",
-      phonePlaceholder: "+39 340 123 4567 or +82 10 1234 5678",
-      attending: "Will you be attending?",
-      attendingYes: "Joyfully Accept (Yes, I will be there!)",
-      attendingNo: "Regretfully Decline (Celebrating in spirit)",
-      guestCount: "Total Number of Attending Guests",
-      eventsAttending: "Which events will you attend?",
-      eventWelcome: "Welcome Sunset Cocktails (Sat, Jan 2)",
-      eventMain: "Main Wedding & Reception Party (Sun, Jan 3)",
-      eventBrunch: "Farewell Recovery Pool Brunch (Mon, Jan 4)",
-      dietary: "Dietary Restrictions & Allergies",
-      dietaryPlaceholder:
-        "e.g. Vegetarian, Gluten-Free, Shellfish Allergy, None",
-      dietaryOptions: [
-        "None / No Restrictions",
-        "Vegetarian",
-        "Vegan",
-        "Gluten-Free",
-        "Halal",
-        "Nut Allergy",
-        "Seafood Allergy",
-      ],
-      shuttleRequired: "Do you need Airport / Venue Shuttle Service?",
-      shuttleYes: "Yes, please include me in the shuttle schedules",
-      shuttleNo: "No, I will arrange independent transport / rental car",
-      songRequest: "A song that will get you on the dancefloor",
-      songRequestPlaceholder: "Artist & Song Title",
-      warmMessage: "A Warm Message / Blessing for the Couple",
-      warmMessagePlaceholder: "Leave a note for Yeji & Emanuele...",
-      submitBtn: "Send RSVP Confirmation",
-      submittingBtn: "Registering Your Response...",
-      successTitle: "Thank You for Your RSVP!",
-      successMessage:
-        "Your response has been recorded with love. We cannot wait to celebrate together under the tropical stars in Phuket!",
-      successDetails: "A confirmation summary has been saved to your browser.",
-      addCalendarBtn: "Save Date to Calendar (.ics)",
-      closeBtn: "Close Window",
-      errorMessage: "Please fill in all required fields marked with *",
-    },
-  },
-  wishes: {
-    eyebrow: "Digital Guestbook",
-    title: "Love Letters & Wishes",
-    subtitle:
-      "Leave a heartfelt blessing for Yeji & Emanuele to cherish forever",
-    leaveWishTitle: "Sign the Guestbook",
-    namePlaceholder: "Your Name(s)",
-    locationPlaceholder:
-      "Your City / Country (e.g. Rome, Italy or Seoul, Korea)",
-    messagePlaceholder:
-      "Write your blessings, favorite memories, or words of wisdom...",
-    stampLabel: "Choose a Blessing Stamp:",
-    postButton: "Post Your Blessing",
-    recentWishesTitle: "Heartfelt Wishes From Around The World",
-    emptyWishes:
-      "Be the first to leave a warm blessing in our digital guestbook!",
-    sampleWishes: [
-      {
-        id: "1",
-        author: "Sofia & Marco",
-    location: "Florence, Italy",
-        message:
-          "Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!",
-        stamp: "🥂",
-    date: "August 2026",
-      },
-      {
-        id: "2",
-        author: "Min-Jun & Yu-Jin",
-    location: "Seoul, South Korea",
-        message:
-          "예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!",
-        stamp: "💐",
-    date: "August 2026",
-      },
-      {
-        id: "3",
-        author: "Elena & Lucas",
-    location: "Bangkok, Thailand",
-        message:
-          "Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!",
-        stamp: "✨",
-    date: "August 2026",
-      },
-    ],
   },
   footer: {
     names: "Yeji & Emanuele",

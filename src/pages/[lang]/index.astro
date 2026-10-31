@@ -8,12 +8,8 @@ import InvitationLetter from '../../components/InvitationLetter.astro';
 import StorySection from '../../components/StorySection.astro';
 import CalendarSection from '../../components/CalendarSection.astro';
 import VenueScheduleSection from '../../components/VenueScheduleSection.astro';
-import TravelTipsSection from '../../components/TravelTipsSection.astro';
-import DressCodeSection from '../../components/DressCodeSection.astro';
+import GuideTeaser from '../../components/GuideTeaser.astro';
 import GallerySection from '../../components/GallerySection.astro';
-import FaqSection from '../../components/FaqSection.astro';
-import WishesSection from '../../components/WishesSection.astro';
-import RsvpSection from '../../components/RsvpSection.astro';
 import Footer from '../../components/Footer.astro';
 import ScrollAnimations from '../../components/ScrollAnimations.astro';
 import SiteLoader from '../../components/SiteLoader.astro';
@@ -40,11 +36,7 @@ const content = getI18n(currentLocale);
     <CalendarSection locale={currentLocale} content={content.calendar} date={content.hero.date} />
     <VenueScheduleSection content={content.venueSchedule} schedule={content.schedule} />
     <GallerySection content={content.gallery} />
-    <TravelTipsSection content={content.travelTips} />
-    <DressCodeSection content={content.dressCode} />
-    <FaqSection content={content.faq} />
-    <WishesSection content={content.wishes} />
-    <RsvpSection content={content.rsvp} />
+    <GuideTeaser locale={currentLocale} content={content.guide} />
   </main>
 
   <Footer content={content.footer} />
