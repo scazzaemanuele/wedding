@@ -4,29 +4,39 @@
 @custom-variant short (@media (orientation: portrait) and (max-height: 720px));
 
 @theme {
-  /* Base */
-  --color-ivory: #faf6ef;
+  /* Palette: lavender gray & white. Blue accent #A7B8D6, lavender #D2CCDF, text gray #686477 */
+  --color-paper: #ffffff;
 
-  /* Gold scale */
-  --color-gold-50: #fcf9f2;
-  --color-gold-100: #f7f1df;
-  --color-gold-200: #eee0bc;
-  --color-gold-300: #e3cc92;
-  --color-gold-400: #d6b363;
-  --color-gold-500: #c5a059;
-  --color-gold-600: #aa813e;
-  --color-gold-700: #886230;
-  --color-gold-800: #6f4e2b;
-  --color-gold-900: #5d4127;
+  /* Accent: lavender tints into periwinkle blue */
+  --color-accent-50: #f7f6fa;
+  --color-accent-100: #edeaf3;
+  --color-accent-200: #d2ccdf;
+  --color-accent-300: #b9c2dd;
+  --color-accent-400: #a7b8d6;
+  --color-accent-500: #8ea3c8;
+  --color-accent-600: #758bb5;
+  --color-accent-700: #5d7298;
+  --color-accent-800: #4b5c7a;
+  --color-accent-900: #3d4962;
 
-  /* Accent */
-  --color-espresso-700: #6a5040;
-  --color-espresso-800: #4f3a2d;
-  --color-espresso-900: #3a2a20;
-  --color-espresso-950: #2a1e17;
-  --color-terracotta-500: #d48166;
+  /* Ink: deep gray-violet for dark surfaces */
+  --color-ink-700: #565266;
+  --color-ink-800: #433f52;
+  --color-ink-900: #34313f;
+  --color-ink-950: #26242e;
 
-  /* Neutrals come from Tailwind's warm `stone` scale. */
+  /* Neutrals: Tailwind `stone` remapped to lavender gray (#686477 at 600) */
+  --color-stone-50: #f8f7fa;
+  --color-stone-100: #f0eef4;
+  --color-stone-200: #e2dfea;
+  --color-stone-300: #d2ccdf;
+  --color-stone-400: #a9a5b7;
+  --color-stone-500: #85819a;
+  --color-stone-600: #686477;
+  --color-stone-700: #565266;
+  --color-stone-800: #433f52;
+  --color-stone-900: #34313f;
+  --color-stone-950: #26242e;
 
   /* Typography: serif for headings & body copy, sans for labels/UI, script for flourishes */
   --font-serif: "Cormorant Garamond", "Noto Serif KR", ui-serif, Georgia, serif;
@@ -39,19 +49,19 @@ html {
 }
 
 body {
-  @apply bg-ivory font-sans text-stone-600 antialiased;
+  @apply bg-paper font-sans text-stone-600 antialiased;
 }
 
 ::selection {
-  @apply bg-gold-600/30 text-stone-800;
+  @apply bg-accent-600/30 text-stone-800;
 }
 
 .site-header {
-  @apply text-ivory transition-all duration-500;
+  @apply text-paper transition-all duration-500;
 }
 
 .site-header.scrolled {
-  @apply bg-ivory/90 text-stone-800 shadow-[0_1px_0_0_rgba(176,141,87,0.25)] backdrop-blur-md;
+  @apply bg-paper/90 text-stone-800 shadow-[0_1px_0_0_rgba(117,139,181,0.25)] backdrop-blur-md;
 }
 
 .mobile-menu {
@@ -63,7 +73,7 @@ body {
 }
 
 .field {
-  @apply w-full border border-gold-600/30 bg-ivory/80 px-4 py-3 font-sans text-sm text-stone-800 outline-none transition-colors placeholder:text-stone-600/40 focus:border-gold-600;
+  @apply w-full border border-accent-600/30 bg-paper/80 px-4 py-3 font-sans text-sm text-stone-800 outline-none transition-colors placeholder:text-stone-600/40 focus:border-accent-600;
 }
 
 /* Shared section shell: same vertical rhythm everywhere; tint alternates sections. */
@@ -72,9 +82,23 @@ body {
 }
 
 .section-tint {
-  @apply bg-gold-50/50;
+  @apply bg-accent-50/50;
 }
 
 .btn-gold {
-  @apply inline-flex items-center justify-center border border-gold-600 bg-gold-600 px-8 py-3 text-xs font-medium tracking-[0.25em] text-ivory uppercase transition-colors duration-300 hover:bg-transparent hover:text-gold-600 disabled:cursor-wait disabled:opacity-60;
+  @apply inline-flex items-center justify-center border border-accent-600 bg-accent-600 px-8 py-3 text-xs font-medium tracking-[0.25em] text-paper uppercase transition-colors duration-300 hover:bg-transparent hover:text-accent-600 disabled:cursor-wait disabled:opacity-60;
+}
+
+@keyframes lavender-sway {
+  0%, 100% { translate: 0 0; rotate: -1.5deg; }
+  50% { translate: 0 -4px; rotate: 1.5deg; }
+}
+
+.lavender-sway {
+  transform-origin: 50% 100%;
+  animation: lavender-sway 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lavender-sway { animation: none; }
 }

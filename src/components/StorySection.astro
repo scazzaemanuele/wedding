@@ -1,6 +1,8 @@
 ---
 import type { I18nContent } from '../data/types';
+import { Image } from 'astro:assets';
 import SectionHeader from './SectionHeader.astro';
+import lavender from '../assets/lavender.png';
 
 interface Props {
   content: I18nContent['story'];
@@ -14,13 +16,14 @@ const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'
 ---
 
 <section id="story" class="section overflow-x-clip">
+  <Image src={lavender} alt="" width={320} aria-hidden="true" class="lavender-sway pointer-events-none absolute top-10 -right-6 -z-10 w-20 -scale-x-100 rotate-6 opacity-90 sm:top-8 sm:right-2 sm:w-28 md:right-[8%] md:w-32 lg:right-[14%] lg:w-40 [mask-image:linear-gradient(to_top,transparent,black_18%)]" />
   <div class="max-w-6xl mx-auto">
     <SectionHeader eyebrow={content.eyebrow} title={content.title} subtitle={content.subtitle} />
 
     {/* Zigzag timeline: polaroid photo on one side, text on the other, dot on the centre line */}
     <ol data-story-timeline class="relative mx-auto max-w-3xl space-y-12 sm:space-y-16">
-      <span class="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gold-300/40" aria-hidden="true"></span>
-      <span data-story-progress class="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 origin-top bg-gold-500" aria-hidden="true"></span>
+      <span class="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-accent-300/40" aria-hidden="true"></span>
+      <span data-story-progress class="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 origin-top bg-accent-500" aria-hidden="true"></span>
 
       {content.milestones.map((item, idx) => {
         const photoLeft = idx % 2 === 0;
@@ -30,7 +33,7 @@ const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'
           <>
             {newYear && (
               <li data-story-year class="relative flex justify-center">
-                <span class="bg-ivory px-4 py-1 font-serif text-2xl tracking-[0.2em] text-gold-700 italic sm:text-3xl">
+                <span class="bg-paper px-4 py-1 font-serif text-2xl tracking-[0.2em] text-accent-700 italic sm:text-3xl">
                   {year}
                 </span>
               </li>
@@ -39,13 +42,13 @@ const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'
               <div data-story-photo class={`row-start-1 flex justify-center ${photoLeft ? 'col-start-1' : 'col-start-3'}`}>
                 <figure
                   style={`--tilt: ${tilts[idx % tilts.length]}deg`}
-                  class="w-full max-w-56 rotate-(--tilt) bg-white p-2 pb-1 shadow-[0_8px_24px_-8px_rgba(60,40,20,0.35)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.04]"
+                  class="w-full max-w-56 rotate-(--tilt) bg-white p-2 pb-1 shadow-[0_8px_24px_-8px_rgba(52,49,63,0.35)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.04]"
                 >
                   <div class={`${aspects[idx % aspects.length]} w-full overflow-hidden`}>
                     {item.image ? (
                       <img src={item.image} alt={item.title} loading="lazy" class="h-full w-full object-cover" />
                     ) : (
-                      <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-gold-200/60 to-stone-200 font-serif text-sm text-stone-500">
+                      <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-200/60 to-stone-200 font-serif text-sm text-stone-500">
                         {item.title}
                       </div>
                     )}
@@ -57,12 +60,12 @@ const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'
               </div>
 
               <span class="relative col-start-2 row-start-1 flex h-3 w-3 items-center justify-center" aria-hidden="true">
-                <span data-story-ring class="absolute inset-0 rounded-full bg-gold-400 opacity-0"></span>
-                <span data-story-dot class="relative h-3 w-3 rounded-full bg-gold-500 ring-4 ring-ivory"></span>
+                <span data-story-ring class="absolute inset-0 rounded-full bg-accent-400 opacity-0"></span>
+                <span data-story-dot class="relative h-3 w-3 rounded-full bg-accent-500 ring-4 ring-paper"></span>
               </span>
 
               <div data-story-text class={`row-start-1 text-center ${photoLeft ? 'col-start-3' : 'col-start-1'}`}>
-                <h3 class="font-serif text-lg text-espresso-950 sm:text-2xl">{item.title}</h3>
+                <h3 class="font-serif text-lg text-ink-950 sm:text-2xl">{item.title}</h3>
                 {item.description && (
                   <p class="mt-2 font-serif text-sm leading-relaxed text-stone-700 italic sm:text-base">{item.description}</p>
                 )}

@@ -33,13 +33,13 @@ const cells = [
 
 <section id="calendar" class="section section-tint">
   <SectionHeader title={content.saveTheDate} />
-  <div data-reveal class="mx-auto max-w-md rounded-2xl border border-gold-200 bg-white/70 px-5 pt-10 pb-8 shadow-[0_20px_50px_-25px_rgba(60,40,20,0.35)] backdrop-blur-sm sm:px-8">
-    <h3 class="text-center font-serif text-3xl text-espresso-950 capitalize sm:text-4xl">{monthTitle}</h3>
+  <div data-reveal class="mx-auto max-w-md rounded-2xl border border-accent-200 bg-white/70 px-5 pt-10 pb-8 shadow-[0_20px_50px_-25px_rgba(52,49,63,0.35)] backdrop-blur-sm sm:px-8">
+    <h3 class="text-center font-serif text-3xl text-ink-950 capitalize sm:text-4xl">{monthTitle}</h3>
     <p class="mt-2 mb-8 text-center font-serif text-sm tracking-[0.2em] text-stone-500 uppercase">{date}</p>
 
     <div class="grid grid-cols-7 text-center">
       {weekdays.map((w, i) => (
-        <span class={`pb-3 text-[11px] font-medium tracking-wider uppercase ${isSunday(i) ? 'text-terracotta-500' : 'text-stone-400'}`}>
+        <span class={`pb-3 text-[11px] font-medium tracking-wider uppercase ${isSunday(i) ? 'text-accent-700' : 'text-stone-400'}`}>
           {w}
         </span>
       ))}
@@ -49,13 +49,13 @@ const cells = [
           <span></span>
         ) : d === day ? (
           <span class="relative flex aspect-square items-center justify-center">
-            <span class="absolute inset-1 animate-ping rounded-full bg-gold-400/40 [animation-duration:2.4s]" aria-hidden="true"></span>
-            <span class="relative flex h-[calc(100%-0.5rem)] w-[calc(100%-0.5rem)] items-center justify-center rounded-full bg-gold-500 font-serif text-lg font-semibold text-white shadow-md">
+            <span class="absolute inset-1 animate-ping rounded-full bg-accent-400/40 [animation-duration:2.4s]" aria-hidden="true"></span>
+            <span class="relative flex h-[calc(100%-0.5rem)] w-[calc(100%-0.5rem)] items-center justify-center rounded-full bg-accent-500 font-serif text-lg font-semibold text-white shadow-md">
               {d}
             </span>
           </span>
         ) : (
-          <span class={`flex aspect-square items-center justify-center font-serif text-lg ${isSunday(i % 7) ? 'text-terracotta-500' : 'text-stone-600'}`}>
+          <span class={`flex aspect-square items-center justify-center font-serif text-lg ${isSunday(i % 7) ? 'text-accent-700' : 'text-stone-600'}`}>
             {d}
           </span>
         )

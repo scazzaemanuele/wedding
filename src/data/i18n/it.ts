@@ -28,7 +28,7 @@ export const itContent: I18nContent = {
       'Per celebrare questo grande capitolo, non potevamo immaginare un luogo più magico delle spiagge incantate di Phuket, in Thailandia: un rifugio mozzafiato che unisce i nostri mondi, dove acque turchesi abbracciano la quiete tropicale.',
     letterParagraph3:
       'Sarebbe per noi un onore immenso avervi al nostro fianco mentre scambiamo le nostre promesse, celebriamo i riti tradizionali e balliamo sotto il cielo stellato del Mare delle Andamane.',
-    signature: 'Con tutto il nostro amore, Yeji & Emanuele',
+    signature: 'Con tutto il nostro amore,\nYeji\n&\nEmanuele',
     ceremonyNotice: 'Si prega cortesemente di dare conferma entro il 30 Settembre 2026'
   },
   story: {

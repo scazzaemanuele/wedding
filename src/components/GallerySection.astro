@@ -40,7 +40,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
                 type="button"
                 data-gallery-open={photo.index}
                 data-full={photo.full}
-                class="relative block w-full cursor-zoom-in overflow-hidden rounded-sm bg-gold-100"
+                class="relative block w-full cursor-zoom-in overflow-hidden rounded-sm bg-accent-100"
                 aria-label={`${content.title} ${pad(photo.index)}`}
               >
                 <Image
@@ -55,8 +55,8 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
                   aria-hidden="true"
                 ></span>
               </button>
-              <figcaption class="mt-2 flex items-center gap-2 font-serif text-xs tracking-[0.3em] text-gold-700">
-                <span class="h-px w-4 bg-gold-400 transition-all duration-500 group-hover:w-8"></span>
+              <figcaption class="mt-2 flex items-center gap-2 font-serif text-xs tracking-[0.3em] text-accent-700">
+                <span class="h-px w-4 bg-accent-400 transition-all duration-500 group-hover:w-8"></span>
                 {pad(photo.index)}
               </figcaption>
             </figure>
@@ -69,21 +69,21 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
   <dialog
     data-lightbox
     tabindex="-1"
-    class="m-0 h-dvh max-h-none w-screen max-w-none touch-none overscroll-contain bg-stone-800 outline-none p-0 text-ivory backdrop:bg-transparent"
+    class="m-0 h-dvh max-h-none w-screen max-w-none touch-none overscroll-contain bg-stone-800 outline-none p-0 text-paper backdrop:bg-transparent"
   >
     <div class="relative flex h-full w-full items-center justify-center select-none">
       <img data-lightbox-img alt="" class="max-h-[86dvh] max-w-[94vw] object-contain shadow-2xl" draggable="false" />
 
-      <button type="button" data-lightbox-close class="absolute top-4 right-4 p-3 text-ivory/80 transition-colors hover:text-ivory" aria-label="Close">
+      <button type="button" data-lightbox-close class="absolute top-4 right-4 p-3 text-paper/80 transition-colors hover:text-paper" aria-label="Close">
         <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
-      <button type="button" data-lightbox-prev class="absolute left-2 rounded-full bg-black/30 p-2.5 text-ivory/90 backdrop-blur-sm transition-colors hover:bg-black/50 hover:text-ivory sm:left-4" aria-label="Previous">
+      <button type="button" data-lightbox-prev class="absolute left-2 rounded-full bg-black/30 p-2.5 text-paper/90 backdrop-blur-sm transition-colors hover:bg-black/50 hover:text-paper sm:left-4" aria-label="Previous">
         <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
       </button>
-      <button type="button" data-lightbox-next class="absolute right-2 rounded-full bg-black/30 p-2.5 text-ivory/90 backdrop-blur-sm transition-colors hover:bg-black/50 hover:text-ivory sm:right-4" aria-label="Next">
+      <button type="button" data-lightbox-next class="absolute right-2 rounded-full bg-black/30 p-2.5 text-paper/90 backdrop-blur-sm transition-colors hover:bg-black/50 hover:text-paper sm:right-4" aria-label="Next">
         <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
       </button>
-      <p data-lightbox-counter class="absolute bottom-5 left-1/2 -translate-x-1/2 font-serif text-sm tracking-[0.4em] text-gold-300"></p>
+      <p data-lightbox-counter class="absolute bottom-5 left-1/2 -translate-x-1/2 font-serif text-sm tracking-[0.4em] text-accent-300"></p>
     </div>
   </dialog>
 </section>

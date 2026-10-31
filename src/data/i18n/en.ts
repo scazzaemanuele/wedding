@@ -30,7 +30,7 @@ export const enContent: I18nContent = {
       "To celebrate this milestone, we could think of no better place than the enchanted shores of Phuket, Thailand — a breathtaking sanctuary bridging our worlds where turquoise waters meet lush tropical tranquility.",
     letterParagraph3:
       "We would be honored beyond words to have you stand beside us as we exchange our vows, honor traditional blessings, and dance beneath the starlit Andaman sky.",
-    signature: "With all our love, Yeji & Emanuele",
+    signature: "With all our love,\nYeji\n&\nEmanuele",
     ceremonyNotice: "Please kindly respond by September 30, 2026",
   },
   story: {

@@ -11,6 +11,7 @@ import venue5 from '../assets/venue5.png';
 import venue6 from '../assets/venue6.png';
 import venue7 from '../assets/venue7.png';
 import SectionHeader from './SectionHeader.astro';
+import lavenderFan from '../assets/lavender-fan.png';
 
 interface Props {
   content: I18nContent['venueSchedule'];
@@ -25,14 +26,14 @@ const { googleMapsUrl, venueName, subLocation } = WEDDING_CONFIG.location;
 const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venueName}, ${subLocation}`)}&z=15&output=embed`;
 ---
 
-<section id="venue-schedule" class="section">
+<section id="venue-schedule" class="section overflow-x-clip">
   <div class="mx-auto max-w-xl">
     <SectionHeader eyebrow={content.eyebrow} title={content.title} />
 
     <div data-reveal data-venue-swiper class="relative">
       <div
         data-track
-        class="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain rounded-2xl shadow-[0_20px_50px_-25px_rgba(60,40,20,0.45)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        class="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain rounded-2xl shadow-[0_20px_50px_-25px_rgba(52,49,63,0.45)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {slides.map((photo, i) => (
           <figure class="aspect-[1200/678] w-full shrink-0 snap-center snap-always">
@@ -54,24 +55,25 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
             data-dot
             aria-label={`${i + 1} / ${slides.length}`}
             aria-current={i === 0 ? 'true' : 'false'}
-            class="h-1.5 w-1.5 rounded-full bg-gold-300 transition-all duration-300 aria-[current=true]:w-5 aria-[current=true]:bg-gold-600"
+            class="h-1.5 w-1.5 rounded-full bg-accent-300 transition-all duration-300 aria-[current=true]:w-5 aria-[current=true]:bg-accent-600"
           ></button>
         ))}
       </div>
     </div>
 
     <div data-reveal class="mt-6 text-center">
-      <h3 class="font-serif text-2xl text-espresso-950 sm:text-3xl">{content.resortName}</h3>
-      <p class="mt-1 font-sans text-[10px] tracking-[0.2em] text-gold-700 uppercase">{content.resortSubtitle}</p>
+      <h3 class="font-serif text-2xl text-ink-950 sm:text-3xl">{content.resortName}</h3>
+      <p class="mt-1 font-sans text-[10px] tracking-[0.2em] text-accent-700 uppercase">{content.resortSubtitle}</p>
       <p class="mt-0.5 font-serif text-sm text-stone-600">{content.address}</p>
     </div>
 
-    <ol data-reveal class="mt-10 space-y-8 border-l border-gold-300 pl-6">
+    <ol data-reveal class="relative mt-10 space-y-8 border-l border-accent-300 pl-6">
+      <Image src={lavenderFan} alt="" width={260} aria-hidden="true" class="lavender-sway pointer-events-none absolute -right-6 -bottom-6 -z-10 w-28 opacity-90 sm:-right-24 sm:w-40 [mask-image:linear-gradient(to_top,transparent,black_18%)]" />
       {events.map((event) => (
         <li class="relative">
-          <span class="absolute top-1.5 -left-[29px] h-2.5 w-2.5 rounded-full bg-gold-500 ring-4 ring-ivory" aria-hidden="true"></span>
-          <p class="font-serif text-lg tracking-wider text-gold-700">{event.time}</p>
-          <h3 class="mt-1 font-serif text-xl text-espresso-950 sm:text-2xl">{event.title}</h3>
+          <span class="absolute top-1.5 -left-[29px] h-2.5 w-2.5 rounded-full bg-accent-500 ring-4 ring-paper" aria-hidden="true"></span>
+          <p class="font-serif text-lg tracking-wider text-accent-700">{event.time}</p>
+          <h3 class="mt-1 font-serif text-xl text-ink-950 sm:text-2xl">{event.title}</h3>
           <p class="mt-0.5 font-sans text-xs tracking-[0.2em] text-stone-500 uppercase">{event.location}</p>
         </li>
       ))}
@@ -82,7 +84,7 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
       href={googleMapsUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="group mt-10 block overflow-hidden rounded-2xl border border-gold-200 bg-white"
+      class="group mt-10 block overflow-hidden rounded-2xl border border-accent-200 bg-white"
       aria-label={content.viewMap}
     >
       <iframe
@@ -93,8 +95,8 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
         tabindex="-1"
         class="pointer-events-none block h-56 w-full border-0 sm:h-64"
       ></iframe>
-      <span class="flex items-center justify-center gap-2 border-t border-gold-200 py-3 font-sans text-xs font-medium tracking-[0.2em] text-espresso-900 uppercase transition-colors group-hover:bg-gold-50">
-        <svg class="h-4 w-4 text-gold-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <span class="flex items-center justify-center gap-2 border-t border-accent-200 py-3 font-sans text-xs font-medium tracking-[0.2em] text-ink-900 uppercase transition-colors group-hover:bg-accent-50">
+        <svg class="h-4 w-4 text-accent-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
         </svg>
         {content.viewMap}
