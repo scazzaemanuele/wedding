@@ -14,11 +14,10 @@ import SectionHeader from './SectionHeader.astro';
 
 interface Props {
   content: I18nContent['venueSchedule'];
-  venue: I18nContent['venue'];
   schedule: I18nContent['schedule'];
 }
 
-const { content, venue, schedule } = Astro.props;
+const { content, schedule } = Astro.props;
 const { events } = schedule;
 const slides = [thavorn, venue1, venue2, venue3, venue4, venue5, venue6, venue7];
 const { googleMapsUrl, venueName, subLocation } = WEDDING_CONFIG.location;
@@ -39,7 +38,7 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
           <figure class="aspect-[1200/678] w-full shrink-0 snap-center snap-always">
             <Image
               src={photo}
-              alt={`${venue.resortName} ${i + 1}`}
+              alt={`${content.resortName} ${i + 1}`}
               widths={[480, 800, 1200]}
               sizes="(min-width: 640px) 576px, 100vw"
               loading={i === 0 ? 'eager' : 'lazy'}
@@ -62,9 +61,9 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
     </div>
 
     <div data-reveal class="mt-6 text-center">
-      <h3 class="font-serif text-2xl text-emerald-950 sm:text-3xl">{venue.resortName}</h3>
-      <p class="mt-1 font-sans text-[10px] tracking-[0.2em] text-gold-700 uppercase">{venue.resortSubtitle}</p>
-      <p class="mt-0.5 font-serif text-sm text-stone-600">{venue.address}</p>
+      <h3 class="font-serif text-2xl text-emerald-950 sm:text-3xl">{content.resortName}</h3>
+      <p class="mt-1 font-sans text-[10px] tracking-[0.2em] text-gold-700 uppercase">{content.resortSubtitle}</p>
+      <p class="mt-0.5 font-serif text-sm text-stone-600">{content.address}</p>
     </div>
 
     <ol data-reveal class="mt-10 space-y-8 border-l border-gold-300 pl-6">
@@ -84,11 +83,11 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
       target="_blank"
       rel="noopener noreferrer"
       class="group mt-10 block overflow-hidden rounded-2xl border border-gold-200 bg-white"
-      aria-label={venue.viewMap}
+      aria-label={content.viewMap}
     >
       <iframe
         src={mapEmbedUrl}
-        title={venue.resortName}
+        title={content.resortName}
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         tabindex="-1"
@@ -98,7 +97,7 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
         <svg class="h-4 w-4 text-gold-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
         </svg>
-        {venue.viewMap}
+        {content.viewMap}
       </span>
     </a>
   </div>

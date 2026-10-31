@@ -9,7 +9,7 @@ export const koContent: I18nContent = {
   nav: {
     story: '러브 스토리',
     schedule: '웨딩 일정',
-    venue: '베뉴 & 여행 안내',
+    travel: '여행 팁',
     dressCode: '드레스 코드',
     gallery: '갤러리',
     faq: '자주 묻는 질문',
@@ -55,7 +55,11 @@ export const koContent: I18nContent = {
   },
   venueSchedule: {
     eyebrow: '예식 안내',
-    title: '예식 장소 & 일정'
+    title: '예식 장소 & 일정',
+    resortName: '타번 비치 빌리지 리조트',
+    resortSubtitle: '나칼레이 비치 • 태국 푸켓',
+    address: '6/2 Moo 6 Kamala, Kathu, Phuket 83150',
+    viewMap: '구글 지도에서 위치 보기'
   },
   schedule: {
     events: [
@@ -63,47 +67,17 @@ export const koContent: I18nContent = {
       { time: '18:30 – 20:30', title: '리셉션 디너', location: '비치프론트 론' }
     ]
   },
-  venue: {
-    eyebrow: '꿈의 웨딩 베뉴',
-    title: '베뉴 & 오시는 길',
-    subtitle: '나칼레이 베이의 프라이빗 비치와 안다만 해의 에메랄드빛 바다가 만나는 프라이빗 안식처',
-    resortName: '타번 비치 빌리지 리조트',
-    resortSubtitle: '나칼레이 비치 • 태국 푸켓',
-    address: '6/2 Moo 6 Kamala, Kathu, Phuket 83150',
-    viewMap: '구글 지도에서 위치 보기',
-    aboutTitle: '베뉴 소개',
-    aboutDesc:
-      '카말라와 파통 사이 나칼레이 베이의 프라이빗 해안에 자리 잡은 비치프론트 리조트로, 리조트 전용의 한적한 비치와 태국 최대급 열대 라군 풀, 울창한 열대 정원을 갖춘 프라이빗 휴양지입니다.',
-    villaHighlightsTitle: '리조트 주요 시설',
-    highlights: [
-      '나칼레이 베이 프라이빗 비치 단독 이용',
-      '안다만 해의 환상적인 일몰 파노라마',
-      '태국 최대급 열대 라군 풀',
-      '하객 전용 럭셔리 스파 & 웰니스 파빌리온',
-      '카말라·파통 비치 무료 셔틀 제공'
+  travelTips: {
+    eyebrow: '떠나기 전에',
+    title: '여행 팁 & 알아두면 좋은 정보',
+    subtitle: '푸켓에서의 즐거운 여행을 위한 몇 가지 팁!',
+    tips: [
+      { title: '이동 수단', text: '푸켓은 대중교통이 많지 않아요. 도착 전에 Grab 앱을 설치해 두시면 섬 곳곳을 편하게 이동하실 수 있어요.' },
+      { title: '현금 & 환전', text: '현지 화폐는 태국 바트(THB)예요. 작은 상점이나 현지 시장에서는 카드를 받지 않을 수 있으니 현금을 조금 챙겨 주세요. 호텔 보증금에도 필요해요.' },
+      { title: '전자담배 금지', text: '태국에서는 전자담배와 베이프가 불법이에요. 절대 가지고 입국하지 마세요.' },
+      { title: '여행자 보험', text: '여행 전에 여행자 보험 가입을 권해 드려요.' }
     ],
-    travelCards: {
-      flightTitle: '푸켓 국제공항(HKT) 항공편',
-      flightDesc:
-        '푸켓 국제공항(HKT)으로 입국하시면 됩니다. 인천(ICN), 로마(FCO), 밀라노(MXP)에서 직항 및 방콕·싱가포르 경유 항공편이 매일 운항됩니다.',
-      transferTitle: '공항 픽업 & 전용 셔틀',
-      transferDesc:
-        '공항에서 숙소까지는 차량으로 약 40~50분 소요됩니다. 1월 2일과 3일 하객 전용 프라이빗 픽업 셔틀 밴을 운행합니다.',
-      visaTitle: '여권 및 비자 안내',
-      visaDesc:
-        '입국일 기준 여권 유효기간이 6개월 이상 남아있어야 합니다. 대한민국 여권 소지자는 무비자로 최대 60일간 태국 체류가 가능합니다.',
-      weatherTitle: '1월 푸켓 날씨',
-      weatherDesc:
-        '1월은 푸켓의 화창한 건기입니다. 평균 기온 28°C~31°C의 쾌적하고 맑은 날씨와 저녁의 기분 좋은 바닷바람을 기대하실 수 있습니다.'
-    },
-    hotelBooking: {
-    title: '하객 전용 제휴 리조트 숙소 안내',
-      desc: '신랑 신부 하객분들을 위해 전 객실 오션뷰 스위트 및 풀빌라를 특별 할인 요금으로 사전 확보하였습니다.',
-      codeLabel: '하객 전용 프로모션 코드:',
-      code: 'YEJIEMANUELE2026',
-      discountText: '3박 이상 예약 시 25% 특별 할인 (매일 샴페인 조식 뷔페 및 스파 크레딧 포함)',
-      bookButton: '할인 코드로 숙소 예약하기'
-    }
+    closing: '무엇보다, 편히 쉬고 햇살을 즐기며 저희와 함께 축하해 주세요!'
   },
   dressCode: {
     eyebrow: '스타일 가이드',
@@ -132,7 +106,6 @@ export const koContent: I18nContent = {
   gallery: {
     eyebrow: '우리의 순간들',
     title: '갤러리',
-    subtitle: '사랑의 발자취와 특별한 추억, 그리고 예식이 열릴 아름다운 공간',
   },
   faq: {
     eyebrow: '궁금한 점들',

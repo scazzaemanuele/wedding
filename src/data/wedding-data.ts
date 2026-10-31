@@ -24,12 +24,6 @@ export const WEDDING_CONFIG = {
     airportCode: 'HKT',
     airportName: 'Phuket International Airport (40 mins by car)'
   },
-  resortBooking: {
-    partnerHotel: 'Thavorn Beach Village Resort',
-    bookingCode: 'YEJIEMANUELE2026',
-    discountPercentage: '25% Special Guest Discount',
-    bookingLink: 'https://example.com/thavorn-booking'
-  },
   contact: {
     email: 'rsvp@yeji-emanuele.wedding',
     phone: '+66 76 123 4567'

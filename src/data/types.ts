@@ -44,7 +44,7 @@ export interface I18nContent {
   nav: {
     story: string;
     schedule: string;
-    venue: string;
+    travel: string;
     dressCode: string;
     gallery: string;
     faq: string;
@@ -79,40 +79,20 @@ export interface I18nContent {
   venueSchedule: {
     eyebrow: string;
     title: string;
-  };
-  schedule: {
-    events: ScheduleEvent[];
-  };
-  venue: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
     resortName: string;
     resortSubtitle: string;
     address: string;
     viewMap: string;
-    aboutTitle: string;
-    aboutDesc: string;
-    villaHighlightsTitle: string;
-    highlights: string[];
-    travelCards: {
-      flightTitle: string;
-      flightDesc: string;
-      transferTitle: string;
-      transferDesc: string;
-      visaTitle: string;
-      visaDesc: string;
-      weatherTitle: string;
-      weatherDesc: string;
-    };
-    hotelBooking: {
-      title: string;
-      desc: string;
-      codeLabel: string;
-      code: string;
-      discountText: string;
-      bookButton: string;
-    };
+  };
+  schedule: {
+    events: ScheduleEvent[];
+  };
+  travelTips: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    tips: { title: string; text: string }[];
+    closing: string;
   };
   dressCode: {
     eyebrow: string;
@@ -129,7 +109,6 @@ export interface I18nContent {
   gallery: {
     eyebrow: string;
     title: string;
-    subtitle: string;
   };
   faq: {
     eyebrow: string;

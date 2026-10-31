@@ -9,7 +9,7 @@ export const itContent: I18nContent = {
   nav: {
     story: 'La Nostra Storia',
     schedule: 'Programma',
-    venue: 'Location & Viaggio',
+    travel: 'Info Viaggio',
     dressCode: 'Dress Code',
     gallery: 'Galleria',
     faq: 'Domande & Risposte',
@@ -55,7 +55,11 @@ export const itContent: I18nContent = {
   },
   venueSchedule: {
     eyebrow: 'Dove e Quando',
-    title: 'Location & Programma'
+    title: 'Location & Programma',
+    resortName: 'Thavorn Beach Village Resort',
+    resortSubtitle: 'Spiaggia di Nakalay • Phuket, Thailandia',
+    address: '6/2 Moo 6 Kamala, Kathu, Phuket 83150',
+    viewMap: 'Apri su Google Maps'
   },
   schedule: {
     events: [
@@ -63,47 +67,17 @@ export const itContent: I18nContent = {
       { time: '18:30 – 20:30', title: 'Cena di Ricevimento', location: 'Prato Fronte Mare' }
     ]
   },
-  venue: {
-    eyebrow: 'La Destinazione',
-    title: 'La Location & Come Arrivare',
-    subtitle: 'Dove la spiaggia privata della Baia di Nakalay incontra le acque turchesi del Mare delle Andamane',
-    resortName: 'Thavorn Beach Village Resort',
-    resortSubtitle: 'Spiaggia di Nakalay • Phuket, Thailandia',
-    address: '6/2 Moo 6 Kamala, Kathu, Phuket 83150',
-    viewMap: 'Apri su Google Maps',
-    aboutTitle: 'La Struttura',
-    aboutDesc:
-      'Situata sulle rive private della Baia di Nakalay tra Kamala e Patong, la struttura offre una spiaggia appartata riservata agli ospiti, una delle più grandi piscine laguna tropicali della Thailandia, giardini botanici lussureggianti e un’atmosfera di totale riservatezza.',
-    villaHighlightsTitle: 'I Servizi del Resort',
-    highlights: [
-      'Spiaggia privata sulla Baia di Nakalay',
-      'Vista panoramica sul tramonto del Mare delle Andamane',
-      'Piscina laguna tropicale tra le più grandi della Thailandia',
-      'Padiglione benessere e SPA di lusso per gli ospiti',
-      'Navetta gratuita per le spiagge di Kamala e Patong'
+  travelTips: {
+    eyebrow: 'Prima di Partire',
+    title: 'Consigli di Viaggio & Info Utili',
+    subtitle: 'Qualche consiglio utile per il vostro soggiorno a Phuket!',
+    tips: [
+      { title: 'Spostarsi', text: 'I trasporti pubblici a Phuket sono limitati. Scaricate Grab prima di partire per muovervi facilmente sull’isola.' },
+      { title: 'Contanti e Valuta', text: 'La valuta locale è il Baht thailandese (THB). Tenete a portata di mano un po’ di contanti: negozi più piccoli e mercati locali potrebbero non accettare carte. Vi serviranno anche per il deposito in hotel.' },
+      { title: 'Niente Vape', text: 'Sigarette elettroniche e vape sono illegali in Thailandia. Vi preghiamo di non portarli nel Paese.' },
+      { title: 'Assicurazione di Viaggio', text: 'Vi consigliamo di stipulare un’assicurazione di viaggio prima della partenza.' }
     ],
-    travelCards: {
-      flightTitle: 'Voli per Phuket (HKT)',
-      flightDesc:
-        'L’aeroporto di riferimento è Phuket International (HKT). Ottimi collegamenti con scalo unico da Roma Fiumicino (FCO), Milano Malpensa (MXP), Seoul Incheon (ICN) via Bangkok o Doha/Dubai.',
-      transferTitle: 'Trasferimenti Aeroportuali',
-      transferDesc:
-        'La struttura dista circa 40–50 minuti dall’aeroporto. Abbiamo organizzato navette private di gruppo dedicate ai nostri invitati nelle giornate del 2 e 3 gennaio.',
-      visaTitle: 'Passaporto & Informazioni Visto',
-      visaDesc:
-        'Il passaporto deve avere validità residua di almeno 6 mesi dalla data d’ingresso. I cittadini italiani e dell’UE beneficiano dell’ingresso turistico senza visto fino a 60 giorni.',
-      weatherTitle: 'Clima a Gennaio',
-      weatherDesc:
-        'I primi giorni di gennaio cadono nel pieno della stagione secca e soleggiata di Phuket. Le temperature medie oscillano tra i 28°C e i 31°C con piacevoli brezze marine serali.'
-    },
-    hotelBooking: {
-    title: 'Convenzione Alloggio Ospiti',
-      desc: 'Abbiamo riservato un blocco di suite fronte oceano e ville con piscina a tariffa agevolata per i nostri invitati.',
-      codeLabel: 'Codice Promozionale:',
-      code: 'YEJIEMANUELE2026',
-      discountText: 'Sconto del 25% su soggiorni di 3 o più notti con colazione allo champagne e crediti spa inclusi.',
-      bookButton: 'Prenota con Codice Sconto'
-    }
+    closing: 'Soprattutto, rilassatevi, godetevi il sole e festeggiate con noi!'
   },
   dressCode: {
     eyebrow: 'Ispirazione di Stile',
@@ -132,7 +106,6 @@ export const itContent: I18nContent = {
   gallery: {
     eyebrow: 'I Nostri Ricordi',
     title: 'Galleria',
-    subtitle: 'Uno sguardo alla nostra storia, alla proposta e al santuario che ci ospiterà',
   },
   faq: {
     eyebrow: 'Domande Frequenti',

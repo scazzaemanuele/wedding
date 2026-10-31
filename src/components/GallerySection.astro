@@ -29,7 +29,7 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
 
 <section id="gallery" class="section section-tint overflow-x-clip">
   <div class="mx-auto max-w-3xl">
-    <SectionHeader eyebrow={content.eyebrow} title={content.title} subtitle={content.subtitle} />
+    <SectionHeader eyebrow={content.eyebrow} title={content.title} />
 
     <div data-gallery class="grid grid-cols-2 items-start gap-3 sm:gap-6">
       {columns.map((column, c) => (

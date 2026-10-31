@@ -11,7 +11,7 @@ export const enContent: I18nContent = {
   nav: {
     story: "Our Story",
     schedule: "Schedule",
-    venue: "Venue & Travel",
+    travel: "Travel Tips",
     dressCode: "Dress Code",
     gallery: "Gallery",
     faq: "Q & A",
@@ -58,6 +58,10 @@ export const enContent: I18nContent = {
   venueSchedule: {
     eyebrow: "Where & When",
     title: "Wedding Venue & Schedule",
+    resortName: "Thavorn Beach Village Resort",
+    resortSubtitle: "Nakalay Beach • Phuket, Thailand",
+    address: "6/2 Moo 6 Kamala, Kathu, Phuket 83150",
+    viewMap: "Open in Google Maps",
   },
   schedule: {
     events: [
@@ -65,49 +69,17 @@ export const enContent: I18nContent = {
       { time: "18:30 – 20:30", title: "Reception Dinner", location: "Beachfront Lawn" },
     ],
   },
-  venue: {
-    eyebrow: "Beachfront Paradise",
-    title: "The Venue & Travel",
-    subtitle:
-      "Where the private sands of Nakalay Bay meet the turquoise waters of the Andaman Sea",
-    resortName: "Thavorn Beach Village Resort",
-    resortSubtitle: "Nakalay Beach • Phuket, Thailand",
-    address: "6/2 Moo 6 Kamala, Kathu, Phuket 83150",
-    viewMap: "Open in Google Maps",
-    aboutTitle: "About the Resort",
-    aboutDesc:
-      "Set on the private shores of Nakalay Bay between Kamala and Patong, our beachfront resort offers its own secluded beach, one of Thailand’s largest tropical lagoon pools, lush botanical gardens, and total serenity away from city hustle.",
-    villaHighlightsTitle: "Resort Amenities",
-    highlights: [
-      "Private beach on Nakalay Bay",
-      "Panoramic sunset views over the Andaman Sea",
-      "One of Thailand’s largest tropical lagoon pools",
-      "Full-service luxury spa & wellness pavilion",
-      "Complimentary shuttle to Kamala & Patong beaches",
+  travelTips: {
+    eyebrow: "Before You Go",
+    title: "Travel Tips & Good to Know",
+    subtitle: "A few helpful tips for your stay in Phuket!",
+    tips: [
+      { title: "Getting Around", text: "Public transportation is limited in Phuket. Download Grab before arrival for easy transportation around the island." },
+      { title: "Cash & Currency", text: "The local currency is Thai Baht (THB). Keep some cash handy, as smaller shops and local markets may not accept cards. You’ll also need some for the hotel deposit." },
+      { title: "No Vapes", text: "E-cigarettes and vapes are illegal in Thailand. Please do not bring them into the country." },
+      { title: "Travel Insurance", text: "We recommend arranging travel insurance before your trip." },
     ],
-    travelCards: {
-      flightTitle: "Air Travel to Phuket (HKT)",
-      flightDesc:
-        "Fly into Phuket International Airport (HKT). Non-stop and one-stop flights connect easily from Rome (FCO), Milan (MXP), Seoul (ICN), Bangkok (BKK), and Singapore (SIN).",
-      transferTitle: "Airport Transfers & Shuttle",
-      transferDesc:
-        "The venue is approximately 40–50 minutes by car from HKT Airport. We are organizing scheduled private shuttle vans for our guests on Jan 2 & Jan 3.",
-      visaTitle: "Passport & Visa Requirements",
-      visaDesc:
-        "Passports must be valid for at least 6 months from entry date. Italian, Korean, and EU/US passport holders enjoy visa-free tourist entry for up to 60 days.",
-      weatherTitle: "Tropical January Climate",
-      weatherDesc:
-        "Early January falls in the heart of Phuket’s sunny dry season. Expect pleasant temperatures around 28°C–31°C (82°F–88°F) with balmy sea breezes in the evening.",
-    },
-    hotelBooking: {
-    title: "Guest Accommodation & Partner Villas",
-      desc: "We have reserved a block of luxury oceanfront suites and pool villas at preferential rates for our wedding guests.",
-      codeLabel: "Group Booking Code:",
-      code: "YEJIEMANUELE2026",
-      discountText:
-        "25% discount on 3+ night bookings including daily champagne breakfast & spa credits.",
-      bookButton: "Book With Discount Code",
-    },
+    closing: "Most importantly, relax, enjoy the sunshine and celebrate with us!",
   },
   dressCode: {
     eyebrow: "Style Inspiration",
@@ -161,8 +133,6 @@ export const enContent: I18nContent = {
   gallery: {
     eyebrow: "Visual Memories",
     title: "Gallery",
-    subtitle:
-      "A glimpse into our milestones, engagement, and wedding sanctuary",
   },
   faq: {
     eyebrow: "Common Questions",
