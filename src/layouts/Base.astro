@@ -8,6 +8,9 @@ interface Props {
 }
 
 const { lang, title, description } = Astro.props;
+// Google Analytics 4 measurement ID (e.g. G-XXXXXXXXXX), set at build time.
+// Left empty locally, so dev/preview traffic is never tracked.
+const gaId = import.meta.env.PUBLIC_GA_ID;
 ---
 
 <!doctype html>
@@ -34,6 +37,21 @@ const { lang, title, description } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=block"
       rel="stylesheet"
     />
+    {
+      gaId && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+          <script is:inline define:vars={{ gaId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', gaId);
+          </script>
+        </>
+      )
+    }
   </head>
   <body>
     <slot />
