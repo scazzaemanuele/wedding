@@ -4,15 +4,10 @@
 @custom-variant short (@media (orientation: portrait) and (max-height: 720px));
 
 @theme {
-  /* Opencode palette */
+  /* Base */
   --color-ivory: #faf6ef;
-  --color-sand: #f0e8da;
-  --color-gold: #b08d57;
-  --color-gold-light: #d4bc94;
-  --color-charcoal: #2b2723;
-  --color-ink: #555048;
 
-  /* Gemini palette (used by sections) */
+  /* Gold scale */
   --color-gold-50: #fcf9f2;
   --color-gold-100: #f7f1df;
   --color-gold-200: #eee0bc;
@@ -24,30 +19,19 @@
   --color-gold-800: #6f4e2b;
   --color-gold-900: #5d4127;
 
+  /* Accent */
   --color-emerald-700: #2e6254;
   --color-emerald-800: #234e42;
   --color-emerald-900: #16362d;
   --color-emerald-950: #0d221c;
-
-  --color-terracotta-50: #fdf5f2;
-  --color-terracotta-100: #fbeae3;
   --color-terracotta-500: #d48166;
-  --color-terracotta-600: #bf6a4e;
 
-  --color-sage-50: #f7f9f7;
-  --color-sage-100: #eff3ee;
-  --color-sage-200: #dce5db;
-  --color-sage-500: #8f9e8b;
-  --color-sage-700: #576554;
+  /* Neutrals come from Tailwind's warm `stone` scale. */
 
-  /* Opencode fonts — kept; gemini font tokens alias them */
-  --font-display: "Cormorant Garamond", "Noto Serif KR", ui-serif, Georgia, serif;
+  /* Typography: serif for headings & body copy, sans for labels/UI, script for flourishes */
+  --font-serif: "Cormorant Garamond", "Noto Serif KR", ui-serif, Georgia, serif;
+  --font-sans: "Jost", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
   --font-script: "Great Vibes", "Noto Serif KR", cursive;
-  --font-body: "Jost", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
-
-  --font-serif: var(--font-display);
-  --font-sans: var(--font-body);
-  --font-kr: "Noto Serif KR", serif;
 }
 
 html {
@@ -55,11 +39,11 @@ html {
 }
 
 body {
-  @apply bg-ivory font-body text-ink antialiased;
+  @apply bg-ivory font-sans text-stone-600 antialiased;
 }
 
 ::selection {
-  @apply bg-gold/30 text-charcoal;
+  @apply bg-gold-600/30 text-stone-800;
 }
 
 .site-header {
@@ -67,7 +51,7 @@ body {
 }
 
 .site-header.scrolled {
-  @apply bg-ivory/90 text-charcoal shadow-[0_1px_0_0_rgba(176,141,87,0.25)] backdrop-blur-md;
+  @apply bg-ivory/90 text-stone-800 shadow-[0_1px_0_0_rgba(176,141,87,0.25)] backdrop-blur-md;
 }
 
 .mobile-menu {
@@ -79,9 +63,18 @@ body {
 }
 
 .field {
-  @apply w-full border border-gold/30 bg-ivory/80 px-4 py-3 font-body text-sm text-charcoal outline-none transition-colors placeholder:text-ink/40 focus:border-gold;
+  @apply w-full border border-gold-600/30 bg-ivory/80 px-4 py-3 font-sans text-sm text-stone-800 outline-none transition-colors placeholder:text-stone-600/40 focus:border-gold-600;
+}
+
+/* Shared section shell: same vertical rhythm everywhere; tint alternates sections. */
+.section {
+  @apply relative z-10 px-4 py-20 sm:px-6 sm:py-28 lg:px-8;
+}
+
+.section-tint {
+  @apply bg-gold-50/50;
 }
 
 .btn-gold {
-  @apply inline-flex items-center justify-center border border-gold bg-gold px-8 py-3 text-xs font-medium tracking-[0.25em] text-ivory uppercase transition-colors duration-300 hover:bg-transparent hover:text-gold disabled:cursor-wait disabled:opacity-60;
+  @apply inline-flex items-center justify-center border border-gold-600 bg-gold-600 px-8 py-3 text-xs font-medium tracking-[0.25em] text-ivory uppercase transition-colors duration-300 hover:bg-transparent hover:text-gold-600 disabled:cursor-wait disabled:opacity-60;
 }

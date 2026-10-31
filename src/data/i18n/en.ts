@@ -14,19 +14,14 @@ export const enContent: I18nContent = {
     venue: "Venue & Travel",
     dressCode: "Dress Code",
     gallery: "Gallery",
-    travel: "Travel Info",
     faq: "Q & A",
     wishes: "Guestbook",
     rsvp: "RSVP",
   },
   hero: {
     eyebrow: "Save the Date & Wedding Invitation",
-    names: "Yeji & Emanuele",
-    and: "&",
-    tagline: "Two Souls, Three Cultures, One Eternal Voyage",
     date: "Sunday, January 3, 2027",
     location: "Thavorn Beach Village Resort • Phuket, Thailand",
-    ctaDetails: "Explore Celebration",
     scrollPrompt: "Scroll to Discover",
   },
   invitation: {
@@ -41,15 +36,6 @@ export const enContent: I18nContent = {
       "We would be honored beyond words to have you stand beside us as we exchange our vows, honor traditional blessings, and dance beneath the starlit Andaman sky.",
     signature: "With all our love, Yeji & Emanuele",
     ceremonyNotice: "Please kindly respond by September 30, 2026",
-  },
-  countdown: {
-    title: "Counting Down To Our Forever",
-    subtitle: "The countdown to January 3, 2027 at Thavorn Beach Village",
-    days: "Days",
-    hours: "Hours",
-    minutes: "Minutes",
-    seconds: "Seconds",
-    celebrationText: "Today is the day! Let's celebrate!",
   },
   story: {
     eyebrow: "How We Began",
@@ -74,37 +60,9 @@ export const enContent: I18nContent = {
     title: "Wedding Venue & Schedule",
   },
   schedule: {
-    eyebrow: "Wedding Day Itinerary",
-    title: "Schedule of Events",
-    subtitle:
-      "An evening of celebration on the shores of Nakalay Bay",
-    addToCalendar: "Add to Calendar",
-    calendarSummary: "Yeji & Emanuele Wedding",
-    calendarDesc:
-      "Join Yeji and Emanuele in celebrating their wedding in Phuket, Thailand.",
-    days: [
-      {
-        date: "Sunday, January 3, 2027",
-        dayTitle: "The Wedding Day",
-        events: [
-          {
-            time: "16:00 – 18:00",
-            title: "Ceremony",
-            location: "AMOR The Pier",
-            description:
-              "Yeji and Emanuele exchange vows and rings above the Andaman Sea.",
-            icon: "ring",
-          },
-          {
-            time: "18:30 – 20:30",
-            title: "Reception Dinner",
-            location: "Beachfront Lawn",
-            description:
-              "Dinner and celebrations on the beachfront lawn.",
-            icon: "dinner",
-          },
-        ],
-      },
+    events: [
+      { time: "16:00 – 18:00", title: "Ceremony", location: "AMOR The Pier" },
+      { time: "18:30 – 20:30", title: "Reception Dinner", location: "Beachfront Lawn" },
     ],
   },
   venue: {
@@ -142,7 +100,7 @@ export const enContent: I18nContent = {
         "Early January falls in the heart of Phuket’s sunny dry season. Expect pleasant temperatures around 28°C–31°C (82°F–88°F) with balmy sea breezes in the evening.",
     },
     hotelBooking: {
-      title: "Guest Accommodation & Partner Villas",
+    title: "Guest Accommodation & Partner Villas",
       desc: "We have reserved a block of luxury oceanfront suites and pool villas at preferential rates for our wedding guests.",
       codeLabel: "Group Booking Code:",
       code: "YEJIEMANUELE2026",
@@ -205,70 +163,6 @@ export const enContent: I18nContent = {
     title: "Gallery",
     subtitle:
       "A glimpse into our milestones, engagement, and wedding sanctuary",
-    filterAll: "All Photos",
-    filterStory: "Our Story",
-    filterVenue: "The Resort",
-    filterCeremony: "Blessings",
-    filterReception: "Celebration",
-    filterDetails: "Details",
-    photos: [
-      {
-        id: "hero",
-        title: "Golden Hour Vows",
-        category: "ceremony",
-        src: "/images/hero.jpg",
-        alt: "Yeji and Emanuele under floral arch overlooking ocean",
-      },
-      {
-        id: "venue",
-        title: "The Beachfront Resort",
-        category: "venue",
-        src: "/images/venue.jpg",
-        alt: "Beachfront resort with lagoon pool at dusk",
-      },
-      {
-        id: "water-blessing",
-        title: "Thai Water Pouring Blessing",
-        category: "ceremony",
-        src: "/images/ceremony.jpg",
-        alt: "Traditional Thai water blessing ceremony with conch shell",
-      },
-      {
-        id: "reception",
-        title: "Banquet Under Fairy Lights",
-        category: "reception",
-        src: "/images/reception.jpg",
-        alt: "Long wooden dinner tables lit by twinkling fairy lights on beach",
-      },
-      {
-        id: "story-beach",
-        title: "Sunrise on the Shore",
-        category: "story",
-        src: "/images/story-1.jpg",
-        alt: "Couple walking barefoot along white sand tropical beach",
-      },
-      {
-        id: "proposal",
-        title: "The Sunset Cliff Proposal",
-        category: "story",
-        src: "/images/proposal.jpg",
-        alt: "Emanuele proposing to Yeji on cliffside with lanterns",
-      },
-      {
-        id: "rings",
-        title: "Golden Bands & White Orchids",
-        category: "details",
-        src: "/images/rings.jpg",
-        alt: "Macro photograph of gold wedding bands on Thai silk and orchid",
-      },
-      {
-        id: "cocktails",
-        title: "Welcome Sunset Spritz",
-        category: "reception",
-        src: "/images/cocktails.jpg",
-        alt: "Sunset beachfront cocktail party with champagne coupe glasses",
-      },
-    ],
   },
   faq: {
     eyebrow: "Common Questions",
@@ -377,38 +271,31 @@ export const enContent: I18nContent = {
       {
         id: "1",
         author: "Sofia & Marco",
-        location: "Florence, Italy",
+    location: "Florence, Italy",
         message:
           "Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!",
         stamp: "🥂",
-        date: "August 2026",
+    date: "August 2026",
       },
       {
         id: "2",
         author: "Min-Jun & Yu-Jin",
-        location: "Seoul, South Korea",
+    location: "Seoul, South Korea",
         message:
           "예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!",
         stamp: "💐",
-        date: "August 2026",
+    date: "August 2026",
       },
       {
         id: "3",
         author: "Elena & Lucas",
-        location: "Bangkok, Thailand",
+    location: "Bangkok, Thailand",
         message:
           "Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!",
         stamp: "✨",
-        date: "August 2026",
+    date: "August 2026",
       },
     ],
-  },
-  music: {
-    play: "Play Romantic Melody",
-    pause: "Pause Melody",
-    label: "Ambient Music",
-    nowPlaying: "Now Playing",
-    trackTitle: "Sunset Serenades in Nakalay Bay (Acoustic Melodies)",
   },
   footer: {
     names: "Yeji & Emanuele",

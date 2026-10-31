@@ -124,13 +124,13 @@ export const RsvpForm: React.FC<RsvpFormProps> = ({ content }) => {
 
         {/* Section Header */}
         <div className="text-center mb-8">
-          <span className="inline-block text-xs font-sans font-bold uppercase tracking-widest text-gold-700 mb-2">
+          <span className="inline-block mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-gold-700 uppercase">
             {content.eyebrow}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-emerald-950">
             {content.title}
           </h2>
-          <p className="text-stone-600 mt-2 font-serif text-sm sm:text-base">
+          <p className="text-stone-600 mt-3 font-serif text-sm sm:text-base">
             {content.subtitle}
           </p>
           <div className="mt-3 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-50 border border-gold-300/80 text-xs font-medium text-emerald-900">

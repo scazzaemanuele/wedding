@@ -11,15 +11,6 @@ export interface ScheduleEvent {
   time: string;
   title: string;
   location: string;
-  description: string;
-  dressCode?: string;
-  icon: 'cocktail' | 'ring' | 'water' | 'dinner' | 'party' | 'brunch' | 'music';
-}
-
-export interface ScheduleDay {
-  date: string;
-  dayTitle: string;
-  events: ScheduleEvent[];
 }
 
 export interface PaletteColor {
@@ -27,15 +18,6 @@ export interface PaletteColor {
   hex: string;
   textDark: boolean;
   description: string;
-}
-
-export interface GalleryPhoto {
-  id: string;
-  title: string;
-  category: 'story' | 'venue' | 'ceremony' | 'reception' | 'details';
-  src: string;
-  alt: string;
-  aspect?: string;
 }
 
 export interface FaqItem {
@@ -65,19 +47,14 @@ export interface I18nContent {
     venue: string;
     dressCode: string;
     gallery: string;
-    travel: string;
     faq: string;
     wishes: string;
     rsvp: string;
   };
   hero: {
     eyebrow: string;
-    names: string;
-    and: string;
-    tagline: string;
     date: string;
     location: string;
-    ctaDetails: string;
     scrollPrompt: string;
   };
   invitation: {
@@ -89,15 +66,6 @@ export interface I18nContent {
     letterParagraph3: string;
     signature: string;
     ceremonyNotice: string;
-  };
-  countdown: {
-    title: string;
-    subtitle: string;
-    days: string;
-    hours: string;
-    minutes: string;
-    seconds: string;
-    celebrationText: string;
   };
   story: {
     eyebrow: string;
@@ -113,13 +81,7 @@ export interface I18nContent {
     title: string;
   };
   schedule: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    addToCalendar: string;
-    calendarSummary: string;
-    calendarDesc: string;
-    days: ScheduleDay[];
+    events: ScheduleEvent[];
   };
   venue: {
     eyebrow: string;
@@ -168,13 +130,6 @@ export interface I18nContent {
     eyebrow: string;
     title: string;
     subtitle: string;
-    filterAll: string;
-    filterStory: string;
-    filterVenue: string;
-    filterCeremony: string;
-    filterReception: string;
-    filterDetails: string;
-    photos: GalleryPhoto[];
   };
   faq: {
     eyebrow: string;
@@ -235,13 +190,6 @@ export interface I18nContent {
     recentWishesTitle: string;
     emptyWishes: string;
     sampleWishes: WishMessage[];
-  };
-  music: {
-    play: string;
-    pause: string;
-    label: string;
-    nowPlaying: string;
-    trackTitle: string;
   };
   footer: {
     names: string;

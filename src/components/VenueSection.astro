@@ -1,6 +1,7 @@
 ---
 import type { I18nContent } from '../data/types';
 import { WEDDING_CONFIG } from '../data/wedding-data';
+import SectionHeader from './SectionHeader.astro';
 
 interface Props {
   content: I18nContent['venue'];
@@ -9,91 +10,32 @@ interface Props {
 const { content } = Astro.props;
 ---
 
-<section id="venue" class="py-24 px-4 sm:px-6 lg:px-8 relative z-10">
+<section id="venue" class="section">
   <div class="max-w-6xl mx-auto">
-    {/* Section Header */}
-    <div class="text-center max-w-2xl mx-auto mb-16 gsap-reveal">
-      <span class="text-xs font-sans font-bold uppercase tracking-widest text-gold-700 mb-2 block">
-        {content.eyebrow}
-      </span>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-emerald-950">
-        {content.title}
-      </h2>
-      <p class="text-stone-600 mt-2 font-serif text-sm sm:text-base">
-        {content.subtitle}
-      </p>
-      <div class="w-16 h-0.5 bg-gold-400 mx-auto mt-4" />
-    </div>
+    <SectionHeader eyebrow={content.eyebrow} title={content.title} subtitle={content.subtitle} />
 
-    {/* Venue Feature Hero Card */}
-    <div class="rounded-3xl overflow-hidden bg-white border border-gold-200 shadow-2xl mb-16 gsap-reveal">
-      <div class="grid grid-cols-1 lg:grid-cols-12">
-        {/* Left: Venue Image */}
-        <div class="lg:col-span-7 relative min-h-[350px] lg:min-h-[450px]">
-          <img
-            src="/images/venue.jpg"
-            alt={content.resortName}
-            loading="lazy"
-            class="w-full h-full object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent lg:hidden" />
-          <div class="absolute bottom-4 left-4 right-4 text-white lg:hidden">
-            <span class="text-xs font-sans text-gold-300 uppercase tracking-widest block">{content.resortSubtitle}</span>
-            <h3 class="text-xl font-serif font-bold">{content.resortName}</h3>
-          </div>
-        </div>
+    {/* About the resort (name, address and map live in the Venue & Schedule section) */}
+    <div data-reveal class="mx-auto mb-16 max-w-3xl rounded-3xl border border-gold-200 bg-white p-6 shadow-lg sm:p-10">
+      <h3 class="font-serif text-2xl font-bold text-emerald-950 sm:text-3xl">{content.aboutTitle}</h3>
+      <p class="mt-3 font-serif text-sm leading-relaxed text-stone-700 sm:text-base">{content.aboutDesc}</p>
 
-        {/* Right: Venue Info */}
-        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between bg-gold-50/30">
-          <div>
-            <div class="hidden lg:block mb-4">
-              <span class="text-xs font-sans font-bold uppercase tracking-widest text-gold-700 block">
-                {content.resortSubtitle}
-              </span>
-              <h3 class="text-2xl sm:text-3xl font-serif font-bold text-emerald-950 mt-1">
-                {content.resortName}
-              </h3>
-            </div>
-
-            <p class="text-xs sm:text-sm text-stone-600 font-sans mb-4 flex items-start gap-2">
-              <span class="text-gold-600 text-sm">📍</span>
-              <span>{content.address}</span>
-            </p>
-
-            <p class="text-stone-700 font-serif text-sm sm:text-base leading-relaxed mb-6">
-              {content.aboutDesc}
-            </p>
-
-            <h4 class="text-xs font-sans font-bold uppercase tracking-wider text-emerald-950 mb-3">
-              {content.villaHighlightsTitle}
-            </h4>
-            <ul class="space-y-2 mb-6">
-              {content.highlights.map((item) => (
-                <li class="flex items-center gap-2 text-xs sm:text-sm text-stone-700 font-serif">
-                  <span class="text-gold-600 font-bold">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <a
-            href={WEDDING_CONFIG.location.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full bg-emerald-900 hover:bg-emerald-950 text-gold-100 text-sm font-semibold transition-all shadow-md hover:shadow-lg"
-          >
-            <span>🗺️</span>
-            <span>{content.viewMap}</span>
-          </a>
-        </div>
-      </div>
+      <h4 class="mt-6 mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-gold-700 uppercase">
+        {content.villaHighlightsTitle}
+      </h4>
+      <ul class="grid gap-2 sm:grid-cols-2">
+        {content.highlights.map((item) => (
+          <li class="flex items-start gap-2 font-serif text-sm text-stone-700">
+            <span class="font-bold text-gold-600">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
 
     {/* 4 Travel Advice Cards */}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
       {/* Flight Card */}
-      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+      <div data-reveal class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <span class="text-3xl mb-3 block">✈️</span>
         <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
           {content.travelCards.flightTitle}
@@ -104,7 +46,7 @@ const { content } = Astro.props;
       </div>
 
       {/* Transfer Card */}
-      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+      <div data-reveal class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <span class="text-3xl mb-3 block">🚐</span>
         <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
           {content.travelCards.transferTitle}
@@ -115,7 +57,7 @@ const { content } = Astro.props;
       </div>
 
       {/* Visa Card */}
-      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+      <div data-reveal class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <span class="text-3xl mb-3 block">🛂</span>
         <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
           {content.travelCards.visaTitle}
@@ -126,7 +68,7 @@ const { content } = Astro.props;
       </div>
 
       {/* Weather Card */}
-      <div class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gsap-reveal">
+      <div data-reveal class="p-6 rounded-2xl bg-white/90 backdrop-blur-md border border-gold-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         <span class="text-3xl mb-3 block">☀️</span>
         <h4 class="font-serif font-bold text-lg text-emerald-950 mb-2">
           {content.travelCards.weatherTitle}
@@ -138,7 +80,7 @@ const { content } = Astro.props;
     </div>
 
     {/* Partner Resort Accommodation Card */}
-    <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-gold-100 border border-gold-400/40 shadow-2xl gsap-reveal">
+    <div data-reveal class="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-gold-100 border border-gold-400/40 shadow-2xl">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
         <div class="max-w-2xl text-center lg:text-left">
           <span class="inline-block px-3 py-1 rounded-full bg-gold-400/20 text-gold-300 text-xs font-bold uppercase tracking-widest mb-3">

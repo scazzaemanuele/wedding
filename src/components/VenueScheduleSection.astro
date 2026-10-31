@@ -10,6 +10,7 @@ import venue4 from '../assets/venue4.png';
 import venue5 from '../assets/venue5.png';
 import venue6 from '../assets/venue6.png';
 import venue7 from '../assets/venue7.png';
+import SectionHeader from './SectionHeader.astro';
 
 interface Props {
   content: I18nContent['venueSchedule'];
@@ -18,20 +19,16 @@ interface Props {
 }
 
 const { content, venue, schedule } = Astro.props;
-const events = schedule.days[0]?.events ?? [];
+const { events } = schedule;
 const slides = [thavorn, venue1, venue2, venue3, venue4, venue5, venue6, venue7];
 const { googleMapsUrl, venueName, subLocation } = WEDDING_CONFIG.location;
 // Keyless Google Maps embed; made non-interactive so it reads as a static map and taps open Google Maps.
 const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venueName}, ${subLocation}`)}&z=15&output=embed`;
 ---
 
-<section id="venue-schedule" class="relative z-10 px-4 py-20 sm:py-24">
+<section id="venue-schedule" class="section">
   <div class="mx-auto max-w-xl">
-    <div data-reveal class="mb-10 text-center">
-      <span class="mb-2 block font-sans text-xs font-bold tracking-widest text-gold-700 uppercase">{content.eyebrow}</span>
-      <h2 class="font-serif text-3xl font-bold text-emerald-950 sm:text-4xl">{content.title}</h2>
-      <div class="mx-auto mt-4 h-0.5 w-16 bg-gold-400"></div>
-    </div>
+    <SectionHeader eyebrow={content.eyebrow} title={content.title} />
 
     <div data-reveal data-venue-swiper class="relative">
       <div
@@ -65,7 +62,7 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
     </div>
 
     <div data-reveal class="mt-6 text-center">
-      <h3 class="font-display text-2xl text-emerald-950 sm:text-3xl">{venue.resortName}</h3>
+      <h3 class="font-serif text-2xl text-emerald-950 sm:text-3xl">{venue.resortName}</h3>
       <p class="mt-1 font-sans text-[10px] tracking-[0.2em] text-gold-700 uppercase">{venue.resortSubtitle}</p>
       <p class="mt-0.5 font-serif text-sm text-stone-600">{venue.address}</p>
     </div>
@@ -74,7 +71,7 @@ const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venu
       {events.map((event) => (
         <li class="relative">
           <span class="absolute top-1.5 -left-[29px] h-2.5 w-2.5 rounded-full bg-gold-500 ring-4 ring-ivory" aria-hidden="true"></span>
-          <p class="font-display text-lg tracking-wider text-gold-700">{event.time}</p>
+          <p class="font-serif text-lg tracking-wider text-gold-700">{event.time}</p>
           <h3 class="mt-1 font-serif text-xl text-emerald-950 sm:text-2xl">{event.title}</h3>
           <p class="mt-0.5 font-sans text-xs tracking-[0.2em] text-stone-500 uppercase">{event.location}</p>
         </li>

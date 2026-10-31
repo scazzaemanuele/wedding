@@ -12,19 +12,14 @@ export const koContent: I18nContent = {
     venue: '베뉴 & 여행 안내',
     dressCode: '드레스 코드',
     gallery: '갤러리',
-    travel: '여행 정보',
     faq: '자주 묻는 질문',
     wishes: '방명록',
     rsvp: '참석 회신 (RSVP)'
   },
   hero: {
     eyebrow: 'Save the Date & 모바일 청첩장',
-    names: '예지 & 에마누엘레',
-    and: '&',
-    tagline: '두 영혼, 세 개의 문화, 하나의 영원한 여정',
-        date: '2027년 1월 3일 일요일',
+    date: '2027년 1월 3일 일요일',
     location: '타번 비치 빌리지 리조트 • 태국 푸켓',
-    ctaDetails: '예식 안내 살펴보기',
     scrollPrompt: '아래로 스크롤하여 더 알아보기'
   },
   invitation: {
@@ -39,15 +34,6 @@ export const koContent: I18nContent = {
       '저희 두 사람이 서로에게 영원을 약속하고, 양가의 전통 축복을 나누며, 별빛 쏟아지는 밤하늘 아래 춤추는 자리에 함께해 주신다면 더없는 기쁨과 영광이겠습니다.',
     signature: '사랑과 감사를 담아, 예지 & 에마누엘레 올림',
     ceremonyNotice: '원활한 행사 준비를 위해 2026년 9월 30일까지 참석 여부를 알려주시면 감사하겠습니다.'
-  },
-  countdown: {
-    title: '우리의 영원을 향한 카운트다운',
-    subtitle: '2027년 1월 3일, 타번 비치 빌리지 리조트에서의 특별한 날까지',
-    days: '일',
-    hours: '시간',
-    minutes: '분',
-    seconds: '초',
-    celebrationText: '마침내 오늘, 우리의 결혼식 날입니다!'
   },
   story: {
     eyebrow: '첫 만남부터 오늘까지',
@@ -72,35 +58,9 @@ export const koContent: I18nContent = {
     title: '예식 장소 & 일정'
   },
   schedule: {
-    eyebrow: '결혼식 일정',
-    title: '예식 및 연회 프로그램',
-    subtitle: '나칼레이 베이 바닷가에서 펼쳐지는 사랑의 저녁',
-    addToCalendar: '캘린더에 일정 추가',
-    calendarSummary: '예지 & 에마누엘레 결혼식',
-    calendarDesc: '태국 푸켓에서 열리는 예지와 에마누엘레의 결혼식 축하 행사',
-    days: [
-      {
-        date: '2027년 1월 3일 일요일',
-        dayTitle: '결혼식 당일',
-        events: [
-          {
-            time: '16:00 – 18:00',
-            title: '결혼 의식',
-            location: 'AMOR 더 피어',
-            description:
-              '끝없는 바다를 배경으로 예지와 에마누엘레가 서약과 반지를 나눕니다.',
-            icon: 'ring'
-          },
-          {
-            time: '18:30 – 20:30',
-            title: '리셉션 디너',
-            location: '비치프론트 론',
-            description:
-              '바닷가 잔디밭에서 이어지는 만찬과 축하의 시간.',
-            icon: 'dinner'
-          }
-        ]
-      }
+    events: [
+      { time: '16:00 – 18:00', title: '결혼 의식', location: 'AMOR 더 피어' },
+      { time: '18:30 – 20:30', title: '리셉션 디너', location: '비치프론트 론' }
     ]
   },
   venue: {
@@ -137,7 +97,7 @@ export const koContent: I18nContent = {
         '1월은 푸켓의 화창한 건기입니다. 평균 기온 28°C~31°C의 쾌적하고 맑은 날씨와 저녁의 기분 좋은 바닷바람을 기대하실 수 있습니다.'
     },
     hotelBooking: {
-      title: '하객 전용 제휴 리조트 숙소 안내',
+    title: '하객 전용 제휴 리조트 숙소 안내',
       desc: '신랑 신부 하객분들을 위해 전 객실 오션뷰 스위트 및 풀빌라를 특별 할인 요금으로 사전 확보하였습니다.',
       codeLabel: '하객 전용 프로모션 코드:',
       code: 'YEJIEMANUELE2026',
@@ -173,70 +133,6 @@ export const koContent: I18nContent = {
     eyebrow: '우리의 순간들',
     title: '갤러리',
     subtitle: '사랑의 발자취와 특별한 추억, 그리고 예식이 열릴 아름다운 공간',
-    filterAll: '전체 사진',
-    filterStory: '러브 스토리',
-    filterVenue: '웨딩 베뉴',
-    filterCeremony: '예식 & 의식',
-    filterReception: '연회 & 파티',
-    filterDetails: '웨딩 디테일',
-    photos: [
-      {
-        id: 'hero',
-        title: '노을빛 아래의 서약',
-        category: 'ceremony',
-        src: '/images/hero.jpg',
-        alt: '바다를 배경으로 플라워 아치 아래 선 예지와 에마누엘레'
-      },
-      {
-        id: 'venue',
-        title: '비치프론트 리조트',
-        category: 'venue',
-        src: '/images/venue.jpg',
-        alt: '해질녘 라군 풀이 있는 비치프론트 리조트'
-      },
-      {
-        id: 'water-blessing',
-        title: '태국 전통 물 축복식',
-        category: 'ceremony',
-        src: '/images/ceremony.jpg',
-        alt: '황금 소라고둥으로 물을 붓는 태국 전통 결혼 의식'
-      },
-      {
-        id: 'reception',
-        title: '별빛 조명 아래의 만찬',
-        category: 'reception',
-        src: '/images/reception.jpg',
-        alt: '해변 데크에 차려진 낭만적인 조명의 야외 디너 테이블'
-      },
-      {
-        id: 'story-beach',
-        title: '해변에서의 아침 산책',
-        category: 'story',
-        src: '/images/story-1.jpg',
-        alt: '에메랄드빛 해변을 맨발로 거니는 신랑 신부'
-      },
-      {
-        id: 'proposal',
-        title: '절벽 위 프러포즈',
-        category: 'story',
-        src: '/images/proposal.jpg',
-        alt: '노을 지는 절벽에서 프러포즈하는 에마누엘레와 감동한 예지'
-      },
-      {
-        id: 'rings',
-        title: '웨딩 링 & 화이트 오키드',
-        category: 'details',
-        src: '/images/rings.jpg',
-        alt: '타이 실크와 난초 위에 놓인 골드 웨딩 링 클로즈업'
-      },
-      {
-        id: 'cocktails',
-        title: '웰컴 선셋 칵테일',
-        category: 'reception',
-        src: '/images/cocktails.jpg',
-        alt: '해질녘 해변 바에서 샴페인을 즐기는 축하 파티'
-      }
-    ]
   },
   faq: {
     eyebrow: '궁금한 점들',
@@ -332,38 +228,31 @@ export const koContent: I18nContent = {
       {
         id: '1',
         author: 'Sofia & Marco',
-        location: '이탈리아 피렌체',
+    location: '이탈리아 피렌체',
         message:
           'Carissimi Yeji e Emanuele, congratulazioni di cuore per questo traguardo straordinario! Non vediamo l’ora di brindare con voi in questo paradiso tropicale. Un abbraccio immenso!',
         stamp: '🥂',
-        date: '2026년 8월'
+    date: '2026년 8월'
       },
       {
         id: '2',
         author: '민준 & 유진',
-        location: '대한민국 서울',
+    location: '대한민국 서울',
         message:
           '예지야, 에마누엘레! 두 사람의 아름다운 결혼을 진심으로 축하해. 세상에서 가장 빛나는 신랑 신부의 앞날에 늘 행복과 축복만 가득하길 바란다. 푸켓에서 만나자!',
         stamp: '💐',
-        date: '2026년 8월'
+    date: '2026년 8월'
       },
       {
         id: '3',
         author: 'Elena & Lucas',
-        location: '태국 방콕',
+    location: '태국 방콕',
         message:
           'Sawaddee krub! We are counting down the days until January. Wishing you a lifetime of laughter, incredible food, and endless adventures together!',
         stamp: '✨',
-        date: '2026년 8월'
+    date: '2026년 8월'
       }
     ]
-  },
-  music: {
-    play: '배경음악 재생',
-    pause: '배경음악 일시정지',
-    label: '웨딩 앰비언스 뮤직',
-    nowPlaying: '현재 재생 중',
-    trackTitle: '나칼레이 베이의 로맨틱 선셋 (Acoustic Guitar & Harp)'
   },
   footer: {
     names: '예지 & 에마누엘레',

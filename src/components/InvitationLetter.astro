@@ -10,10 +10,10 @@ const { content } = Astro.props;
 const { monogram } = WEDDING_CONFIG.couple;
 ---
 
-<section id="invitation" class="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+<section id="invitation" class="section">
   <div class="max-w-3xl mx-auto">
     {/* Parchment Invitation Card */}
-    <div class="relative p-8 sm:p-12 md:p-16 rounded-3xl bg-[#fdfcf9] border border-gold-300 shadow-2xl shadow-emerald-950/10 text-center gsap-reveal">
+    <div data-reveal class="relative p-8 sm:p-12 md:p-16 rounded-3xl bg-[#fdfcf9] border border-gold-300 shadow-2xl shadow-emerald-950/10 text-center">
       {/* Decorative Ornate Borders */}
       <div class="absolute inset-3 sm:inset-4 border border-gold-200 pointer-events-none rounded-2xl" />
       <div class="absolute inset-5 sm:inset-6 border border-gold-100 pointer-events-none rounded-xl" />
@@ -26,7 +26,7 @@ const { monogram } = WEDDING_CONFIG.couple;
       </div>
 
       {/* Eyebrow */}
-      <span class="inline-block text-xs font-sans font-bold uppercase tracking-widest text-gold-700 mb-2">
+      <span class="inline-block mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-gold-700 uppercase">
         {content.eyebrow}
       </span>
 
