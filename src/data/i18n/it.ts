@@ -67,6 +67,10 @@ export const itContent: I18nContent = {
   calendar: {
     saveTheDate: 'Save the Date'
   },
+  venueSchedule: {
+    eyebrow: 'Dove e Quando',
+    title: 'Location & Programma'
+  },
   schedule: {
     eyebrow: 'Il Giorno delle Nozze',
     title: 'Programma delle Celebrazioni',
@@ -167,7 +171,7 @@ export const itContent: I18nContent = {
   },
   gallery: {
     eyebrow: 'I Nostri Ricordi',
-    title: 'Momenti Indimenticabili',
+    title: 'Galleria',
     subtitle: 'Uno sguardo alla nostra storia, alla proposta e al santuario che ci ospiterà',
     filterAll: 'Tutte le Foto',
     filterStory: 'La Nostra Storia',

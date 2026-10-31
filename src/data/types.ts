@@ -108,6 +108,10 @@ export interface I18nContent {
   calendar: {
     saveTheDate: string;
   };
+  venueSchedule: {
+    eyebrow: string;
+    title: string;
+  };
   schedule: {
     eyebrow: string;
     title: string;

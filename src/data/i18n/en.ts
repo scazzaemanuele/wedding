@@ -69,6 +69,10 @@ export const enContent: I18nContent = {
   calendar: {
     saveTheDate: "Save the Date",
   },
+  venueSchedule: {
+    eyebrow: "Where & When",
+    title: "Wedding Venue & Schedule",
+  },
   schedule: {
     eyebrow: "Wedding Day Itinerary",
     title: "Schedule of Events",
@@ -198,7 +202,7 @@ export const enContent: I18nContent = {
   },
   gallery: {
     eyebrow: "Visual Memories",
-    title: "Moments In Time",
+    title: "Gallery",
     subtitle:
       "A glimpse into our milestones, engagement, and wedding sanctuary",
     filterAll: "All Photos",

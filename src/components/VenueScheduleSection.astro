@@ -1,0 +1,129 @@
+---
+import { Image } from 'astro:assets';
+import type { I18nContent } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
+import thavorn from '../assets/thavorn.png';
+import venue1 from '../assets/venue.png';
+import venue2 from '../assets/venue2.png';
+import venue3 from '../assets/venue3.png';
+import venue4 from '../assets/venue4.png';
+import venue5 from '../assets/venue5.png';
+import venue6 from '../assets/venue6.png';
+import venue7 from '../assets/venue7.png';
+
+interface Props {
+  content: I18nContent['venueSchedule'];
+  venue: I18nContent['venue'];
+  schedule: I18nContent['schedule'];
+}
+
+const { content, venue, schedule } = Astro.props;
+const events = schedule.days[0]?.events ?? [];
+const slides = [thavorn, venue1, venue2, venue3, venue4, venue5, venue6, venue7];
+const { googleMapsUrl, venueName, subLocation } = WEDDING_CONFIG.location;
+// Keyless Google Maps embed; made non-interactive so it reads as a static map and taps open Google Maps.
+const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(`${venueName}, ${subLocation}`)}&z=15&output=embed`;
+---
+
+<section id="venue-schedule" class="relative z-10 px-4 py-20 sm:py-24">
+  <div class="mx-auto max-w-xl">
+    <div data-reveal class="mb-10 text-center">
+      <span class="mb-2 block font-sans text-xs font-bold tracking-widest text-gold-700 uppercase">{content.eyebrow}</span>
+      <h2 class="font-serif text-3xl font-bold text-emerald-950 sm:text-4xl">{content.title}</h2>
+      <div class="mx-auto mt-4 h-0.5 w-16 bg-gold-400"></div>
+    </div>
+
+    <div data-reveal data-venue-swiper class="relative">
+      <div
+        data-track
+        class="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain rounded-2xl shadow-[0_20px_50px_-25px_rgba(60,40,20,0.45)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {slides.map((photo, i) => (
+          <figure class="aspect-[1200/678] w-full shrink-0 snap-center snap-always">
+            <Image
+              src={photo}
+              alt={`${venue.resortName} ${i + 1}`}
+              widths={[480, 800, 1200]}
+              sizes="(min-width: 640px) 576px, 100vw"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              class="h-full w-full object-cover"
+            />
+          </figure>
+        ))}
+      </div>
+      <div class="mt-3 flex justify-center gap-2">
+        {slides.map((_, i) => (
+          <button
+            type="button"
+            data-dot
+            aria-label={`${i + 1} / ${slides.length}`}
+            aria-current={i === 0 ? 'true' : 'false'}
+            class="h-1.5 w-1.5 rounded-full bg-gold-300 transition-all duration-300 aria-[current=true]:w-5 aria-[current=true]:bg-gold-600"
+          ></button>
+        ))}
+      </div>
+    </div>
+
+    <div data-reveal class="mt-6 text-center">
+      <h3 class="font-display text-2xl text-emerald-950 sm:text-3xl">{venue.resortName}</h3>
+      <p class="mt-1 font-sans text-[10px] tracking-[0.2em] text-gold-700 uppercase">{venue.resortSubtitle}</p>
+      <p class="mt-0.5 font-serif text-sm text-stone-600">{venue.address}</p>
+    </div>
+
+    <ol data-reveal class="mt-10 space-y-8 border-l border-gold-300 pl-6">
+      {events.map((event) => (
+        <li class="relative">
+          <span class="absolute top-1.5 -left-[29px] h-2.5 w-2.5 rounded-full bg-gold-500 ring-4 ring-ivory" aria-hidden="true"></span>
+          <p class="font-display text-lg tracking-wider text-gold-700">{event.time}</p>
+          <h3 class="mt-1 font-serif text-xl text-emerald-950 sm:text-2xl">{event.title}</h3>
+          <p class="mt-0.5 font-sans text-xs tracking-[0.2em] text-stone-500 uppercase">{event.location}</p>
+        </li>
+      ))}
+    </ol>
+
+    <a
+      data-reveal
+      href={googleMapsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group mt-10 block overflow-hidden rounded-2xl border border-gold-200 bg-white"
+      aria-label={venue.viewMap}
+    >
+      <iframe
+        src={mapEmbedUrl}
+        title={venue.resortName}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        tabindex="-1"
+        class="pointer-events-none block h-56 w-full border-0 sm:h-64"
+      ></iframe>
+      <span class="flex items-center justify-center gap-2 border-t border-gold-200 py-3 font-sans text-xs font-medium tracking-[0.2em] text-emerald-900 uppercase transition-colors group-hover:bg-gold-50">
+        <svg class="h-4 w-4 text-gold-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" />
+        </svg>
+        {venue.viewMap}
+      </span>
+    </a>
+  </div>
+</section>
+
+<script>
+  // Native scroll-snap carousel: swipe on touch, dots to jump; dots follow the visible slide.
+  document.querySelectorAll<HTMLElement>('[data-venue-swiper]').forEach((swiper) => {
+    const track = swiper.querySelector<HTMLElement>('[data-track]')!;
+    const dots = [...swiper.querySelectorAll<HTMLButtonElement>('[data-dot]')];
+
+    dots.forEach((dot, i) =>
+      dot.addEventListener('click', () => track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' }))
+    );
+
+    track.addEventListener(
+      'scroll',
+      () => {
+        const active = Math.round(track.scrollLeft / track.clientWidth);
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === active)));
+      },
+      { passive: true }
+    );
+  });
+</script>

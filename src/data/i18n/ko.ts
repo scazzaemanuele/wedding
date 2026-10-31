@@ -67,6 +67,10 @@ export const koContent: I18nContent = {
   calendar: {
     saveTheDate: 'Save the Date'
   },
+  venueSchedule: {
+    eyebrow: '예식 안내',
+    title: '예식 장소 & 일정'
+  },
   schedule: {
     eyebrow: '결혼식 일정',
     title: '예식 및 연회 프로그램',

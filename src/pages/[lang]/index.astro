@@ -7,7 +7,7 @@ import Hero from '../../components/Hero.astro';
 import InvitationLetter from '../../components/InvitationLetter.astro';
 import StorySection from '../../components/StorySection.astro';
 import CalendarSection from '../../components/CalendarSection.astro';
-import ScheduleSection from '../../components/ScheduleSection.astro';
+import VenueScheduleSection from '../../components/VenueScheduleSection.astro';
 import VenueSection from '../../components/VenueSection.astro';
 import DressCodeSection from '../../components/DressCodeSection.astro';
 import GallerySection from '../../components/GallerySection.astro';
@@ -38,10 +38,10 @@ const content = getI18n(currentLocale);
     <InvitationLetter content={content.invitation} />
     <StorySection content={content.story} />
     <CalendarSection locale={currentLocale} content={content.calendar} date={content.hero.date} />
-    <ScheduleSection content={content.schedule} />
+    <VenueScheduleSection content={content.venueSchedule} venue={content.venue} schedule={content.schedule} />
+    <GallerySection content={content.gallery} />
     <VenueSection content={content.venue} />
     <DressCodeSection content={content.dressCode} />
-    <GallerySection content={content.gallery} />
     <FaqSection content={content.faq} />
     <WishesSection content={content.wishes} />
     <RsvpSection content={content.rsvp} />
