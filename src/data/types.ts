@@ -1,11 +1,10 @@
 export type SupportedLocale = 'en' | 'it' | 'ko';
 
 export interface Milestone {
-  year: string;
+  date: string;
   title: string;
-  location: string;
-  description: string;
-  image: string;
+  description?: string;
+  image?: string;
 }
 
 export interface ScheduleEvent {

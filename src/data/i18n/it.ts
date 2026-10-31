@@ -52,40 +52,16 @@ export const itContent: I18nContent = {
   story: {
     eyebrow: 'Come Tutto È Iniziato',
     title: 'La Nostra Storia d’Amore',
-    subtitle: 'Un percorso incantevole tra Roma, Seoul e il Mare delle Andamane',
+    subtitle: 'Otto luoghi, una sola storia.',
     milestones: [
-      {
-        year: '2021',
-        title: 'Il Destino a Piazza Navona',
-        location: 'Roma, Italia',
-        description:
-          'Un tavolo condiviso in un caffè durante un improvviso temporale estivo a Piazza Navona ha acceso una conversazione di cinque ore su arte, architettura e sapori del mondo. La sera stessa sapevamo che qualcosa di unico era iniziato.',
-        image: '/images/story-1.jpg'
-      },
-      {
-        year: '2023',
-        title: 'Tra Continenti e Tramonti a Seoul',
-        location: 'Seoul, Corea del Sud',
-        description:
-          'Innumerevoli voli aerei, calcoli di fusi orari e viaggi dal villaggio di Bukchon Hanok alla Costiera Amalfitana hanno dimostrato che "casa" è semplicemente ovunque siamo insieme.',
-        image: '/images/cocktails.jpg'
-      },
-      {
-        year: '2025',
-        title: 'La Proposta sulla Scogliera',
-        location: 'Phuket, Thailandia',
-        description:
-          'Su una scogliera a picco sul mare, circondati da lanterne accese e gelsomini in fiore, Emanuele ha fatto la domanda più importante. Yeji ha risposto sì tra lacrime di commozione e felicità.',
-        image: '/images/proposal.jpg'
-      },
-      {
-        year: '2027',
-        title: 'Il Nostro Prossimo Grande Capitolo',
-        location: 'Spiaggia di Nakalay, Phuket',
-        description:
-          'Ora riuniamo le nostre famiglie dall’Italia, dalla Corea e da tutto il mondo per unire le nostre radici e scrivere insieme una pagina indimenticabile.',
-        image: '/images/hero.jpg'
-      }
+      { date: '2025.05', title: 'Boracay', description: 'Dove tutto è iniziato: un incontro per caso sulla sabbia bianca.' },
+      { date: '2025.08', title: 'Corea', description: 'La nostra prima avventura insieme, tra luci della città e street food.' },
+      { date: '2025.10', title: 'Giappone', description: 'Templi, ramen e lunghe passeggiate mano nella mano.' },
+      { date: '2026.03', title: 'Thailandia', description: 'Di nuovo al mare, sotto caldi tramonti tropicali.' },
+      { date: '2026.04', title: 'Italia', description: 'Famiglia, cene lunghe e la dolce vita.' },
+      { date: '2026.06', title: 'Portogallo', description: 'Brezza atlantica e pastéis de nata.' },
+      { date: '2026.06', title: 'Bali', description: 'Risaie a terrazza, onde e mattine lente.' },
+      { date: '2026.08', title: 'Vietnam', description: 'Vicoli illuminati dalle lanterne e il cammino davanti a noi.' }
     ]
   },
   schedule: {

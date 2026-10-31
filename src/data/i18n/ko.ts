@@ -52,40 +52,16 @@ export const koContent: I18nContent = {
   story: {
     eyebrow: '첫 만남부터 오늘까지',
     title: '우리의 러브 스토리',
-    subtitle: '로마, 서울, 그리고 안다만 해를 잇는 운명 같은 사랑의 여정',
+    subtitle: '여덟 곳의 여행, 하나의 이야기.',
     milestones: [
-      {
-        year: '2021',
-        title: '로마 나보나 광장의 소나기',
-        location: '이탈리아 로마',
-        description:
-          '한여름 갑작스러운 소나기를 피해 들어간 카페의 작은 테이블. 예술과 건축, 매운 음식에 대한 5시간 동안의 대화는 둘만의 특별한 인연의 시작이었습니다.',
-        image: '/images/story-1.jpg'
-      },
-      {
-        year: '2023',
-        title: '대륙을 건너 서울의 노을까지',
-        location: '대한민국 서울',
-        description:
-          '수많은 비행기 티켓, 시차 계산, 그리고 북촌 한옥마을부터 아말피 해안까지의 여정을 함께하며 언제 어디서든 서로의 곁이 가장 편안한 집임을 확인했습니다.',
-        image: '/images/cocktails.jpg'
-      },
-      {
-        year: '2025',
-        title: '푸켓 절벽 위에서의 프러포즈',
-        location: '태국 푸켓',
-        description:
-          '노을빛으로 물든 안다만 해를 내려다보는 절벽 위, 따스한 등불과 재스민 향기 속에서 에마누엘레가 평생을 함께하자는 고백을 건넸고, 예지는 눈물과 미소로 승낙했습니다.',
-        image: '/images/proposal.jpg'
-      },
-      {
-        year: '2027',
-        title: '새로운 시작을 향한 발걸음',
-        location: '푸켓 나칼레이 비치',
-        description:
-          '이탈리아와 한국, 그리고 전 세계의 소중한 분들을 모시고 서로의 문화와 사랑을 축복하며 인생의 새로운 막을 엽니다.',
-        image: '/images/hero.jpg'
-      }
+      { date: '2025.05', title: '보라카이', description: '모든 것이 시작된 곳, 하얀 모래 위의 우연한 만남.' },
+      { date: '2025.08', title: '한국', description: '도시의 불빛과 길거리 음식 사이, 함께한 첫 여행.' },
+      { date: '2025.10', title: '일본', description: '사찰과 라멘, 손잡고 걷던 긴 산책.' },
+      { date: '2026.03', title: '태국', description: '따뜻한 열대의 노을 아래, 다시 바다로.' },
+      { date: '2026.04', title: '이탈리아', description: '가족, 긴 저녁 식사, 그리고 라 돌체 비타.' },
+      { date: '2026.06', title: '포르투갈', description: '대서양의 바람과 에그타르트.' },
+      { date: '2026.06', title: '발리', description: '계단식 논과 파도, 느긋한 아침.' },
+      { date: '2026.08', title: '베트남', description: '등불이 밝힌 거리, 그리고 앞으로의 길.' }
     ]
   },
   schedule: {

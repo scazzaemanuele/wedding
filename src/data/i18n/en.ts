@@ -54,40 +54,16 @@ export const enContent: I18nContent = {
   story: {
     eyebrow: "How We Began",
     title: "Our Love Story",
-    subtitle: "A serendipitous path across Rome, Seoul, and the Andaman Sea",
+    subtitle: "Eight places, one story.",
     milestones: [
-      {
-        year: "2021",
-        title: "The Piazza Navona Serendipity",
-        location: "Rome, Italy",
-        description:
-          "A shared café table during a summer rainstorm in Piazza Navona sparked a five-hour conversation about art, architecture, and spicy food. By evening, we both knew something extraordinary had begun.",
-        image: "/images/story-1.jpg",
-      },
-      {
-        year: "2023",
-        title: "Bridging Continents & Seoul Sunsets",
-        location: "Seoul, South Korea",
-        description:
-          "Countless flights, time-zone arithmetic, and weekend explorations from Bukchon Hanok Village to the Amalfi Coast proved that home is simply wherever we are together.",
-        image: "/images/cocktails.jpg",
-      },
-      {
-        year: "2025",
-        title: "The Sunset Cliff Proposal",
-        location: "Phuket, Thailand",
-        description:
-          "On a cliff overlooking the Andaman Sea, surrounded by flickering lanterns and blooming jasmine, Emanuele asked the question that changed our lives forever. Yeji said yes with happy tears.",
-        image: "/images/proposal.jpg",
-      },
-      {
-        year: "2027",
-        title: "Our Next Great Adventure",
-        location: "Nakalay Beach, Phuket",
-        description:
-          "Now we bring together our families from Italy, Korea, and all over the world to unite our heritage and begin the next chapter of our story.",
-        image: "/images/hero.jpg",
-      },
+      { date: "2025.05", title: "Boracay", description: "Where it all began — a chance meeting on the white sands." },
+      { date: "2025.08", title: "Korea", description: "Our first adventure together, between city lights and street food." },
+      { date: "2025.10", title: "Japan", description: "Temples, ramen and long walks hand in hand." },
+      { date: "2026.03", title: "Thailand", description: "Back to the sea, under warm tropical sunsets." },
+      { date: "2026.04", title: "Italy", description: "Family, long dinners and la dolce vita." },
+      { date: "2026.06", title: "Portugal", description: "Atlantic breezes and pastéis de nata." },
+      { date: "2026.06", title: "Bali", description: "Rice terraces, waves and slow mornings." },
+      { date: "2026.08", title: "Vietnam", description: "Lantern-lit streets and the road ahead." },
     ],
   },
   schedule: {
