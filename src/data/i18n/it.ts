@@ -64,6 +64,9 @@ export const itContent: I18nContent = {
       { date: '2026.08', title: 'Vietnam', description: 'E il viaggio continua, un orizzonte alla volta.' }
     ]
   },
+  calendar: {
+    saveTheDate: 'Save the Date'
+  },
   schedule: {
     eyebrow: 'Il Giorno delle Nozze',
     title: 'Programma delle Celebrazioni',

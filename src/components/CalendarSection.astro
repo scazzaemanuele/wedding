@@ -1,0 +1,65 @@
+---
+import type { I18nContent, SupportedLocale } from '../data/types';
+import { WEDDING_CONFIG } from '../data/wedding-data';
+
+interface Props {
+  locale: SupportedLocale;
+  content: I18nContent['calendar'];
+  date: string;
+}
+
+const { locale, content, date } = Astro.props;
+
+// Calendar day comes from the ISO date string, so it never shifts with the build machine's timezone.
+const [year, month, day] = WEDDING_CONFIG.date.weddingDateISO.slice(0, 10).split('-').map(Number);
+const utc = (d: number) => new Date(Date.UTC(year, month - 1, d));
+
+const monthTitle = new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(utc(1));
+const weekdayFmt = new Intl.DateTimeFormat(locale, { weekday: 'short', timeZone: 'UTC' });
+// Italian calendars start on Monday; EN/KO start on Sunday, like Korean invitations.
+const weekStart = locale === 'it' ? 1 : 0;
+const isSunday = (col: number) => (weekStart + col) % 7 === 0;
+// 2023-01-01 is a Sunday: use it to label columns in display order.
+const weekdays = Array.from({ length: 7 }, (_, i) => weekdayFmt.format(new Date(Date.UTC(2023, 0, 1 + weekStart + i))));
+
+const daysInMonth = new Date(Date.UTC(year, month, 0)).getUTCDate();
+const leading = (utc(1).getUTCDay() - weekStart + 7) % 7;
+const cells = [
+  ...Array.from({ length: leading }, () => null),
+  ...Array.from({ length: daysInMonth }, (_, i) => i + 1)
+];
+---
+
+<section id="calendar" class="relative z-10 px-4 py-20 sm:py-24">
+  <h2 data-reveal class="mb-8 text-center font-script text-5xl text-gold-700 sm:text-6xl">{content.saveTheDate}</h2>
+  <div data-reveal class="mx-auto max-w-md rounded-2xl border border-gold-200 bg-white/70 px-5 pt-10 pb-8 shadow-[0_20px_50px_-25px_rgba(60,40,20,0.35)] backdrop-blur-sm sm:px-8">
+    <h3 class="text-center font-display text-3xl text-emerald-950 capitalize sm:text-4xl">{monthTitle}</h3>
+    <p class="mt-2 text-center font-display text-sm tracking-[0.2em] text-stone-500 uppercase">{date}</p>
+    <div class="mx-auto mt-5 mb-6 h-px w-16 bg-gold-400"></div>
+
+    <div class="grid grid-cols-7 text-center">
+      {weekdays.map((w, i) => (
+        <span class={`pb-3 text-[11px] font-medium tracking-wider uppercase ${isSunday(i) ? 'text-terracotta-500' : 'text-stone-400'}`}>
+          {w}
+        </span>
+      ))}
+
+      {cells.map((d, i) =>
+        d === null ? (
+          <span></span>
+        ) : d === day ? (
+          <span class="relative flex aspect-square items-center justify-center">
+            <span class="absolute inset-1 animate-ping rounded-full bg-gold-400/40 [animation-duration:2.4s]" aria-hidden="true"></span>
+            <span class="relative flex h-[calc(100%-0.5rem)] w-[calc(100%-0.5rem)] items-center justify-center rounded-full bg-gold-500 font-display text-lg font-semibold text-white shadow-md">
+              {d}
+            </span>
+          </span>
+        ) : (
+          <span class={`flex aspect-square items-center justify-center font-display text-lg ${isSunday(i % 7) ? 'text-terracotta-500' : 'text-stone-600'}`}>
+            {d}
+          </span>
+        )
+      )}
+    </div>
+  </div>
+</section>

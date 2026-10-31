@@ -105,6 +105,9 @@ export interface I18nContent {
     subtitle: string;
     milestones: Milestone[];
   };
+  calendar: {
+    saveTheDate: string;
+  };
   schedule: {
     eyebrow: string;
     title: string;

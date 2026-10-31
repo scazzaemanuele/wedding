@@ -66,6 +66,9 @@ export const enContent: I18nContent = {
       { date: "2026.08", title: "Vietnam", description: "And the journey goes on, one horizon at a time." },
     ],
   },
+  calendar: {
+    saveTheDate: "Save the Date",
+  },
   schedule: {
     eyebrow: "Wedding Day Itinerary",
     title: "Schedule of Events",

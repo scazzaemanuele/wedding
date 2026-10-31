@@ -6,6 +6,7 @@ import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import InvitationLetter from '../../components/InvitationLetter.astro';
 import StorySection from '../../components/StorySection.astro';
+import CalendarSection from '../../components/CalendarSection.astro';
 import ScheduleSection from '../../components/ScheduleSection.astro';
 import VenueSection from '../../components/VenueSection.astro';
 import DressCodeSection from '../../components/DressCodeSection.astro';
@@ -36,6 +37,7 @@ const content = getI18n(currentLocale);
     <Hero hero={content.hero} />
     <InvitationLetter content={content.invitation} />
     <StorySection content={content.story} />
+    <CalendarSection locale={currentLocale} content={content.calendar} date={content.hero.date} />
     <ScheduleSection content={content.schedule} />
     <VenueSection content={content.venue} />
     <DressCodeSection content={content.dressCode} />

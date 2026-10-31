@@ -64,6 +64,9 @@ export const koContent: I18nContent = {
       { date: '2026.08', title: '베트남', description: '그리고 우리의 여행은 계속돼요, 새로운 수평선을 향해.' }
     ]
   },
+  calendar: {
+    saveTheDate: 'Save the Date'
+  },
   schedule: {
     eyebrow: '결혼식 일정',
     title: '예식 및 연회 프로그램',
