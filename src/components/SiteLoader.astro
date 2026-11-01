@@ -6,14 +6,24 @@ const { couple } = WEDDING_CONFIG;
 
 <div
   id="site-loader"
-  class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-stone-800 transition-opacity duration-700"
+  class="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 bg-accent-50 transition-opacity duration-700"
   aria-hidden="true"
 >
-  <p class="font-script text-4xl text-accent-300 opacity-0 transition-opacity duration-700 sm:text-5xl">
+  <p class="font-script text-4xl text-accent-700 opacity-0 transition-opacity duration-700 sm:text-5xl">
     {couple.partner1.split(' ')[0]} &amp; {couple.partner2.split(' ')[0]}
   </p>
   <span class="h-9 w-9 animate-spin rounded-full border border-accent-600/25 border-t-accent-600"></span>
 </div>
+
+<!-- Runs before first paint: the loader is only shown on the first visit of a browser session. -->
+<script is:inline>
+  try {
+    if (sessionStorage.getItem('loader-seen')) document.getElementById('site-loader')?.remove();
+    else sessionStorage.setItem('loader-seen', '1');
+  } catch {
+    // Storage unavailable (private mode): fall back to showing the loader every time.
+  }
+</script>
 
 <script>
   const loader = document.getElementById('site-loader');
