@@ -4,7 +4,6 @@ export interface Milestone {
   date: string;
   title: string;
   description?: string;
-  image?: string;
 }
 
 export interface ScheduleEvent {

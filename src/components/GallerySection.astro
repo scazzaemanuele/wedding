@@ -24,6 +24,17 @@ const photos = await Promise.all(
 
 // Two staggered columns that drift at different speeds while scrolling.
 const columns = [photos.filter((_, i) => i % 2 === 0), photos.filter((_, i) => i % 2 === 1)];
+// Frame lines: each corner sends one line along each edge, meeting at the edge midpoints.
+const frameLines = [
+  { axis: 'x', pos: 'top-0 left-0 h-px w-1/2 origin-left' },
+  { axis: 'x', pos: 'top-0 right-0 h-px w-1/2 origin-right' },
+  { axis: 'x', pos: 'bottom-0 left-0 h-px w-1/2 origin-left' },
+  { axis: 'x', pos: 'bottom-0 right-0 h-px w-1/2 origin-right' },
+  { axis: 'y', pos: 'top-0 left-0 w-px h-1/2 origin-top' },
+  { axis: 'y', pos: 'bottom-0 left-0 w-px h-1/2 origin-bottom' },
+  { axis: 'y', pos: 'top-0 right-0 w-px h-1/2 origin-top' },
+  { axis: 'y', pos: 'bottom-0 right-0 w-px h-1/2 origin-bottom' }
+];
 const pad = (n: number) => String(n + 1).padStart(2, '0');
 ---
 
@@ -50,10 +61,11 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
                   sizes="(min-width: 768px) 360px, 50vw"
                   class="block h-auto w-full transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
                 />
-                <span
-                  class="pointer-events-none absolute inset-2 border border-white/0 transition-colors duration-500 group-hover:border-white/70 sm:inset-3"
-                  aria-hidden="true"
-                ></span>
+                <span class="pointer-events-none absolute inset-2 sm:inset-3" aria-hidden="true">
+                  {frameLines.map((line) => (
+                    <span data-frame-line={line.axis} class={`absolute bg-white/70 ${line.pos}`}></span>
+                  ))}
+                </span>
               </button>
               <figcaption class="mt-2 flex items-center gap-2 font-serif text-xs tracking-[0.3em] text-accent-700">
                 <span class="h-px w-4 bg-accent-400 transition-all duration-500 group-hover:w-8"></span>
@@ -135,6 +147,19 @@ const pad = (n: number) => String(n + 1).padStart(2, '0');
           .from(img, { scale: 1.06, duration: 1.8, ease: 'power2.out' }, '<')
           .from(item.querySelector('figcaption'), { autoAlpha: 0, duration: 0.8, ease: 'power1.out' }, '-=0.9');
       });
+
+      // Frames draw themselves from the four corners until the lines meet. They all start once the
+      // top photos come into view, cascading from the first photo to the last, so lower photos
+      // already have their frame complete when they are revealed.
+      const frames = gsap.timeline({ scrollTrigger: { trigger: gallery, start: 'top 75%', toggleActions: 'play none none none' } });
+      [...gallery.querySelectorAll<HTMLElement>('[data-gallery-item]')]
+        .sort((a, b) => Number(a.querySelector('button')!.dataset.galleryOpen) - Number(b.querySelector('button')!.dataset.galleryOpen))
+        .forEach((item, i) => {
+          const at = i * 0.25;
+          frames
+            .from(item.querySelectorAll('[data-frame-line="x"]'), { scaleX: 0, duration: 1.1, ease: 'power2.inOut' }, at)
+            .from(item.querySelectorAll('[data-frame-line="y"]'), { scaleY: 0, duration: 1.1, ease: 'power2.inOut' }, at);
+        });
     }
 
     // --- Lightbox

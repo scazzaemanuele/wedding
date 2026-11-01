@@ -3,6 +3,14 @@ import type { I18nContent } from '../data/types';
 import { Image } from 'astro:assets';
 import SectionHeader from './SectionHeader.astro';
 import lavender from '../assets/lavender.png';
+import boracay from '../assets/memories/boracay.jpeg';
+import korea from '../assets/memories/korea.jpeg';
+import japan from '../assets/memories/japan.jpeg';
+import thailand from '../assets/memories/thailand.jpeg';
+import italy from '../assets/memories/italy.jpeg';
+import portugal from '../assets/memories/portugal.jpeg';
+import bali from '../assets/memories/bali.jpeg';
+import vietnam from '../assets/memories/vietnam.jpeg';
 
 interface Props {
   content: I18nContent['story'];
@@ -10,9 +18,20 @@ interface Props {
 
 const { content } = Astro.props;
 
-// Small per-step variations so the timeline doesn't feel uniform.
+// One photo per milestone, same order as content.milestones.
+const photos = [
+  { src: boracay, aspect: 'aspect-[2/3]' },
+  { src: korea, aspect: 'aspect-[3/4]' },
+  { src: japan, aspect: 'aspect-[3/4]' },
+  { src: thailand, aspect: 'aspect-[4/3]' },
+  { src: italy, aspect: 'aspect-[3/4]' },
+  { src: portugal, aspect: 'aspect-[3/4]' },
+  { src: bali, aspect: 'aspect-[3/4]' },
+  { src: vietnam, aspect: 'aspect-[3/4]' }
+];
+
+// Small per-step tilt so the timeline doesn't feel uniform.
 const tilts = [-3, 2.5, -1.5, 3, -2.5, 1.5, -3, 2];
-const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'];
 ---
 
 <section id="story" class="section overflow-x-clip">
@@ -44,14 +63,8 @@ const aspects = ['aspect-square', 'aspect-[4/5]', 'aspect-[5/4]', 'aspect-[4/5]'
                   style={`--tilt: ${tilts[idx % tilts.length]}deg`}
                   class="w-full max-w-56 rotate-(--tilt) bg-white p-2 pb-1 shadow-[0_8px_24px_-8px_rgba(52,49,63,0.35)] transition-transform duration-500 hover:rotate-0 hover:scale-[1.04]"
                 >
-                  <div class={`${aspects[idx % aspects.length]} w-full overflow-hidden`}>
-                    {item.image ? (
-                      <img src={item.image} alt={item.title} loading="lazy" class="h-full w-full object-cover" />
-                    ) : (
-                      <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent-200/60 to-stone-200 font-serif text-sm text-stone-500">
-                        {item.title}
-                      </div>
-                    )}
+                  <div class={`${photos[idx].aspect} w-full overflow-hidden`}>
+                    <Image src={photos[idx].src} alt={item.title} width={560} class="h-full w-full object-cover" />
                   </div>
                   <figcaption class="py-1.5 text-center font-script text-xl text-stone-600 sm:text-2xl">
                     <time>{item.date}</time>
