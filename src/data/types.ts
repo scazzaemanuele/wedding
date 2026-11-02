@@ -22,6 +22,7 @@ export interface I18nContent {
     story: string;
     schedule: string;
     gallery: string;
+    travel: string;
   };
   hero: {
     eyebrow: string;

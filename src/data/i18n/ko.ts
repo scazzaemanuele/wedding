@@ -9,7 +9,8 @@ export const koContent: I18nContent = {
   nav: {
     story: '러브 스토리',
     schedule: '웨딩 일정',
-    gallery: '갤러리'
+    gallery: '갤러리',
+    travel: '여행 팁'
   },
   hero: {
     eyebrow: 'Save the Date & 모바일 청첩장',

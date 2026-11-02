@@ -9,7 +9,8 @@ export const itContent: I18nContent = {
   nav: {
     story: 'La Nostra Storia',
     schedule: 'Programma',
-    gallery: 'Galleria'
+    gallery: 'Galleria',
+    travel: 'Consigli'
   },
   hero: {
     eyebrow: 'Save the Date & Invito Ufficiale',

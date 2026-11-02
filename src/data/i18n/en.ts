@@ -12,6 +12,7 @@ export const enContent: I18nContent = {
     story: "Our Story",
     schedule: "Schedule",
     gallery: "Gallery",
+    travel: "Travel Tips",
   },
   hero: {
     eyebrow: "Save the Date & Wedding Invitation",
