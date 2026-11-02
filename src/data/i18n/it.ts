@@ -9,7 +9,6 @@ export const itContent: I18nContent = {
   nav: {
     story: 'La Nostra Storia',
     schedule: 'Programma',
-    guide: 'Guida Ospiti',
     gallery: 'Galleria'
   },
   hero: {
@@ -62,15 +61,6 @@ export const itContent: I18nContent = {
       { time: '16:00 – 18:00', title: 'Cerimonia', location: 'Pontile AMOR' },
       { time: '18:30 – 20:30', title: 'Cena di Ricevimento', location: 'Prato Fronte Mare' }
     ]
-  },
-  guide: {
-    eyebrow: 'Guida Ospiti',
-    title: 'Info Utili',
-    subtitle: 'Consigli di viaggio per Phuket e cosa indossare il giorno delle nozze.',
-    teaserTitle: 'Consigli di Viaggio & Dress Code',
-    teaserText: 'Tutto quello che serve prima di partire: consigli utili per il soggiorno a Phuket e cosa indossare per la festa.',
-    cta: 'Leggi la guida',
-    back: 'Torna all’invito'
   },
   travelTips: {
     eyebrow: 'Prima di Partire',

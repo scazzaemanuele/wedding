@@ -11,7 +11,6 @@ export const enContent: I18nContent = {
   nav: {
     story: "Our Story",
     schedule: "Schedule",
-    guide: "Guest Guide",
     gallery: "Gallery",
   },
   hero: {
@@ -64,15 +63,6 @@ export const enContent: I18nContent = {
       { time: "16:00 – 18:00", title: "Ceremony", location: "AMOR The Pier" },
       { time: "18:30 – 20:30", title: "Reception Dinner", location: "Beachfront Lawn" },
     ],
-  },
-  guide: {
-    eyebrow: "Guest Guide",
-    title: "Good to Know",
-    subtitle: "Travel tips for Phuket and what to wear on the day.",
-    teaserTitle: "Travel Tips & Dress Code",
-    teaserText: "Everything you need before you fly: helpful tips for your stay in Phuket and what to wear for our celebration.",
-    cta: "Read the guide",
-    back: "Back to the invitation",
   },
   travelTips: {
     eyebrow: "Before You Go",

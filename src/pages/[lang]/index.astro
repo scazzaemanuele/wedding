@@ -8,11 +8,12 @@ import InvitationLetter from '../../components/InvitationLetter.astro';
 import StorySection from '../../components/StorySection.astro';
 import CalendarSection from '../../components/CalendarSection.astro';
 import VenueScheduleSection from '../../components/VenueScheduleSection.astro';
-import GuideTeaser from '../../components/GuideTeaser.astro';
 import GallerySection from '../../components/GallerySection.astro';
 import Footer from '../../components/Footer.astro';
 import ScrollAnimations from '../../components/ScrollAnimations.astro';
 import SiteLoader from '../../components/SiteLoader.astro';
+import TravelTipsSection from '../../components/TravelTipsSection.astro';
+import DressCodeSection from '../../components/DressCodeSection.astro';
 
 export function getStaticPaths() {
   return supportedLocales.map((loc) => ({
@@ -36,7 +37,8 @@ const content = getI18n(currentLocale);
     <CalendarSection locale={currentLocale} content={content.calendar} date={content.hero.date} />
     <VenueScheduleSection content={content.venueSchedule} schedule={content.schedule} />
     <GallerySection content={content.gallery} />
-    <GuideTeaser locale={currentLocale} content={content.guide} />
+    <TravelTipsSection content={content.travelTips} />
+    <DressCodeSection content={content.dressCode} />
   </main>
 
   <Footer content={content.footer} />

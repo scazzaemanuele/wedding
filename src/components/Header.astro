@@ -6,24 +6,19 @@ import { supportedLocales } from '../data/i18n';
 interface Props {
   locale: SupportedLocale;
   nav: I18nContent['nav'];
-  /** Path after the locale (e.g. 'guide/'), so the language switch stays on the same page. */
-  path?: string;
-  /** Pages without a dark hero start with the solid (scrolled) header style. */
-  solid?: boolean;
 }
 
-const { locale, nav, path = '', solid = false } = Astro.props;
+const { locale, nav } = Astro.props;
 const home = `/${locale}/`;
 // Section links point at the home page so they also work from other pages.
 const links = [
   { href: `${home}#story`, label: nav.story },
   { href: `${home}#venue-schedule`, label: nav.schedule },
-  { href: `${home}#gallery`, label: nav.gallery },
-  { href: `${home}guide/`, label: nav.guide }
+  { href: `${home}#gallery`, label: nav.gallery }
 ];
 ---
 
-<header id="site-header" data-solid={solid ? '' : undefined} class:list={['site-header fixed inset-x-0 top-0 z-50', { scrolled: solid }]}>
+<header id="site-header" class="site-header fixed inset-x-0 top-0 z-50">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
     <a href={home} class="font-script text-2xl leading-none" aria-label="Home">
       {WEDDING_CONFIG.couple.monogram}
@@ -49,7 +44,7 @@ const links = [
             <>
               {i > 0 && <span class="opacity-40">/</span>}
               <a
-                href={`/${code}/${path}`}
+                href={`/${code}/`}
                 aria-current={code === locale ? 'page' : undefined}
                 class={`px-1 transition-opacity ${
                   code === locale ? 'opacity-100 underline underline-offset-4' : 'opacity-50 hover:opacity-100'
@@ -96,7 +91,7 @@ const links = [
   const btn = document.getElementById('menu-btn')!;
   const menu = document.getElementById('mobile-menu')!;
 
-  const onScroll = () => header.classList.toggle('scrolled', header.hasAttribute('data-solid') || window.scrollY > 40);
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 

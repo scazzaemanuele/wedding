@@ -21,7 +21,6 @@ export interface I18nContent {
   nav: {
     story: string;
     schedule: string;
-    guide: string;
     gallery: string;
   };
   hero: {
@@ -59,15 +58,6 @@ export interface I18nContent {
   };
   schedule: {
     events: ScheduleEvent[];
-  };
-  guide: {
-    eyebrow: string;
-    title: string;
-    subtitle: string;
-    teaserTitle: string;
-    teaserText: string;
-    cta: string;
-    back: string;
   };
   travelTips: {
     eyebrow: string;

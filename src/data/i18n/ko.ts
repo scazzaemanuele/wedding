@@ -9,7 +9,6 @@ export const koContent: I18nContent = {
   nav: {
     story: '러브 스토리',
     schedule: '웨딩 일정',
-    guide: '하객 안내',
     gallery: '갤러리'
   },
   hero: {
@@ -62,15 +61,6 @@ export const koContent: I18nContent = {
       { time: '16:00 – 18:00', title: '결혼 의식', location: 'AMOR 더 피어' },
       { time: '18:30 – 20:30', title: '리셉션 디너', location: '비치프론트 론' }
     ]
-  },
-  guide: {
-    eyebrow: '하객 안내',
-    title: '알아두면 좋은 정보',
-    subtitle: '푸켓 여행 팁과 결혼식 날 복장 안내예요.',
-    teaserTitle: '여행 팁 & 드레스 코드',
-    teaserText: '떠나기 전에 꼭 필요한 정보: 푸켓 여행을 위한 팁과 결혼식 복장 안내를 확인해 주세요.',
-    cta: '안내 보기',
-    back: '청첩장으로 돌아가기'
   },
   travelTips: {
     eyebrow: '떠나기 전에',
