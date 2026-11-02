@@ -23,11 +23,11 @@ export const itContent: I18nContent = {
     title: 'Con il Cuore Pieno di Gioia',
     greeting: 'Carissima Famiglia e Amici,',
     letterParagraph1:
-      'È tutto cominciato con un incontro per caso sulle spiagge di Boracay, nelle Filippine — un tramonto dorato, la brezza del mare e una chiacchierata che non volevamo finire. Da lì ci hanno portati tra continenti, fino alle avventure notturne a Seoul e oltre. In tutto questo, il vostro affetto e la vostra amicizia sono stati il nostro regalo più grande.',
+      'Per una bellissima coincidenza, le nostre strade si sono incrociate sulla sabbia bianca di Boracay. Quello che poteva essere solo un incontro fugace durante i nostri viaggi si è trasformato in un legame speciale, che si è rafforzato momento dopo momento e alla fine ci ha portato a decidere di passare la vita insieme.',
     letterParagraph2:
-      'Per celebrare questo grande capitolo, non potevamo immaginare un luogo più magico delle spiagge incantate di Phuket, in Thailandia: un rifugio mozzafiato che unisce i nostri mondi, dove acque turchesi abbracciano la quiete tropicale.',
+      'Così come il nostro primo incontro è stato pieno di magia, abbiamo scelto la splendida costa di Phuket come cornice del nostro matrimonio, il 3 gennaio 2027, circondati dalla nostra famiglia e dai nostri amici più cari.',
     letterParagraph3:
-      'Sarebbe per noi un onore immenso avervi al nostro fianco mentre scambiamo le nostre promesse, celebriamo i riti tradizionali e balliamo sotto il cielo stellato del Mare delle Andamane.',
+      'Saremmo davvero felici di avervi con noi per questa celebrazione speciale, dove le splendide culture di Corea del Sud e Italia si uniscono in una festa d’amore.',
     signature: 'Con tutto il nostro amore,\nYeji\n&\nEmanuele',
     ceremonyNotice: 'Si prega cortesemente di dare conferma entro il 30 Settembre 2026'
   },

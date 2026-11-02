@@ -25,11 +25,11 @@ export const enContent: I18nContent = {
     title: "With Joy in Our Hearts",
     greeting: "Dearest Family & Friends,",
     letterParagraph1:
-      "What began as a chance meeting on the sands of the Philippines has carried us across continents, to late-night food adventures in Rome, Seoul and beyond. Through it all, your love and friendship have been our greatest gift.",
+      "By a beautiful coincidence, our paths crossed on the white sandy shores of Boracay. What could have been just a fleeting encounter during our travels blossomed into a special connection, one that grew stronger with each passing moment and ultimately led us to decide to spend our lives together.",
     letterParagraph2:
-      "To celebrate this milestone, we could think of no better place than the enchanted shores of Phuket, Thailand — a breathtaking sanctuary bridging our worlds where turquoise waters meet lush tropical tranquility.",
+      "Just as our first meeting was filled with magic, we have chosen the beautiful seaside of Phuket as the setting for our wedding on January 3, 2027, surrounded by our closest family and friends.",
     letterParagraph3:
-      "We would be honored beyond words to have you stand beside us as we exchange our vows, honor traditional blessings, and dance beneath the starlit Andaman sky.",
+      "We would be truly delighted to have you join us for this special celebration, where the beautiful cultures of South Korea and Italy come together in a celebration of love.",
     signature: "With all our love,\nYeji\n&\nEmanuele",
     ceremonyNotice: "Please kindly respond by September 30, 2026",
   },
