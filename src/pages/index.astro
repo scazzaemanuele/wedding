@@ -1,4 +1,9 @@
 ---
+import { getI18n } from '../data/i18n';
+
+const content = getI18n('en');
+const site = Astro.site ?? new URL('https://yejimanuwedding.date');
+const ogImage = new URL('/og-image.jpg', site);
 ---
 
 <!doctype html>
@@ -8,6 +13,21 @@
     <meta http-equiv="refresh" content="0;url=/en/" />
     <meta name="robots" content="noindex" />
     <link rel="canonical" href="/en/" />
-    <title>Yeji & Emanuele</title>
+    <title>{content.meta.title}</title>
+    <meta name="description" content={content.meta.description} />
+    <meta property="og:title" content={content.meta.title} />
+    <meta property="og:description" content={content.meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={site.href} />
+    <meta property="og:site_name" content="Yeji &amp; Emanuele" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={content.meta.ogImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImage} />
   </head>
 </html>

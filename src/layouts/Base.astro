@@ -11,6 +11,13 @@ const { lang, title, description } = Astro.props;
 // Google Analytics 4 measurement ID (e.g. G-XXXXXXXXXX), set at build time.
 // Left empty locally, so dev/preview traffic is never tracked.
 const gaId = import.meta.env.PUBLIC_GA_ID;
+
+// Social scrapers (WhatsApp, Facebook, Telegram) need absolute image URLs.
+const site = Astro.site ?? new URL('https://yejimanuwedding.date');
+const canonicalURL = new URL(Astro.url.pathname, site);
+const ogImage = new URL('/og-image.jpg', site);
+const ogLocales: Record<string, string> = { en: 'en_US', it: 'it_IT', ko: 'ko_KR' };
+const ogLocale = ogLocales[lang] ?? 'en_US';
 ---
 
 <!doctype html>
@@ -25,7 +32,21 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Yeji & Emanuele" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     <meta name="theme-color" content="#34313f" />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
