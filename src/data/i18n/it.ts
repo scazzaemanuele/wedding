@@ -37,13 +37,13 @@ export const itContent: I18nContent = {
     subtitle: 'Otto luoghi, una sola storia.',
     milestones: [
       { date: '2025.05', title: 'Boracay', description: 'Due sconosciuti sulla stessa riva: la marea ci ha fatti incontrare.' },
-      { date: '2025.08', title: 'Corea', description: 'Tra due culture, abbiamo scelto l’uno l’altra per la vita.' },
+      { date: '2025.08', title: 'Corea', description: 'Un nuovo inizio, dove il nostro amore è cresciuto passo dopo passo.' },
       { date: '2025.10', title: 'Giappone', description: 'Le prime valigie fatte insieme, la prima mappa condivisa.' },
       { date: '2026.03', title: 'Thailandia', description: 'Abbiamo camminato sulla sabbia dove diremo “sì”, immaginando il per sempre.' },
-      { date: '2026.04', title: 'Italia', description: 'Alla tavola della famiglia di Emanuele, una nuova casa ci ha accolti a braccia aperte.' },
+      { date: '2026.04', title: 'Italia', description: 'Il suo primo viaggio in Italia, alla scoperta del suo mondo e del calore della sua famiglia.' },
       { date: '2026.06', title: 'Portogallo', description: 'Un paese nuovo per entrambi: scoprirlo, e scoprirci, insieme.' },
-      { date: '2026.06', title: 'Bali', description: 'La vacanza sognata da sempre, finalmente nostra.' },
-      { date: '2026.08', title: 'Vietnam', description: 'E il viaggio continua, un orizzonte alla volta.' }
+      { date: '2026.06', title: 'Bali', description: 'Una lunga vacanza, un sogno condiviso e ricordi creati insieme.' },
+      { date: '2026.08', title: 'Vietnam', description: 'Legati dal caffè locale e dai piatti preferiti, creando insieme ricordi deliziosi.' }
     ]
   },
   calendar: {

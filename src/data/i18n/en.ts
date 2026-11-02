@@ -39,13 +39,13 @@ export const enContent: I18nContent = {
     subtitle: "Eight places, one story.",
     milestones: [
       { date: "2025.05", title: "Boracay", description: "Two strangers on the same shore — the tide brought us together." },
-      { date: "2025.08", title: "Korea", description: "Somewhere between two cultures, we chose each other for a lifetime." },
+      { date: "2025.08", title: "Korea", description: "A new beginning, where our love grew stronger with every step." },
       { date: "2025.10", title: "Japan", description: "Our first suitcases packed side by side, our first map shared." },
       { date: "2026.03", title: "Thailand", description: "We walked the sand where we’ll say “I do”, imagining forever." },
-      { date: "2026.04", title: "Italy", description: "Around Emanuele’s family table, a new home opened its arms." },
+      { date: "2026.04", title: "Italy", description: "Her first journey to Italy, discovering his world and the warmth of his family." },
       { date: "2026.06", title: "Portugal", description: "A country new to both of us — discovering it, and each other, together." },
-      { date: "2026.06", title: "Bali", description: "The holiday we’d always dreamed of, finally ours." },
-      { date: "2026.08", title: "Vietnam", description: "And the journey goes on, one horizon at a time." },
+      { date: "2026.06", title: "Bali", description: "A long holiday, a dream shared, and memories made together." },
+      { date: "2026.08", title: "Vietnam", description: "Bonded over local coffee and favorite dishes, creating delicious memories along the way." },
     ],
   },
   calendar: {
