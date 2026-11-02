@@ -10,9 +10,32 @@ const ogImage = new URL('/og-image.jpg', site);
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0;url=/en/" />
     <meta name="robots" content="noindex" />
     <link rel="canonical" href="/en/" />
+    <script is:inline>
+      // Pick the visitor's language: an explicit choice wins, then the browser
+      // language, then English.
+      (function () {
+        var supported = ['en', 'it', 'ko'];
+        var locale = null;
+        try {
+          var stored = localStorage.getItem('locale');
+          if (supported.indexOf(stored) !== -1) locale = stored;
+        } catch (e) {}
+        if (!locale) {
+          var langs = navigator.languages || [navigator.language || 'en'];
+          for (var i = 0; i < langs.length; i++) {
+            var code = String(langs[i]).slice(0, 2).toLowerCase();
+            if (supported.indexOf(code) !== -1) {
+              locale = code;
+              break;
+            }
+          }
+        }
+        window.location.replace('/' + (locale || 'en') + '/');
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0;url=/en/" /></noscript>
     <title>{content.meta.title}</title>
     <meta name="description" content={content.meta.description} />
     <meta property="og:title" content={content.meta.title} />

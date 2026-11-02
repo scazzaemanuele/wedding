@@ -46,6 +46,7 @@ const links = [
               {i > 0 && <span class="opacity-40">/</span>}
               <a
                 href={`/${code}/`}
+                data-locale={code}
                 aria-current={code === locale ? 'page' : undefined}
                 class={`px-1 transition-opacity ${
                   code === locale ? 'opacity-100 underline underline-offset-4' : 'opacity-50 hover:opacity-100'
@@ -95,6 +96,17 @@ const links = [
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Remember an explicit language choice so the root redirect honors it.
+  document.querySelectorAll<HTMLElement>('[data-locale]').forEach((link) => {
+    link.addEventListener('click', () => {
+      try {
+        localStorage.setItem('locale', link.dataset.locale!);
+      } catch {
+        /* storage unavailable (private mode): browser language still applies */
+      }
+    });
+  });
 
   btn.addEventListener('click', () => {
     const open = menu.classList.toggle('open');
